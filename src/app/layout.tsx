@@ -4,9 +4,14 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import ScrollToTop from "@/components/ScrollToTop";
 import { Inter } from "next/font/google";
+// @ts-expect-error - CSS import is handled by Next.js
 import "../styles/index.css";
+import { Lato } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
+const lato = Lato({
+  subsets: ["latin"],
+  weight: ["300", "400", "700"],
+});
 
 export default function RootLayout({
   children,
@@ -21,7 +26,7 @@ export default function RootLayout({
       */}
       <head />
 
-      <body className={`bg-[#FCFCFC] dark:bg-black ${inter.className}`}>
+      <body className={`bg-[#FCFCFC] dark:bg-black ${lato.className}`}>
         <Providers>
           <div className="isolate">
             <Header />
@@ -36,4 +41,3 @@ export default function RootLayout({
 }
 
 import { Providers } from "./providers";
-
