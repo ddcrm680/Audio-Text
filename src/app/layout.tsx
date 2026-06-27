@@ -4,7 +4,6 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import ScrollToTop from "@/components/ScrollToTop";
 import { Inter } from "next/font/google";
-// @ts-expect-error - CSS import is handled by Next.js
 import "../styles/index.css";
 import { Lato } from "next/font/google";
 
