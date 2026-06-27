@@ -7,6 +7,7 @@ import Teams from "../../../public/images/hero/business.png";
 import Image from "next/image";
 import Link from "next/link";
 import { FOOTER_LINKS } from "@/utils/constants";
+import "../../styles/hero.css";
 // import { Facebook, Linkedin, Mail, MailOpen, Twitter } from "lucide-react";
 const Footer = () => {
   return (

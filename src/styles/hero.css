@@ -1,0 +1,25 @@
+#footer .socials-icons li a:after {
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  border-radius: 30px;
+  -moz-border-radius: 30px;
+  -webkit-border-radius: 30px;
+  font-size: 32px;
+  background-color: #7b848f;
+}
+#footer .socials-icons li a {
+  width: 60px;
+  height: 60px;
+}
+
+.socials li a {
+  display: inline-block;
+  position: relative;
+  width: 35px;
+  height: 35px;
+  text-indent: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  vertical-align: top;
+}
