@@ -48,7 +48,7 @@ export default function DestinationCard({
         }`}
       />
       <div className="flex h-[60px]">
-        <div className="flex flex-1 items-center px-8 text-[18px] uppercase">
+        <div className="flex flex-1 items-center px-8 text-[21px] uppercase">
           {title}
         </div>
 
