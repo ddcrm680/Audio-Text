@@ -67,8 +67,8 @@ const Footer = () => {
             </div>
 
             {/* Quick Contact */}
-            <div className="flex flex-col items-center md:items-start">
-              <h2 className="mb-5 text-[36px] font-light text-white uppercase">
+            <div className="flex flex-col items-start md:items-start">
+              <h2 className="mb-5 text-[26px] font-light text-white uppercase">
                 Quick Contact
               </h2>
 
@@ -110,7 +110,7 @@ const Footer = () => {
               ))}
             </ul>
 
-            <div className="text-center text-[16px] leading-7 font-light text-white lg:text-left">
+            <div className="text-center text-[14px] leading-7 font-light text-white md:text-[16px] lg:text-left">
               <p>2015-2026 © Designed &amp; Hosted by</p>
               <p>Audiotext Development Team</p>
             </div>
