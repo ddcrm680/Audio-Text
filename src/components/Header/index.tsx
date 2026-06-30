@@ -12,7 +12,31 @@ const Header = () => {
   const navbarToggleHandler = () => {
     setNavbarOpen(!navbarOpen);
   };
+  const [isTablet, setIsTablet] = useState(false);
 
+  useEffect(() => {
+    const checkScreen = () => {
+      setIsDesktop(window.innerWidth >= 1024);
+      setIsTablet(window.innerWidth >= 768 && window.innerWidth < 1024);
+    };
+
+    checkScreen();
+    window.addEventListener("resize", checkScreen);
+
+    return () => window.removeEventListener("resize", checkScreen);
+  }, []);
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  useEffect(() => {
+    const checkScreen = () => {
+      setIsDesktop(window.innerWidth >= 1024);
+    };
+
+    checkScreen();
+    window.addEventListener("resize", checkScreen);
+
+    return () => window.removeEventListener("resize", checkScreen);
+  }, []);
   // Sticky Navbar
   const [sticky, setSticky] = useState(false);
   const handleStickyNavbar = () => {
@@ -28,15 +52,16 @@ const Header = () => {
 
   // submenu handler
   const [openIndex, setOpenIndex] = useState(-1);
-  const handleSubmenu = (index) => {
-    if (openIndex === index) {
-      setOpenIndex(-1);
-    } else {
-      setOpenIndex(index);
-    }
-  };
+  console.log(openIndex, "openIndex");
 
+  const handleSubmenu = (index: number) => {
+    // Desktop -> don't use click
+    if (isDesktop) return;
+
+    setOpenIndex((prev) => (prev === index ? -1 : index));
+  };
   const usePathName = usePathname();
+  console.log(navbarOpen, "navbarOpen");
 
   return (
     <>
@@ -45,12 +70,14 @@ const Header = () => {
           sticky ? "shadow-sm" : ""
         }`}
       >
-        <div className="flex items-center justify-between px-40 lg:mx-auto">
+        <div className="flex flex-row px-8 md:flex-col lg:mx-auto lg:flex-row lg:items-center lg:justify-center lg:gap-8 lg:px-40 xl:justify-between">
           <div className="flex-shrink-0">
             <Link
               href="/"
               className={`header-logo block w-full ${
-                sticky ? "py-5 lg:py-3" : "py-5"
+                sticky
+                  ? "py-5 md:pt-3 md:pb-0 lg:py-3"
+                  : "py-5 md:pt-5 md:pb-0 lg:py-5"
               } `}
             >
               <Image
@@ -64,46 +91,51 @@ const Header = () => {
           </div>
           <div className="flex flex-1 items-center justify-end">
             <div>
-              <button
-                onClick={navbarToggleHandler}
-                id="navbarToggler"
-                aria-label="Mobile Menu"
-                className="ring-primary absolute top-1/2 right-4 block translate-y-[-50%] rounded-lg px-3 py-[6px] focus:ring-2 lg:hidden"
-              >
-                <span
-                  className={`relative my-1.5 block h-0.5 w-[30px] bg-black transition-all duration-300 dark:bg-white ${
-                    navbarOpen ? "top-[7px] rotate-45" : " "
-                  }`}
-                />
-                <span
-                  className={`relative my-1.5 block h-0.5 w-[30px] bg-black transition-all duration-300 dark:bg-white ${
-                    navbarOpen ? "opacity-0" : " "
-                  }`}
-                />
-                <span
-                  className={`relative my-1.5 block h-0.5 w-[30px] bg-black transition-all duration-300 dark:bg-white ${
-                    navbarOpen ? "top-[-8px] -rotate-45" : " "
-                  }`}
-                />
-              </button>
+              <div className="flex items-center gap-8">
+                <div className="block md:hidden">
+                  <ThemeToggler />
+                </div>
+                <button
+                  onClick={navbarToggleHandler}
+                  id="navbarToggler"
+                  aria-label="Mobile Menu"
+                  className="ring-primary block rounded-lg px-3 py-[6px] focus:ring-2 md:hidden"
+                >
+                  <span
+                    className={`relative my-1.5 block h-0.5 w-[30px] bg-black transition-all duration-300 dark:bg-white ${
+                      navbarOpen ? "top-[7px] rotate-45" : " "
+                    }`}
+                  />
+                  <span
+                    className={`relative my-1.5 block h-0.5 w-[30px] bg-black transition-all duration-300 dark:bg-white ${
+                      navbarOpen ? "opacity-0" : " "
+                    }`}
+                  />
+                  <span
+                    className={`relative my-1.5 block h-0.5 w-[30px] bg-black transition-all duration-300 dark:bg-white ${
+                      navbarOpen ? "top-[-8px] -rotate-45" : " "
+                    }`}
+                  />
+                </button>
+              </div>
               <nav
                 id="navbarCollapse"
-                className={`navbar border-body-color/50 dark:border-body-color/20 dark:bg-dark absolute right-0 z-30 w-[250px] rounded border-[.5px] bg-white px-6 py-4 duration-300 lg:visible lg:static lg:w-auto lg:border-none lg:p-0 lg:opacity-100 ${
+                className={`navbar dark:bg-dark absolute right-0 z-30 mt-2 w-[230px] rounded border border-[#d9d9d9] bg-white py-2 shadow-lg duration-300 md:visible md:static md:mt-0 md:w-auto md:border-none md:bg-transparent md:p-0 md:shadow-none lg:visible lg:static lg:w-auto lg:border-none lg:p-0 lg:opacity-100 ${
                   navbarOpen
                     ? "visibility top-full opacity-100"
-                    : "invisible top-[120%] opacity-0"
+                    : "invisible top-[120%] opacity-0 md:visible md:opacity-100"
                 }`}
               >
-                <ul className="flex items-center gap-12">
+                <ul className="flex flex-col md:flex-row md:items-center md:gap-12 lg:gap-4">
                   {menuData.map((menuItem, index) => (
-                    <li key={index} className="group relative">
+                    <li key={index} className={`group relative md:border-b-0`}>
                       {menuItem.path ? (
                         <Link
                           href={menuItem.path}
-                          className={`relative py-8 text-[16px] font-light tracking-[0.02em] uppercase transition-colors duration-300 ${
+                          className={`block w-full px-[25px] py-[7px] text-left text-[15px] font-light tracking-[0.02em] uppercase transition-colors duration-300 md:w-auto md:px-0 md:py-8 lg:px-5 lg:py-[14px] ${
                             usePathName === menuItem.path
                               ? "text-[#48AFDB] dark:text-white"
-                              : "text-[#2d3550] hover:text-[#48AFDB] dark:text-white/70 dark:hover:text-white"
+                              : "text-black hover:text-[#48AFDB] dark:text-white/70 dark:hover:text-white"
                           }`}
                         >
                           {menuItem.title}
@@ -112,15 +144,21 @@ const Header = () => {
                         <>
                           <p
                             onClick={() => handleSubmenu(index)}
-                            className={`relative flex cursor-pointer items-center justify-between py-8 text-[16px] font-light tracking-[0.02em] uppercase transition-colors duration-300 ${
+                            className={`flex w-full items-center justify-between px-[25px] py-[7px] text-[15px] font-light tracking-[0.02em] uppercase transition-colors duration-300 md:w-auto md:px-0 md:py-8 lg:px-5 lg:py-[14px] ${
                               usePathName === menuItem.path
                                 ? "text-[#48AFDB]"
-                                : "text-[#2d3550] hover:text-[#48AFDB] dark:text-white/70 dark:group-hover:text-white"
+                                : "text-black hover:text-[#48AFDB] dark:text-white/70"
                             }`}
                             // className="text-dark group-hover:text-primary flex cursor-pointer items-center justify-between py-2 text-base lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 dark:text-white/70 dark:group-hover:text-white"
                           >
                             {menuItem.title}
-                            <span className="ml-2">
+                            <span
+                              className={`ml-2 transition-transform duration-300 ${
+                                openIndex === index
+                                  ? "rotate-180 md:rotate-0"
+                                  : ""
+                              }`}
+                            >
                               {" "}
                               <svg width="20" height="20" viewBox="0 0 25 24">
                                 <path
@@ -133,20 +171,26 @@ const Header = () => {
                             </span>
                           </p>
                           <div
-                            className={`submenu dark:bg-dark relative top-full left-0 rounded-sm bg-white transition-[top] duration-300 group-hover:opacity-100 lg:invisible lg:absolute lg:top-[110%] lg:block lg:w-[250px] lg:p-4 lg:opacity-0 lg:shadow-lg lg:group-hover:visible lg:group-hover:top-full ${
-                              openIndex === index ? "block" : "hidden"
-                            }`}
+                            className={`transition-all duration-300 ${
+                              openIndex === index
+                                ? isTablet
+                                  ? "dark:bg-gray-dark absolute top-[110%] left-0 z-50 w-[250px] rounded border border-t-0 border-[#ececec] bg-white p-2 shadow-lg dark:border-gray-700"
+                                  : "dark:bg-gray-dark block bg-[#f8f8f8]"
+                                : isDesktop
+                                  ? "lg:invisible lg:opacity-0 lg:group-hover:visible lg:group-hover:opacity-100"
+                                  : "hidden"
+                            } dark:lg:bg-gray-dark lg:absolute lg:top-[110%] lg:left-0 lg:w-[250px] lg:rounded lg:border lg:border-t-0 lg:border-[#ececec] lg:bg-white lg:p-2 lg:shadow-lg dark:lg:border-gray-700`}
                           >
+                            {" "}
                             {menuItem.submenu.map((submenuItem, index) => (
                               <Link
-                                href={submenuItem.path}
                                 key={index}
-                                className={`relative flex cursor-pointer items-center justify-between rounded-sm py-2.5 text-sm font-light tracking-[0.02em] transition-colors duration-300 lg:px-3 ${
+                                href={submenuItem.path}
+                                className={`block border-l-2 border-transparent px-8 py-3 text-[14px] font-light transition-all duration-200 ${
                                   usePathName === submenuItem.path
-                                    ? "text-[#48AFDB] dark:text-white"
-                                    : "text-[#2d3550] hover:text-[#48AFDB] dark:text-white/70 dark:hover:text-white"
+                                    ? "border-[#48AFDB] bg-[#eef9fe] text-[#48AFDB] dark:bg-[#1f2937]"
+                                    : "text-black hover:border-[#48AFDB] hover:bg-[#f4fbff] hover:text-[#48AFDB] dark:text-white/80 dark:hover:bg-[#2a3142] dark:hover:text-[#48AFDB]"
                                 }`}
-                                // className="text-dark hover:text-primary block rounded-sm py-2.5 text-sm lg:px-3 dark:text-white/70 dark:hover:text-white"
                               >
                                 {submenuItem.title}
                               </Link>
@@ -156,7 +200,9 @@ const Header = () => {
                       )}
                     </li>
                   ))}
-                  <ThemeToggler />
+                  <li className="hidden md:block">
+                    <ThemeToggler />
+                  </li>
                 </ul>
               </nav>
             </div>
