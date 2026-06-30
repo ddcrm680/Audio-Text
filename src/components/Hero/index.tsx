@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useEffect } from "react";
 import { Services } from "./Services";
 import GetToKnowUs from "../GetToKnowUs";
+import TopDestinations from "../TopDestinations";
 
 const Hero = () => {
   useEffect(() => {
@@ -17,7 +18,7 @@ const Hero = () => {
     <>
       <section
         id="home"
-        className="dark:bg-gray-dark relative z-10 overflow-hidden bg-white pt-[120px] pb-16 md:pt-[150px] md:pb-[120px] xl:pt-[180px] xl:pb-[160px] 2xl:pt-[210px] 2xl:pb-[200px]"
+        className="dark:bg-gray-dark relative z-10 overflow-hidden bg-white"
       >
         <div className="container">
           <div className="-mx-4 flex flex-wrap">
@@ -52,7 +53,8 @@ const Hero = () => {
         </div>
         <Services />
         <GetToKnowUs />
-        <div className="absolute top-0 right-0 z-[-1] opacity-30 lg:opacity-100">
+        <TopDestinations />
+        {/* <div className="absolute top-0 right-0 z-[-1] opacity-30 lg:opacity-100">
           <svg
             width="450"
             height="556"
@@ -292,7 +294,7 @@ const Hero = () => {
               </radialGradient>
             </defs>
           </svg>
-        </div>
+        </div> */}
       </section>
     </>
   );

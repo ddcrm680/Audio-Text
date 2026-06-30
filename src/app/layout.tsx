@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import ScrollToTop from "@/components/ScrollToTop";
 import { Inter } from "next/font/google";
+import "yet-another-react-lightbox/styles.css";
 import "../styles/index.css";
 import { Lato } from "next/font/google";
 

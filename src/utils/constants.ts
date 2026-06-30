@@ -60,3 +60,25 @@ export const SERVICES = [
     color: "#5ED9C5",
   },
 ];
+export const destinations = [
+  {
+    title: "COMROS - 2693231060",
+    image: "/images/destination/COMROS.jpg",
+  },
+  {
+    title: "CONGO - 242800100654",
+    image: "/images/destination/CONGO.jpg",
+  },
+  {
+    title: "LATVIA - 37120901550",
+    image: "/images/destination/LATVIA.jpg",
+  },
+  {
+    title: "CONGO - 242800100654",
+    image: "/images/destination/CONGO.jpg",
+  },
+  {
+    title: "LATVIA - 37120901550",
+    image: "/images/destination/LATVIA.jpg",
+  },
+];
