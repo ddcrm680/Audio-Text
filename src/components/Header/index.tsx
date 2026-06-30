@@ -70,7 +70,7 @@ const Header = () => {
           sticky ? "shadow-sm" : ""
         }`}
       >
-        <div className="flex flex-row px-8 md:flex-col lg:mx-auto lg:flex-row lg:items-center lg:justify-center lg:gap-8 lg:px-40 xl:justify-between">
+        <div className="flex flex-row px-[14px] md:flex-col lg:mx-auto lg:flex-row lg:items-center lg:justify-center lg:gap-8 lg:px-40 xl:justify-between">
           <div className="flex-shrink-0">
             <Link
               href="/"
@@ -91,7 +91,7 @@ const Header = () => {
           </div>
           <div className="flex flex-1 items-center justify-end">
             <div>
-              <div className="flex items-center gap-8">
+              <div className="flex items-center gap-4 md:gap-8">
                 <div className="block md:hidden">
                   <ThemeToggler />
                 </div>
