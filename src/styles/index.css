@@ -1,6 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap")
 layer(base);
-
+@font-face {
+  font-family: "Aileron UltraLight";
+  src: url("/fonts/Aileron-UltraLight.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+}
 @import "tailwindcss";
 
 @custom-variant dark (&:is(.dark *));

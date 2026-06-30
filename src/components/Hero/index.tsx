@@ -4,6 +4,7 @@ import { API_ENDPOINTS } from "@/utils/constants";
 import Link from "next/link";
 import { useEffect } from "react";
 import { Services } from "./Services";
+import GetToKnowUs from "../GetToKnowUs";
 
 const Hero = () => {
   useEffect(() => {
@@ -50,6 +51,7 @@ const Hero = () => {
           </div>
         </div>
         <Services />
+        <GetToKnowUs />
         <div className="absolute top-0 right-0 z-[-1] opacity-30 lg:opacity-100">
           <svg
             width="450"
