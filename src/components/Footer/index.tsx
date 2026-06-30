@@ -14,10 +14,10 @@ const Footer = () => {
     <>
       <footer className="dark:bg-gray-dark footer relative z-10 bg-[#3b3e4f]">
         {/* Top Section */}
-        <div className="mx-auto max-w-6xl px-6 pt-14 pb-30 lg:px-10">
-          <div className="flex items-center justify-between">
+        <div className="mx-auto max-w-6xl px-6 py-12 md:px-8 lg:px-10 lg:py-14">
+          <div className="flex flex-col items-start gap-12 md:flex-row md:justify-between md:gap-16">
             {/* Follow Us */}
-            <div className="socials flex flex-col items-center md:items-start">
+            <div className="socials flex w-full flex-col items-start md:w-1/2 md:items-start">
               <h2 className="mb-5 text-[36px] font-light text-white uppercase">
                 Follow Us
               </h2>
@@ -95,7 +95,7 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="bg-[#2f313e] py-8">
-          <div className="mx-auto flex max-w-6xl flex-col items-start justify-between gap-6 px-6 lg:flex-row lg:pr-20 lg:pl-10">
+          <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 px-6 lg:flex-row lg:items-start lg:pr-20 lg:pl-10">
             <ul className="flex flex-wrap items-center justify-center gap-x-7 gap-y-3">
               {FOOTER_LINKS.map((item, id) => (
                 <li key={id}>
