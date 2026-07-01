@@ -1,3 +1,8 @@
+import SlideFive from "@/components/LandingScreeen/SlideFive";
+import SlideFour from "@/components/LandingScreeen/SlideFour";
+import SlideOne from "@/components/LandingScreeen/SlideOne";
+import SlideThree from "@/components/LandingScreeen/SlideThree";
+import SlideTwo from "@/components/LandingScreeen/SlideTwo";
 import { PenTool, Phone, SlidersHorizontal, Smartphone } from "lucide-react";
 
 export const API_ENDPOINTS = {
@@ -82,3 +87,36 @@ export const destinations = [
     image: "/images/destination/LATVIA.jpg",
   },
 ];
+
+export const Landing_screen = [
+  {
+    title: "AUDIO TEXT SOLUTIONS LTD.",
+    subTitle: "",
+    desc: "A */Giant Telecom Partner/* that understands your */Business/* well Connecting the World with highly acquiescent */Premium Rate Numbers/*",
+    image: "/images/destination/COMROS.jpg",
+  },
+  {
+    title: "Be our Reseller",
+    subTitle: "Let the World know you",
+    desc: "Now creating a reseller account is absolutely */Hassle-Free!/*",
+    CTA: "Register Now",
+    image: "/images/destination/CONGO.jpg",
+  },
+  {
+    title: "Fast Payment Terms",
+    subTitle: "Secured Payments Methods",
+    desc: "Now creating a reseller account is absolutely */Hassle-Free!/*",
+    CTA: "Register Now",
+    image: "/images/destination/CONGO.jpg",
+  },
+  {
+    title: "CONGO - 242800100654",
+    image: "/images/destination/CONGO.jpg",
+  },
+  {
+    title: "LATVIA - 37120901550",
+    image: "/images/destination/LATVIA.jpg",
+  },
+];
+
+export const slideList = [SlideOne, SlideTwo, SlideThree, SlideFour, SlideFive];

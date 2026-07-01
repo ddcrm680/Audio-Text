@@ -52,7 +52,7 @@ export default function TopDestinations() {
             <div className="flex">
               {destinations.map((item, index) => (
                 <div
-                  key={item.title}
+                  key={index}
                   className="min-w-0 flex-[0_0_100%] px-4 md:flex-[0_0_50%] lg:flex-[0_0_33.3333%]"
                 >
                   <DestinationCard

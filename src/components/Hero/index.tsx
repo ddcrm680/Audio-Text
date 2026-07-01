@@ -3,9 +3,16 @@ import { getApi } from "@/utils/api";
 import { API_ENDPOINTS } from "@/utils/constants";
 import Link from "next/link";
 import { useEffect } from "react";
+
 import { Services } from "./Services";
 import GetToKnowUs from "../GetToKnowUs";
 import TopDestinations from "../TopDestinations";
+import SlideOne from "../LandingScreeen/SlideOne";
+import SlideTwo from "../LandingScreeen/SlideTwo";
+import SlideThree from "../LandingScreeen/SlideThree";
+import SlideFour from "../LandingScreeen/SlideFour";
+import SlideFive from "../LandingScreeen/SlideFive";
+import LandingSlide from "../LandingScreeen";
 
 const Hero = () => {
   useEffect(() => {
@@ -20,33 +27,8 @@ const Hero = () => {
         id="home"
         className="dark:bg-gray-dark relative z-10 overflow-hidden bg-white"
       >
-        <div className="container">
-          <div className="-mx-4 flex flex-wrap items-center justify-center">
-            <div className="min-h-[250px] w-full px-4">
-              <div className="mx-auto max-w-[800px] text-center">
-                <p className="text-body-color dark:text-body-color-dark mb-12 text-base leading-relaxed! sm:text-lg md:text-xl">
-                  Startup is free Next.js template for startups and SaaS
-                  business websites comes with all the essential pages,
-                  components, and sections you need to launch a complete
-                  business website, built-with Next 16.x and Tailwind CSS.
-                </p>
-                <div className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4">
-                  <Link
-                    href="https://nextjstemplates.com/templates/saas-starter-startup"
-                    className="bg-primary hover:bg-primary/80 rounded-xs px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out"
-                  >
-                    🔥 Get Pro
-                  </Link>
-                  <Link
-                    href="https://github.com/NextJSTemplates/startup-nextjs"
-                    className="inline-block rounded-xs bg-black px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-black/90 dark:bg-white/10 dark:text-white dark:hover:bg-white/5"
-                  >
-                    Star on GitHub
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div className="pt-[100px]">
+          <LandingSlide />
         </div>
         <Services />
         <GetToKnowUs />
