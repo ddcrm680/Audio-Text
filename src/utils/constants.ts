@@ -407,4 +407,33 @@ The packages of our exclusive services and products would definitely assist you 
     aboutFooterMessage:
       "A telecom service provider with immense dedication, exceptional knowledge, expedient services, and exquisite work experience.",
   },
+  Services: {
+    title: "Services",
+    subTitle: "Incredible service suite that suits you!",
+    peculiarServiceTitle: "Peculiar service collection",
+    peculiarServiceDescription1:
+      "At Audio Text Solutions Pte. Ltd. , we provide you various exclusive ranges of services for premium rate numbers available internationally and domestically. Premium rate numbers are kind of special telephone numbers, generally used for business purposes to access a number of customizable and programmable application services. These services may include live chat, directory enquiries, technical support; and audio and text alerts for news, sports, weather forecast, mobile ringtones, videos, games, and horoscopes.The charges for these numbers are usually higher than that of the ordinary numbers. Service providers usually use premium rate numbers as micro payment solutions. The owners of such numbers get paid by the end users, every time their numbers get called. The routing procedure for these premium rate numbers is similar to that of the toll free telephone numbers; however, their billing procedure is somewhat different.",
+    peculiarServiceDescription2:
+      "We strive to endow you with the best of our services in terms of accessibility as well as reliability. With us, you always get immensely elite services at the most affordable prices",
+    internationalPremiumTitle: "INTERNATIONAL PREMIUM RATE NUMBERS",
+    internationalPremiumDesc1:
+      "Audio Text Solutions Pte. Ltd. provides you a wide range of international premium rate numbers. We offer you a 24x7x365 expertize technical support in case you get struck somewhere accessing our services. Further, you get a multi-currency option for getting your revenue payments direct into your bank account.",
+    internationalPremiumDesc2:
+      "We’ve enabled these excellent services like Session Initiation Protocol and Interactive Voice Response to redirect your calls to your gateway or PSTN. Let’s have a look over how these services really work!",
+    domesticPremiumTitle: "DOMESTIC PREMIUM RATE NUMBERS",
+    domesticPremiumDesc1:
+      "The domestic premium rate numbers are country specific, i.e. these numbers are useful for clients in a particular country and thus, the charges associated with these numbers also vary for different countries. We provide two types of DPRN i.e. Pay Per Call (PPC) and Pay Per Minute (PPM). All you have to do is to brief us about your preferred country and we will provide you a variety of domestic premium rate numbers that can be accessed in that country. Domestic premium rate numbers are easier to market because you just require to increase the popularity of your services by utilizing the marketing tools such as, TV and radio.",
+    bespokeTitle: "Bespoke Software",
+    bespokeDesc:
+      "Bespoke software is a highly expedient and adaptable solution for your Domestic Premium Rate Numbers. Bespoke supports various applications like Horoscope, Live Chats, Radio, T.V, and much more. These applications make your Premium Rate Numbers even more exhilarating.",
+    customizeSolutionTitle: "Customized Solutions",
+    customizeSolutionDesc:
+      "Customized Solutions provide you various tools for your specific preferences. You may reveal your preferences to us and we will customize our services for you. We offer you these Unique, Effective, and Lucrative solutions to deliver you the services exactly as per your requisites.",
+    sessionInitiationTitle: "Session Initiation Protocol",
+    sessionInitiationDesc:
+      "Your calls are diverted to your PSTN (Public Switched Telephone Network) or gateway via a communication protocol, Session Initiation Protocol (SIP). This protocol is used for signaling and controlling multimedia for unicast as well as multicast sessions.The messages about the setting up and closure of the calls with aid of some other important elements are directed via this protocol. You may avail various applications under SIP, such as instant messaging, online games, video conferencing, file transfer, streaming multimedia distribution, and fax over internet protocol.",
+    interativeVoiceTitle: "Interactive Voice Response",
+    interativeVoiceDesc:
+      "At GATS, we strive to increase our as well as your competencies and for this, we’ve brought an Interactive Voice Response. The IVR platform redirects your calls in an expedient and effective manner by allowing you to interact with the host system of the company via your keypad or even your voice. IVR service enables you to retort your own queries by tracking an IVR dialogue. This service is specifically useful where call volume and cost effectiveness are of prime concern. Further, it supports numerous of applications like telephone banking, tele-voting, and various other credit card services.",
+  },
 };

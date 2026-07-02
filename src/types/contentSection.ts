@@ -3,15 +3,17 @@ export interface ContentSectionProps {
 
   description: React.ReactNode;
 
-  image: string;
+  image?: string;
 
   imageAlt?: string;
+  bg?: string;
 
   imagePosition?: "left" | "right";
 
   buttonText?: string;
 
   buttonLink?: string;
+  padding?: string;
 
   titleIcon?: React.ReactNode;
 

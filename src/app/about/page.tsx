@@ -12,7 +12,6 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "About | Audio Text",
-  description: "This is About Page for Startup Nextjs Template",
   // other metadata
 };
 

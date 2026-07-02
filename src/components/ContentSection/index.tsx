@@ -14,10 +14,12 @@ export default function ContentSection({
   titleIcon,
   buttonText,
   buttonLink,
+  padding = "p-[50px]",
+  bg = "bg-white",
   className = "",
 }: ContentSectionProps) {
   return (
-    <section className={`bg-white py-[50px] dark:bg-slate-900 ${className}`}>
+    <section className={`${bg} ${padding} dark:bg-slate-900 ${className}`}>
       <div
         className={`mx-auto flex flex-col items-center gap-[30px] px-6 md:max-w-4xl md:gap-[30px] lg:max-w-5xl xl:max-w-7xl ${
           imagePosition === "left" ? "md:flex-row-reverse" : "md:flex-row"
@@ -26,9 +28,9 @@ export default function ContentSection({
         {/* Content */}
 
         <div className="flex-2">
-          <div className="mb-5 flex items-center gap-4">
+          <div className="mt-1 mb-5 flex items-start gap-4 md:items-center">
             {titleIcon && (
-              <div className="text-[#48AFDB] dark:text-sky-400">
+              <div className="mt-2 flex h-[40px] w-[40px] shrink-0 items-center justify-center rounded-full bg-[#48AFDB] text-white md:mt-0">
                 {titleIcon}
               </div>
             )}
@@ -58,15 +60,17 @@ export default function ContentSection({
 
         {/* Image */}
 
-        <div className="w-full flex-1">
-          <Image
-            src={image}
-            alt={imageAlt ?? title}
-            width={700}
-            height={500}
-            className="w-full border border-gray-200 object-cover p-[20px] dark:border-slate-700"
-          />
-        </div>
+        {image && (
+          <div className="w-full flex-1">
+            <Image
+              src={image}
+              alt={imageAlt ?? title}
+              width={700}
+              height={500}
+              className="w-full border border-gray-200 object-cover p-[20px] dark:border-slate-700"
+            />
+          </div>
+        )}
       </div>
     </section>
   );
