@@ -15,6 +15,7 @@ import analyticsPaperPen from "../../../public/images/hero/Slide5_El1.png";
 import scaleCalculator from "../../../public/images/hero/Slide5_El8 (1).webp";
 import specs from "../../../public/images/hero/specs.webp";
 import { useState } from "react";
+import { useMediaQuery } from "@/hook/useMediaQuery";
 
 export default function SlideFive() {
   const [mouse, setMouse] = useState({ x: 0, y: 0 });
@@ -28,16 +29,7 @@ export default function SlideFive() {
       y: (e.clientY - top - height / 2) / 30,
     });
   };
-  const parallax =
-    window.innerWidth >= 1024
-      ? {
-          x: mouse.x * 0.8,
-          y: mouse.y * 0.8 + Math.sin(Date.now()) * 2,
-        }
-      : {
-          x: 0,
-          y: 0,
-        };
+  const parallax = useMediaQuery("(min-width: 1024px)");
   return (
     <section
       onMouseMove={handleMove}

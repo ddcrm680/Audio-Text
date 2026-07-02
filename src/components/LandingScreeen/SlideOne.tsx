@@ -142,7 +142,7 @@ export default function SlideOne() {
             stiffness: 70,
             damping: 18,
           }}
-          className="mt-3 text-3xl font-thin tracking-normal text-white uppercase sm:text-4xl lg:-ml-[25%] lg:text-5xl lg:text-[52px] lg:text-[64px]"
+          className="mt-3 text-3xl font-thin tracking-normal text-white uppercase lg:text-[62px] xl:-ml-[25%]"
         >
           AUDIO TEXT SOLUTIONS LTD.
         </motion.h1>
@@ -171,7 +171,7 @@ export default function SlideOne() {
             stiffness: 70,
             damping: 18,
           }}
-          className="mt-6 text-[14px] font-light text-white sm:text-lg lg:-ml-[10%] lg:text-[33px]"
+          className="mt-6 text-[14px] font-light text-white sm:text-lg lg:text-[33px] xl:-ml-[10%]"
         >
           <span className="inline lg:hidden">
             A Giant <span className="text-[#48AFDB]">Telecom Partner</span> that
@@ -212,7 +212,7 @@ export default function SlideOne() {
             scale: 0.7,
             y: -40,
           }}
-          className="mt-5 hidden text-sm font-light text-white sm:text-base lg:-ml-[5%] lg:inline lg:text-xl lg:text-[26px]"
+          className="mt-5 hidden text-sm font-light text-white sm:text-base lg:inline lg:text-xl lg:text-[26px] xl:-ml-[5%]"
         >
           Connecting the <span className="text-[#48AFDB]">World</span> with
           highly acquiescent{" "}
