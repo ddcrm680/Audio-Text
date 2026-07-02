@@ -27,7 +27,7 @@ const Hero = () => {
         id="home"
         className="dark:bg-gray-dark relative z-10 overflow-hidden bg-white"
       >
-        <div className="pt-[100px]">
+        <div className="pt-[105.79px] md:pt-[172.29px] lg:pt-[105.79px]">
           <LandingSlide />
         </div>
         <Services />

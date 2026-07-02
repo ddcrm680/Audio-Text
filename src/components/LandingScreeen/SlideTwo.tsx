@@ -52,7 +52,7 @@ export default function SlideTwo() {
 
       {/* Content */}
 
-      <div className="mx-auto flex h-[380px] flex-col items-center justify-center gap-4 px-5 md:h-[470px] md:flex-row md:px-8 lg:px-10">
+      <div className="mx-auto flex h-[380px] flex-col items-center justify-center gap-4 px-5 md:flex-row md:px-8 lg:h-[470px] lg:px-10">
         {/* Left */}
 
         <motion.div

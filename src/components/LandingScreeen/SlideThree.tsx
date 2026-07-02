@@ -73,7 +73,7 @@ export default function SlideThree() {
       <div className="pointer-events-none absolute inset-x-0 top-0 z-1 h-10 bg-gradient-to-r from-red-300/59 via-cyan-300/59 to-lime-300/59 blur-xl" />
       {/* Content */}
 
-      <div className="mx-auto flex h-[470px] items-center justify-center gap-0 px-10">
+      <div className="mx-auto flex h-[380px] items-center justify-center gap-0 px-10 lg:h-[470px]">
         {/* Left */}
 
         <motion.div
@@ -99,7 +99,7 @@ export default function SlideThree() {
               stiffness: 70,
               damping: 18,
             }}
-            className="text-[28px] leading-none font-extralight text-[#48AFDB] md:text-[50px] lg:text-[74px]"
+            className="text-[28px] leading-none font-extralight text-[#48AFDB] md:text-[50px] xl:text-[74px]"
           >
             Fast Payment Terms
           </motion.h2>
@@ -121,7 +121,7 @@ export default function SlideThree() {
               stiffness: 70,
               damping: 18,
             }}
-            className="mt-4 text-[24px] leading-none font-extralight text-[#1b1b1b] md:text-[40px] lg:text-[62px] dark:text-white"
+            className="mt-4 text-[24px] leading-none font-extralight text-[#1b1b1b] md:text-[40px] xl:text-[62px] dark:text-white"
           >
             Secured Payment Methods
           </motion.h3>
@@ -142,7 +142,7 @@ export default function SlideThree() {
               stiffness: 70,
               damping: 18,
             }}
-            className="mt-2 text-[20px] font-light text-[#48AFDB] lg:text-[28px]"
+            className="mt-2 text-[20px] font-light text-[#48AFDB] xl:text-[28px]"
           >
             Making your payment your way!
           </motion.p>
@@ -163,7 +163,7 @@ export default function SlideThree() {
               stiffness: 70,
               damping: 18,
             }}
-            className="mt-6 max-w-[620px] text-[20px] leading-snug font-light text-[#4b4b4b] lg:text-[26px] dark:text-white"
+            className="mt-6 max-w-[620px] text-[20px] leading-snug font-light text-[#4b4b4b] xl:text-[26px] dark:text-white"
           >
             Now choose your payment term and get your payment processed in a{" "}
             <span className="text-[#48AFDB]">Highly Protected</span> way.
