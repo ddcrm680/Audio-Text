@@ -41,7 +41,7 @@ const ServicePage = () => {
         title={Constant.Services.title}
         subtitle={Constant.Services.subTitle}
       />
-      <div className="px-4" style={{ fontFamily: "Aileron Light" }}>
+      <div className="md:px-5" style={{ fontFamily: "Aileron Light" }}>
         <div className="mx-auto max-w-6xl py-[70px]">
           <ContentSection
             bg=""

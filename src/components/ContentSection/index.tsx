@@ -21,7 +21,7 @@ export default function ContentSection({
   return (
     <section className={`${bg} ${padding} dark:bg-slate-900 ${className}`}>
       <div
-        className={`mx-auto flex flex-col items-center gap-[30px] px-6 md:max-w-4xl md:gap-[30px] lg:max-w-5xl xl:max-w-7xl ${
+        className={`mx-auto flex flex-col items-center gap-[30px] px-6 md:max-w-4xl md:gap-[30px] md:px-0 lg:max-w-5xl xl:max-w-7xl ${
           imagePosition === "left" ? "md:flex-row-reverse" : "md:flex-row"
         }`}
       >

@@ -21,7 +21,7 @@ export default function FeatureSection({
   return (
     <section className={`${padding} ${className}`}>
       <div
-        className={`mx-auto flex max-w-6xl gap-12 ${
+        className={`mx-auto flex max-w-6xl gap-12 px-6 md:px-0 ${
           imagePosition === "left" ? "lg:flex-row-reverse" : "lg:flex-row"
         } flex-col`}
       >

@@ -22,7 +22,7 @@ const AboutPage = () => {
         title={Constant.ABOUT.title}
         subtitle={Constant.ABOUT.subTitle}
       />
-      <div className="px-4">
+      <div className="px-5">
         <div className="mx-auto max-w-6xl py-[70px]">
           <div className="grid gap-[30px] md:grid-cols-[2fr_1fr]">
             <div className="grid grid-cols-1 gap-[30px]">
