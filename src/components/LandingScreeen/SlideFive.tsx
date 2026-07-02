@@ -29,7 +29,15 @@ export default function SlideFive() {
       y: (e.clientY - top - height / 2) / 30,
     });
   };
-  const parallax = useMediaQuery("(min-width: 1024px)");
+  const parallax = useMediaQuery("(min-width: 1024px)")
+    ? {
+        x: mouse.x * 0.8,
+        y: mouse.y * 0.8 + Math.sin(Date.now()) * 2,
+      }
+    : {
+        x: 0,
+        y: 0,
+      };
   return (
     <section
       onMouseMove={handleMove}
