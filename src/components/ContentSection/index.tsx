@@ -33,7 +33,7 @@ export default function ContentSection({
               </div>
             )}
 
-            <h2 className='font-["Aileron_UltraLight"] text-4xl leading-[46px] font-light text-[#48AFDB] uppercase md:text-4xl dark:text-sky-400'>
+            <h2 className="text-4xl leading-[46px] font-light text-[#48AFDB] uppercase md:text-4xl dark:text-sky-400">
               {title}
             </h2>
           </div>

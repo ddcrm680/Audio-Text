@@ -385,3 +385,26 @@ export const Landing_screen = [
 ];
 
 export const slideList = [SlideOne, SlideTwo, SlideThree, SlideFour, SlideFive];
+export const Constant = {
+  ABOUT: {
+    title: "About Us",
+    subTitle: "We understand your business needs",
+    userTitle: "Who We Are",
+    userDesc: `Audio Text Solutions Pte. Ltd. deals in providing an excellent suite of audio and text solutions to the telecom industries worldwide. The organization came into existence in the year 2007 with its headquarters based in Singapore. Presently, we’ve got massive presence in several nations like London, Singapore, and USA. In addition, we have numerous of interconnections with major tier-1 carriers across the world and thus, we strive to provide you international as well as domestic premium rate numbers, covering a total of more than 200 destinations across the globe. We are empowered with a highly qualified team of technical experts who are dedicated to provide you a round the clock expertise support.
+
+The packages of our exclusive services and products would definitely assist you to grow your business and take it to another higher level. Our client-centric approach has led us stand amongst the world’s most premier organizations. No matter you own a small business, or you are a business tycoon, we are always committed to expand your web presence.`,
+    visionTitle: "Vision",
+    visionDesc: `At ATS, we endeavor to bring out the best of our efforts to bestow our valued clients with the most reliable and prompt web solutions. We are continuously working towards becoming the most trusted IPRN and DPRN providers across the globe.`,
+    missionTitle: "Mission",
+    missionDesc: `We strive to offer you absolutely exclusive services with aid of enormous new opportunities so that you may thrive your business with your full strength. As a client-centric organization, we strongly believe that fulfilling the clients’ satisfaction is our major intention and for this, we tend to surpass your expectations by our unremitting dedication. We anticipate the best gateway services for international and domestic rate numbers so as to maintain a trustworthy bonding with our resellers.`,
+    skillsTitle: "Our Skills",
+    skillDesc: {
+      userFriendly: "User Friendly Panel",
+      bestPayouts: "Best Payouts",
+      exclusiveTermination: "Exclusive Terminations",
+      support: "24X7 Support",
+    },
+    aboutFooterMessage:
+      "A telecom service provider with immense dedication, exceptional knowledge, expedient services, and exquisite work experience.",
+  },
+};

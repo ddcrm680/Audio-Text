@@ -28,7 +28,7 @@ export default function TopDestinations() {
   return (
     <section className="bg-[#e8ecef] py-16 dark:bg-slate-900">
       <div className="mx-auto max-w-7xl px-4">
-        <h2 className='mb-10 text-center font-["Aileron_UltraLight"] text-5xl text-[#48AFDB] uppercase'>
+        <h2 className="mb-10 text-center text-5xl text-[#48AFDB] uppercase">
           Top Destinations
         </h2>
 
