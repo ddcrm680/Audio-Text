@@ -263,7 +263,7 @@ export default function SlideFive() {
             stiffness: 70,
             damping: 18,
           }}
-          className="mt-5 flex w-[70%] flex-wrap justify-center gap-2 space-y-2 leading-[15px] md:w-[50%] lg:inline lg:w-auto lg:gap-0 lg:leading-[35px]"
+          className="mt-5 flex w-[70%] flex-wrap justify-center gap-2 space-y-2 leading-[8px] md:w-[50%] lg:inline lg:w-auto lg:gap-0 lg:leading-[35px]"
         >
           <div className="text-[14px] font-light text-[#1738ff] md:text-[16px] lg:text-end lg:text-[28px]">
             High Database Storage Capacity
@@ -285,7 +285,7 @@ export default function SlideFive() {
         <motion.button
           whileHover={{ scale: 1.08 }}
           whileTap={{ scale: 0.95 }}
-          className="mt-2 rounded-full bg-[#7d2d67] px-[12px] py-[6px] text-lg font-light text-white transition hover:bg-[#63214f]"
+          className="mt-5 rounded-full bg-[#7d2d67] px-[12px] py-[6px] text-lg font-light text-white transition hover:bg-[#63214f] lg:mt-2"
         >
           Sign Up Now
         </motion.button>
