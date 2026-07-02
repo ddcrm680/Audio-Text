@@ -23,7 +23,7 @@ export default function SlideThree() {
     <section
       onMouseMove={handleMove}
       onMouseLeave={() => setMouse({ x: 0, y: 0 })}
-      className="relative h-[470px] overflow-hidden"
+      className="relative h-[380px] overflow-hidden lg:h-[470px]"
     >
       {/* Floating Euro Stamps */}
 
@@ -37,7 +37,7 @@ export default function SlideThree() {
           duration: 5,
           repeat: Infinity,
         }}
-        className="absolute -top-[40px] left-[18%] z-10"
+        className="absolute -top-[12%] left-[18%] z-10 lg:-top-[40px]"
       >
         <Image src={euroStamp} alt="" width={110} />
       </motion.div>
@@ -52,7 +52,7 @@ export default function SlideThree() {
           duration: 5,
           repeat: Infinity,
         }}
-        className="absolute top-[60px] right-[12%]"
+        className="absolute right-[5%] -bottom-[80px] md:-bottom-[40px] lg:top-[60px] lg:right-[12%]"
       >
         <Image src={euroStamp} alt="" width={110} />
       </motion.div>
@@ -99,7 +99,7 @@ export default function SlideThree() {
               stiffness: 70,
               damping: 18,
             }}
-            className="text-[74px] leading-none font-extralight text-[#48AFDB]"
+            className="text-[28px] leading-none font-extralight text-[#48AFDB] md:text-[50px] lg:text-[74px]"
           >
             Fast Payment Terms
           </motion.h2>
@@ -121,7 +121,7 @@ export default function SlideThree() {
               stiffness: 70,
               damping: 18,
             }}
-            className="mt-4 text-[62px] leading-none font-extralight text-[#1b1b1b]"
+            className="mt-4 text-[24px] leading-none font-extralight text-[#1b1b1b] md:text-[40px] lg:text-[62px] dark:text-white"
           >
             Secured Payment Methods
           </motion.h3>
@@ -142,7 +142,7 @@ export default function SlideThree() {
               stiffness: 70,
               damping: 18,
             }}
-            className="mt-2 text-[28px] font-light text-[#48AFDB]"
+            className="mt-2 text-[20px] font-light text-[#48AFDB] lg:text-[28px]"
           >
             Making your payment your way!
           </motion.p>
@@ -163,7 +163,7 @@ export default function SlideThree() {
               stiffness: 70,
               damping: 18,
             }}
-            className="mt-6 max-w-[620px] text-[26px] leading-snug font-light text-[#4b4b4b]"
+            className="mt-6 max-w-[620px] text-[20px] leading-snug font-light text-[#4b4b4b] lg:text-[26px] dark:text-white"
           >
             Now choose your payment term and get your payment processed in a{" "}
             <span className="text-[#48AFDB]">Highly Protected</span> way.
@@ -190,7 +190,7 @@ export default function SlideThree() {
             stiffness: 70,
             damping: 18,
           }}
-          className="relative"
+          className="relative hidden lg:block"
         >
           <Image
             src={paymentImage}

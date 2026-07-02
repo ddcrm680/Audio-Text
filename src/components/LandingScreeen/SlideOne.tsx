@@ -20,7 +20,7 @@ export default function SlideOne() {
   };
   return (
     <section
-      className="relative h-[470px] overflow-hidden"
+      className="relative flex h-[380px] flex-col justify-center overflow-hidden lg:h-[470px]"
       onMouseMove={handleMove}
       onMouseLeave={() => setMouse({ x: 0, y: 0 })}
     >
@@ -84,7 +84,7 @@ export default function SlideOne() {
       {/* <div className="absolute inset-0 bg-gradient-to-r from-[#04182d]/65 via-transparent to-[#a23f6f]/30" /> */}
       {/* Content */}
 
-      <div className="relative z-10 flex h-[470px] flex-col items-center justify-center px-6 text-center">
+      <div className="relative z-10 flex h-[380px] flex-col items-center justify-center px-6 text-center lg:h-[470px]">
         {/* Logo */}
 
         <motion.div
@@ -110,7 +110,12 @@ export default function SlideOne() {
             damping: 18,
           }}
         >
-          <Image src={logo} alt="GATS" width={300} priority />
+          <Image
+            src={logo}
+            alt="GATS"
+            className="w-[200px] lg:w-[300px]"
+            priority
+          />
         </motion.div>
 
         {/* Heading */}
@@ -137,7 +142,7 @@ export default function SlideOne() {
             stiffness: 70,
             damping: 18,
           }}
-          className="mt-3 -ml-[25%] text-[64px] font-thin tracking-normal text-white uppercase md:text-[52px]"
+          className="mt-3 text-3xl font-thin tracking-normal text-white uppercase sm:text-4xl lg:-ml-[25%] lg:text-5xl lg:text-[52px] lg:text-[64px]"
         >
           AUDIO TEXT SOLUTIONS LTD.
         </motion.h1>
@@ -166,10 +171,21 @@ export default function SlideOne() {
             stiffness: 70,
             damping: 18,
           }}
-          className="mt-6 -ml-[10%] text-[20px] font-light text-white md:text-[33px]"
+          className="mt-6 text-[14px] font-light text-white sm:text-lg lg:-ml-[10%] lg:text-[33px]"
         >
-          A Giant <span className="text-[#48AFDB]">Telecom Partner</span> that
-          understands your <span className="text-[#48AFDB]">Business</span> well
+          <span className="inline lg:hidden">
+            A Giant <span className="text-[#48AFDB]">Telecom Partner</span> that
+            understands your <span className="text-[#48AFDB]">Business</span>{" "}
+            well Connecting the <span className="text-[#48AFDB]">World</span>{" "}
+            with highly acquiescent{" "}
+            <span className="text-[#48AFDB]">Premium Rate Numbers</span>
+          </span>
+
+          <span className="hidden lg:inline">
+            A Giant <span className="text-[#48AFDB]">Telecom Partner</span> that
+            understands your <span className="text-[#48AFDB]">Business</span>{" "}
+            well
+          </span>
         </motion.h2>
 
         {/* Caption */}
@@ -196,7 +212,7 @@ export default function SlideOne() {
             scale: 0.7,
             y: -40,
           }}
-          className="mt-5 -ml-[5%] text-[18px] font-light text-white md:text-[26px]"
+          className="mt-5 hidden text-sm font-light text-white sm:text-base lg:-ml-[5%] lg:inline lg:text-xl lg:text-[26px]"
         >
           Connecting the <span className="text-[#48AFDB]">World</span> with
           highly acquiescent{" "}

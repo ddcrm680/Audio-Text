@@ -22,7 +22,7 @@ export default function SlideTwo() {
     <section
       onMouseMove={handleMove}
       onMouseLeave={() => setMouse({ x: 0, y: 0 })}
-      className="relative h-[470px] overflow-hidden bg-gradient-to-b from-white to-[#f6f8fb]"
+      className="relative h-[380px] flex-col justify-center overflow-hidden bg-gradient-to-b from-[#b8dcff] via-[#cae2fb] to-[#71aae4] lg:h-[470px] lg:flex-row lg:bg-gradient-to-b lg:from-white lg:to-[#f6f8fb]"
     >
       {/* Floating circles */}
 
@@ -52,7 +52,7 @@ export default function SlideTwo() {
 
       {/* Content */}
 
-      <div className="mx-auto flex h-[470px] items-center justify-center gap-4 px-10">
+      <div className="mx-auto flex h-[380px] flex-col items-center justify-center gap-4 px-5 md:h-[470px] md:flex-row md:px-8 lg:px-10">
         {/* Left */}
 
         <motion.div
@@ -78,7 +78,7 @@ export default function SlideTwo() {
               stiffness: 70,
               damping: 18,
             }}
-            className="text-[80px] leading-none font-extralight text-[#48AFDB]"
+            className="text-[28px] leading-none font-extralight text-[#48AFDB] md:text-5xl lg:text-[80px]"
           >
             Be Our Reseller
           </motion.h2>
@@ -100,7 +100,7 @@ export default function SlideTwo() {
               stiffness: 70,
               damping: 18,
             }}
-            className="mt-4 text-[80px] leading-none font-extralight text-[#98C93C]"
+            className="mt-4 text-[28px] leading-none font-extralight text-[#98C93C] md:text-5xl lg:text-[80px]"
           >
             Let the WORLD
             <span className="font-extralight text-[#98C93C]"> know you</span>
@@ -122,7 +122,7 @@ export default function SlideTwo() {
               stiffness: 70,
               damping: 18,
             }}
-            className="mt-4 text-[28px] leading-tight font-light text-[#4d4d4d]"
+            className="mt-4 text-[24px] leading-tight font-light text-[#4d4d4d] lg:text-[28px]"
           >
             Now creating a reseller account is
             <br />
@@ -149,7 +149,7 @@ export default function SlideTwo() {
             whileTap={{
               scale: 0.95,
             }}
-            className="mt-2 cursor-pointer rounded-full bg-[#48AFDB] px-[12px] py-[6px] text-lg font-light text-white transition hover:bg-sky-500"
+            className="mt-4 cursor-pointer rounded-full bg-[#48AFDB] px-[12px] py-[6px] text-lg font-light text-white transition hover:bg-sky-500 lg:mt-2"
           >
             Register Now
           </motion.button>
@@ -174,7 +174,7 @@ export default function SlideTwo() {
             stiffness: 70,
             damping: 18,
           }}
-          className="relative h-full w-[30%]"
+          className="relative hidden h-[220px] w-full md:h-[320px] md:w-[30%] lg:block lg:h-full"
         >
           <Image
             src={woman}

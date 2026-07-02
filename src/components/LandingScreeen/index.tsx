@@ -11,7 +11,7 @@ import Autoplay from "embla-carousel-autoplay";
 export default function LandingSlide() {
   const autoplay = useRef(
     Autoplay({
-      delay: 5000,
+      // delay: 5000,
       stopOnInteraction: false,
       stopOnMouseEnter: false,
     }),
@@ -21,9 +21,11 @@ export default function LandingSlide() {
     {
       loop: true,
       align: "start",
-      duration: 45, // try 40-60
+      // duration: 45, // try 40-60
     },
-    [autoplay.current],
+    [
+      // autoplay.current
+    ],
   );
   const scrollNext = useCallback(() => {
     emblaApi?.scrollNext();
@@ -40,7 +42,7 @@ export default function LandingSlide() {
 
       <button
         onClick={scrollPrev}
-        className="group absolute top-1/2 left-6 z-30 hidden h-16 w-16 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full border border-white text-[#48AFDB] lg:flex"
+        className="group absolute top-1/2 left-3 z-30 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-white/70 bg-white/20 md:h-12 md:w-12 lg:left-6 lg:h-16 lg:w-16"
       >
         <ChevronLeft className="transition-transform duration-300 group-hover:-translate-x-2" />
       </button>
@@ -48,7 +50,7 @@ export default function LandingSlide() {
       {/* Next */}
       <button
         onClick={scrollNext}
-        className="group absolute top-1/2 right-6 z-30 hidden h-16 w-16 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full border border-white text-[#48AFDB] lg:flex"
+        className="group absolute top-1/2 right-3 z-30 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-white/70 bg-white/20 md:h-12 md:w-12 lg:right-6 lg:h-16 lg:w-16"
       >
         <ChevronRight className="transition-transform duration-300 group-hover:translate-x-2" />
       </button>
@@ -61,23 +63,6 @@ export default function LandingSlide() {
             </div>
           ))}
         </div>
-      </div>
-
-      {/* Mobile Buttons */}
-      <div className="mt-8 flex justify-center gap-5 lg:hidden">
-        <button
-          onClick={scrollPrev}
-          className="group flex h-14 w-14 items-center justify-center rounded-full border border-[#48AFDB]"
-        >
-          <ChevronLeft className="transition-transform duration-300 group-hover:-translate-x-1" />
-        </button>
-
-        <button
-          onClick={scrollNext}
-          className="group flex h-14 w-14 items-center justify-center rounded-full border border-[#48AFDB]"
-        >
-          <ChevronRight className="transition-transform duration-300 group-hover:translate-x-1" />
-        </button>
       </div>
     </div>
   );

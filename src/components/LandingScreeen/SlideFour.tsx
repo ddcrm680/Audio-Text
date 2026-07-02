@@ -20,7 +20,7 @@ export default function SlideFour() {
 
   return (
     <section
-      className="relative h-[470px] overflow-hidden bg-[#f8fbff]"
+      className="relative h-[380px] overflow-hidden bg-[#f8fbff] xl:h-[470px]"
       onMouseMove={handleMove}
       onMouseLeave={() => setMouse({ x: 0, y: 0 })}
     >
@@ -35,9 +35,21 @@ export default function SlideFour() {
         className="absolute bottom-[100px] left-[60%] h-4 w-4 rounded-full bg-[#48AFDB]"
       />
 
-      <div className="mx-auto flex h-[470px] items-center justify-center gap-0 px-10">
+      <div className="mx-auto flex h-[380px] items-center justify-center gap-0 px-10 md:h-[470px]">
         {/* Left */}
+        <div className="absolute inset-0 xl:hidden">
+          <Image
+            src={statics}
+            alt=""
+            fill
+            className="scale-110 object-cover blur-[3px]"
+          />
 
+          <div className="absolute inset-0 bg-black/45" />
+
+          {/* Optional blue tint */}
+          <div className="absolute inset-0 bg-[#48AFDB]/15" />
+        </div>
         <motion.div
           initial={{
             opacity: 0,
@@ -54,7 +66,7 @@ export default function SlideFour() {
             stiffness: 70,
             damping: 18,
           }}
-          className="absolute top-0 left-[130px] w-[50%]"
+          className="absolute bottom-0 hidden w-[100%] xl:top-0 xl:left-[5rem] xl:block xl:w-[50%] 2xl:left-[8rem]"
         >
           <Image
             src={statics}
@@ -82,34 +94,36 @@ export default function SlideFour() {
             stiffness: 70,
             damping: 18,
           }}
-          className="absolute top-[55px] right-[13%] w-[520px]"
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 md:w-[520px] xl:top-[55px] xl:right-[5rem] xl:left-auto xl:translate-x-0 xl:translate-y-0 2xl:right-[10rem]"
         >
           <h2
-            className="-ml-[20px] text-[78px] leading-none font-thin tracking-tight text-black"
+            className="text-center text-[35px] leading-none font-thin tracking-tight text-black md:text-left md:text-[50px] xl:-ml-[20px] xl:text-[78px] dark:text-white dark:xl:text-black"
             style={{ fontFamily: "Aileron UltraLight" }}
           >
             We let you VIEW
           </h2>
 
           <h3
-            className="mt-2 ml-28 text-[74px] leading-none font-thin tracking-tight text-black"
+            className="mt-2 text-center text-[35px] leading-none font-thin tracking-tight text-black md:ml-28 md:text-left md:text-[50px] xl:text-[74px] dark:text-white dark:xl:text-black"
             style={{ fontFamily: "Aileron UltraLight" }}
           >
             What we DO
           </h3>
 
-          <div className="mt-14 space-y-3 text-[29px] leading-[26px] font-light text-[#5b5b5b]">
-            <p className="ml-28">
+          <div className="mt-8 flex flex-col justify-center space-y-1 text-[14px] leading-[24px] font-light text-[#bababa] md:space-y-3 md:text-[22px] md:leading-[26px] xl:mt-14 xl:text-[29px] xl:text-[#5b5b5b]">
+            <span className="text-center md:ml-28 md:text-left">
               Analyse your{" "}
               <span className="text-[#48AFDB]">live statistics</span>
-            </p>
+            </span>
 
-            <p className="ml-40">
+            <p className="text-center md:ml-40 md:text-left">
               Keep track of your <span className="">live traffic</span>
             </p>
 
-            <div className="words ml-50 flex items-center gap-5">
-              <span>Follow our latest updates</span>
+            <div className="words flex items-center justify-center gap-5 md:ml-50 md:justify-start">
+              <span className="text-center md:text-left">
+                Follow our latest updates
+              </span>
             </div>
           </div>
         </motion.div>
