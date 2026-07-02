@@ -5,7 +5,7 @@ import { Share2 } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import ShareMenu from "./ShareMenu";
 import { DestinationCardProps } from "@/types/destination";
-import share from "../../../public/images/destination/share.png";
+import shareIcon from "../../../public/images/destination/share.png";
 export default function DestinationCard({
   image,
   onToggle,
@@ -13,6 +13,7 @@ export default function DestinationCard({
   onClose,
   title,
   open,
+  share,
 }: DestinationCardProps) {
   const cardRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
@@ -48,7 +49,7 @@ export default function DestinationCard({
         }`}
       />
       <div className="flex h-[60px]">
-        <div className="flex flex-1 items-center px-8 text-[16px] uppercase md:text-[21px]">
+        <div className="flex flex-1 items-center px-8 text-[16px] uppercase md:text-[18px]">
           {title}
         </div>
 
@@ -57,7 +58,7 @@ export default function DestinationCard({
             onClick={onToggle}
             className="flex w-[60px] cursor-pointer items-center justify-center bg-[#3b5578] text-white"
           >
-            <Image src={share} alt={"Share"} width={20} height={20} />
+            <Image src={shareIcon} alt={"Share"} width={20} height={20} />
           </button>
         )}
       </div>
@@ -72,7 +73,7 @@ export default function DestinationCard({
           open ? "w-[100%]" : "w-0"
         }`}
       >
-        <ShareMenu />
+        <ShareMenu share={share} />
       </div>
     </div>
   );

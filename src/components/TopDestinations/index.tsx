@@ -13,6 +13,7 @@ export default function TopDestinations() {
   const [previewImage, setPreviewImage] = useState<string | null>(null);
   const [emblaRef, emblaApi] = useEmblaCarousel({
     loop: true,
+    slidesToScroll: 3,
     align: "start",
   });
 

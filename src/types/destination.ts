@@ -1,8 +1,21 @@
 export interface DestinationCardProps {
-  title: string;
   image: string;
-  onImageClick: () => void;
+  title: string;
+  share: ShareLinks;
+
   open: boolean;
-  onClose: () => void;
   onToggle: () => void;
+  onClose: () => void;
+  onImageClick: () => void;
+}
+export interface ShareLinks {
+  facebook?: string;
+  twitter?: string;
+  google?: string;
+  pinterest?: string;
+  linkedin?: string;
+  stumble?: string;
+}
+export interface ShareMenuProps {
+  share?: ShareLinks;
 }
