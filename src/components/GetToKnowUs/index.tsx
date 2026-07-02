@@ -7,6 +7,7 @@ export default function GetToKnowUs() {
   return (
     <ContentSection
       title="GET TO KNOW US"
+      padding="py-[50px] md:p-[50px]"
       image="/images/about/get-to-know-us.jpg"
       imageAlt="About Audio Text Solutions"
       buttonText="KNOW MORE"
