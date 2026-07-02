@@ -24,7 +24,7 @@ export default function GetToKnowUs() {
             We have interconnections with major Tier-1 carriers across the world
             and currently, we are one of the{" "}
             <Link
-              href="/#"
+              href="/services"
               className="font-medium text-[#48AFDB] hover:underline"
             >
               best premium rate numbers providers
@@ -35,14 +35,14 @@ export default function GetToKnowUs() {
           <span>
             We strive to provide you{" "}
             <Link
-              href="/#"
+              href="/services"
               className="font-medium text-[#48AFDB] hover:underline"
             >
               domestic premium rate numbers
             </Link>{" "}
             as well as{" "}
             <Link
-              href="/#"
+              href="/services"
               className="font-medium text-[#48AFDB] hover:underline"
             >
               international premium numbers
@@ -61,7 +61,7 @@ export default function GetToKnowUs() {
             </Link>
             , SIP on premium rate calls and other{" "}
             <Link
-              href="/#"
+              href="/services"
               className="font-medium text-[#48AFDB] hover:underline"
             >
               premium rate services
