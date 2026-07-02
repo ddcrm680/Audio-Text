@@ -10,7 +10,7 @@ export default function GetToKnowUs() {
       image="/images/about/get-to-know-us.jpg"
       imageAlt="About Audio Text Solutions"
       buttonText="KNOW MORE"
-      buttonLink="/about-us"
+      buttonLink="/about"
       description={
         <>
           <span>
