@@ -94,17 +94,17 @@ export default function SlideFour() {
             stiffness: 70,
             damping: 18,
           }}
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 md:w-[520px] xl:top-[55px] xl:right-[5rem] xl:left-auto xl:translate-x-0 xl:translate-y-0 2xl:right-[10rem]"
+          className="absolute top-1/2 left-1/2 w-[90%] -translate-x-1/2 -translate-y-1/2 md:w-[520px] xl:top-[55px] xl:right-[5rem] xl:left-auto xl:translate-x-0 xl:translate-y-0 2xl:right-[10rem]"
         >
           <h2
-            className="text-center text-[35px] leading-none font-thin tracking-tight text-black md:text-left md:text-[50px] xl:-ml-[20px] xl:text-[78px] dark:text-white dark:xl:text-black"
+            className="text-center text-[35px] leading-none font-thin tracking-tight text-white md:text-left md:text-[50px] xl:-ml-[20px] xl:text-[78px] dark:text-white dark:xl:text-black"
             style={{ fontFamily: "Aileron UltraLight" }}
           >
             We let you VIEW
           </h2>
 
           <h3
-            className="mt-2 text-center text-[35px] leading-none font-thin tracking-tight text-black md:ml-28 md:text-left md:text-[50px] xl:text-[74px] dark:text-white dark:xl:text-black"
+            className="mt-2 text-center text-[35px] leading-none font-thin tracking-tight text-white md:ml-28 md:text-left md:text-[50px] xl:text-[74px] dark:text-white dark:xl:text-black"
             style={{ fontFamily: "Aileron UltraLight" }}
           >
             What we DO
