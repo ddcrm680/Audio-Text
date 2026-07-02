@@ -3,4 +3,5 @@ export const Colors = {
   exclusiveLight: "#B8EF4B",
   payoutLight: "#56C7C3",
   userLight: "#4E5968",
+  primary: "#48afdb",
 };

@@ -3,7 +3,17 @@ import SlideFour from "@/components/LandingScreeen/SlideFour";
 import SlideOne from "@/components/LandingScreeen/SlideOne";
 import SlideThree from "@/components/LandingScreeen/SlideThree";
 import SlideTwo from "@/components/LandingScreeen/SlideTwo";
-import { PenTool, Phone, SlidersHorizontal, Smartphone } from "lucide-react";
+import {
+  CreditCard,
+  Gift,
+  Headphones,
+  LogIn,
+  PenTool,
+  Phone,
+  SlidersHorizontal,
+  Smartphone,
+} from "lucide-react";
+import { Colors } from "./color";
 
 export const API_ENDPOINTS = {
   TEST: "/api/test",
@@ -39,30 +49,70 @@ export const SERVICES = [
   {
     title: "SESSION INITIATION PROTOCOL",
     description:
-      "Session Initiation Protocol is a Communication Protocol used for redirecting your calls to your PSTN or Gateway. It proves to be very useful for applications like Instant Messaging, Online Games, Video Conferencing, File Transfer, and Streaming Multimedia Distribution. ",
-    icon: Phone,
+      "Session Initiation Protocol is a Communication Protocol used for redirecting your calls to your PSTN or Gateway. It proves to be very useful for applications like Instant Messaging, Online Games, Video Conferencing, File Transfer, and Streaming Multimedia Distribution.",
+    icon: "phone",
     color: "#48AFDB",
   },
   {
     title: "INTERACTIVE VOICE RESPONSE",
     description:
       "Customized Solutions provide you various tools for your specific preferences. You may reveal your preferences to us and we will customize our services for you. We offer you these Unique, Effective, and Lucrative solutions to deliver you the services exactly as per your requisites.",
-    icon: Smartphone,
+    icon: "smartphone",
     color: "#5A8FB5",
   },
   {
     title: "BESPOKE SOFTWARE",
     description:
       "Bespoke software is a highly expedient and adaptable solution for your Domestic Premium Rate Numbers. Bespoke supports various applications like Horoscope, Live Chats, Radio, T.V, and much more. These applications make your Premium Rate Numbers even more exhilarating.",
-    icon: SlidersHorizontal,
+    icon: "sliders",
     color: "#48AFDB",
   },
   {
     title: "CUSTOMIZED SOLUTIONS",
     description:
       "Customized Solutions provide you various tools for your specific preferences. You may reveal your preferences to us and we will customize our services for you. We offer you these Unique, Effective, and Lucrative solutions to deliver you the services exactly as per your requisites.",
-    icon: PenTool,
+    icon: "penTool",
     color: "#5ED9C5",
+  },
+];
+export const iconMap = {
+  phone: Phone,
+  smartphone: Smartphone,
+  sliders: SlidersHorizontal,
+  penTool: PenTool,
+  network: LogIn,
+  payment: CreditCard,
+  support: Headphones,
+  offers: Gift,
+};
+export const RESELLER_FEATURES = [
+  {
+    title: "Solid Network",
+    description:
+      "Get access over a world class network where you can ceaselessly demand International Premium Rate Numbers.",
+    icon: "network",
+    color: Colors.primary,
+  },
+  {
+    title: "Secure Payment",
+    description:
+      "Get on time payment via reliable money transfer partners like Western Union, MoneyGram, and Bank Wire.",
+    icon: "payment",
+    color: Colors.primary,
+  },
+  {
+    title: "Dedicated Support",
+    description:
+      "Get a Dedicated Account Manager, available 24x7x365 to resolve every cater you every possible required support.",
+    icon: "support",
+    color: Colors.primary,
+  },
+  {
+    title: "Exclusive Offers",
+    description:
+      "Get access to our exciting and exclusive offers, best products, and beneficial deals on registering with us.",
+    icon: "offers",
+    color: Colors.primary,
   },
 ];
 export const destinations = [
@@ -435,5 +485,26 @@ The packages of our exclusive services and products would definitely assist you 
     interativeVoiceTitle: "Interactive Voice Response",
     interativeVoiceDesc:
       "At GATS, we strive to increase our as well as your competencies and for this, we’ve brought an Interactive Voice Response. The IVR platform redirects your calls in an expedient and effective manner by allowing you to interact with the host system of the company via your keypad or even your voice. IVR service enables you to retort your own queries by tracking an IVR dialogue. This service is specifically useful where call volume and cost effectiveness are of prime concern. Further, it supports numerous of applications like telephone banking, tele-voting, and various other credit card services.",
+  },
+  RESELLERS: {
+    title: "Resellers",
+    subTitle: "Its Instant, Beneficial, and Easy",
+    beOurSellerTitle: "Be our reseller",
+    beOurSellerDesc1: {
+      beforeLink:
+        "ATS provides you an amazing online tool, empowering you to become our reseller. This enables you to create your own reseller account as well as accounts for your customers. Since our reseller platform is completely white labelled, our identity would never be revealed to the end users or customers. Further, on becoming our reseller, you can avail amazing advantages including free",
+      linkText: " IVR hosting",
+      linkHref: "/#",
+      afterLink: ", IP routing, and much more.",
+    },
+    beOurSellerDesc2: {
+      beforeLink:
+        "You become an integral part of a world class network, when you register with us as our reseller, where you can ceaselessly demand",
+      linkText: " International Premium Rate Numbers ",
+      linkHref: "/services",
+      afterLink:
+        "and get some exciting and exclusive offers, best products, and beneficial deals. Further, you do not need to worry about your payment since we make it secure and swift via reliable money transfer partners like Western Union, MoneyGram, and Bank Wire. In addition, you get a Dedicated Account Manager available 24x7x365 to resolve your issues.",
+    },
+    featureTitle: "Get benefitted with these outstanding features",
   },
 };

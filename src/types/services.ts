@@ -1,8 +1,15 @@
 import { LucideIcon } from "lucide-react";
+import { ReactNode } from "react";
 
 export interface ServiceCardProp {
-  title?: string;
+  title?: ReactNode;
+  parentClassName?: string;
+  iconClassName?: string;
+  imageContainerClassName?: string;
   description?: string;
-  icon?: LucideIcon;
+  titleClassName?: string;
+  descClassName?: string;
+  enableHoverScale?: boolean;
+  icon?: string;
   color?: string;
 }

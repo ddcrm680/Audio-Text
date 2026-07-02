@@ -28,7 +28,6 @@ const Hero = () => {
         className="dark:bg-gray-dark relative z-10 overflow-hidden bg-white"
       >
         <LandingSlide />
-        {/* </div> */}
         <Services />
         <GetToKnowUs />
         <TopDestinations />

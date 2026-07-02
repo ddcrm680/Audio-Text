@@ -1,35 +1,41 @@
 "use client";
 
 import { useRouter } from "next/navigation";
+import { Phone, Smartphone, SlidersHorizontal, PenTool } from "lucide-react";
 import { ServiceCardProp } from "@/types/services";
+import { iconMap } from "@/utils/constants";
+import React from "react";
 
 export default function ServiceCard({
-  title,
   description,
-  icon: Icon,
+  icon,
   color,
+  title,
+  iconClassName = "h-21 w-21",
+  imageContainerClassName = "h-42 w-42",
+  parentClassName,
+  enableHoverScale = true,
+  descClassName = "text-[15px]",
 }: ServiceCardProp) {
   const router = useRouter();
 
+  const Icon = icon ? iconMap[icon] : null;
+
   return (
     <div
-      className="group mx-auto flex h-full cursor-pointer flex-col items-center text-center md:max-w-[275px]"
+      className={`group mx-auto flex h-full cursor-pointer flex-col items-center text-center md:max-w-[275px] ${parentClassName}`}
       onClick={() => router.push("/services")}
     >
       {Icon && (
         <div
-          className="mb-[25px] flex h-42 w-42 items-center justify-center rounded-full transition duration-300 group-hover:scale-105"
           style={{ backgroundColor: color }}
+          className={`mb-[25px] flex items-center justify-center rounded-full transition duration-300 ${enableHoverScale ? "group-hover:scale-105" : ""} ${imageContainerClassName} `}
         >
-          <Icon className="h-21 w-21 text-white" strokeWidth={1.8} />
+          <Icon className={`text-white ${iconClassName}`} strokeWidth={1.8} />
         </div>
       )}
-
-      <h3 className="mb-[15px] max-w-[220px] text-[18px] font-light text-[#2d3550] uppercase md:text-[23px] dark:text-white">
-        {title}
-      </h3>
-
-      <p className="text-[15px] leading-6 text-[#606d85] dark:text-gray-300">
+      {title}
+      <p className={`leading-6 text-black dark:text-gray-300 ${descClassName}`}>
         {description}
       </p>
     </div>

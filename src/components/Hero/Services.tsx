@@ -16,7 +16,17 @@ export function Services() {
 
         <div className="grid gap-5 sm:grid-cols-2 lg:gap-x-10 lg:gap-y-16 xl:grid-cols-4">
           {SERVICES.map((service) => (
-            <ServiceCard key={service.title} {...service} />
+            <ServiceCard
+              {...service}
+              key={service.title}
+              title={
+                <h3
+                  className={`mb-[15px] max-w-[220px] text-[18px] font-light text-[#2d3550] uppercase md:text-[23px] dark:text-white`}
+                >
+                  {service.title}
+                </h3>
+              }
+            />
           ))}
         </div>
       </div>
