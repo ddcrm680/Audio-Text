@@ -42,7 +42,7 @@ export default function LandingSlide() {
 
       <button
         onClick={scrollPrev}
-        className="group absolute top-1/2 left-3 z-30 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-white/80 bg-white/20 shadow-[0_0_0_1px_rgba(0,0,0,.25),0_8px_20px_rgba(0,0,0,.2)] backdrop-blur-md transition-all duration-300 hover:bg-white/30 md:h-12 md:w-12 lg:left-6 lg:h-16 lg:w-16"
+        className="group absolute top-1/2 left-3 z-30 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-white/80 bg-white/20 shadow-[0_0_0_1px_rgba(0,0,0,.25),0_8px_20px_rgba(0,0,0,.2)] backdrop-blur-[2px] transition-all duration-300 hover:bg-white/30 md:h-12 md:w-12 lg:left-6 lg:h-16 lg:w-16"
       >
         <ChevronLeft className="text-white drop-shadow-[0_0_3px_rgba(0,0,0,.7)] transition-transform duration-300 group-hover:-translate-x-2" />
       </button>
@@ -50,7 +50,7 @@ export default function LandingSlide() {
       {/* Next */}
       <button
         onClick={scrollNext}
-        className="group absolute top-1/2 right-3 z-30 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-white/80 bg-white/20 shadow-[0_0_0_1px_rgba(0,0,0,.25),0_8px_20px_rgba(0,0,0,.2)] backdrop-blur-md transition-all duration-300 hover:bg-white/30 md:h-12 md:w-12 lg:right-6 lg:h-16 lg:w-16"
+        className="group absolute top-1/2 right-3 z-30 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-white/80 bg-white/20 shadow-[0_0_0_1px_rgba(0,0,0,.25),0_8px_20px_rgba(0,0,0,.2)] backdrop-blur-[2px] transition-all duration-300 hover:bg-white/30 md:h-12 md:w-12 lg:right-6 lg:h-16 lg:w-16"
       >
         <ChevronRight className="text-white drop-shadow-[0_0_3px_rgba(0,0,0,.7)] transition-transform duration-300 group-hover:translate-x-2" />
       </button>
