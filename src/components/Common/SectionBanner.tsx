@@ -1,8 +1,4 @@
-interface SectionBannerProps {
-  title: string;
-  subtitle: string;
-  backgroundImage?: string;
-}
+import { SectionBannerProps } from "@/utils/common";
 
 export default function SectionBanner({
   title,
@@ -20,13 +16,17 @@ export default function SectionBanner({
       }}
     >
       <div className="mx-auto flex max-w-7xl flex-col items-center justify-center px-4 text-center">
-        <h1 className="text-[44px] font-bold text-white md:text-5xl">
-          {title}
-        </h1>
+        {title && (
+          <h1 className="text-[44px] font-bold text-white md:text-5xl">
+            {title}
+          </h1>
+        )}
 
-        <h2 className="mt-[11px] text-4xl font-bold text-[#FFF200]">
-          {subtitle}
-        </h2>
+        {subtitle && (
+          <h2 className="mt-[11px] text-4xl font-bold text-[#FFF200]">
+            {subtitle}
+          </h2>
+        )}
       </div>
     </section>
   );
