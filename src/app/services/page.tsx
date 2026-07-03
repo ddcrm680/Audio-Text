@@ -14,6 +14,7 @@ import { Constant } from "@/utils/constants";
 import {
   Accessibility,
   BriefcaseBusiness,
+  ChevronRight,
   CirclePlay,
   Eye,
   Flag,
@@ -30,7 +31,7 @@ import {
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Service | Audio Text",
+  title: "Services | Audio Text",
   // other metadata
 };
 
@@ -41,7 +42,7 @@ const ServicePage = () => {
         title={Constant.Services.title}
         subtitle={Constant.Services.subTitle}
       />
-      <div className="md:px-5" style={{ fontFamily: "Aileron Light" }}>
+      <div className="" style={{ fontFamily: "Aileron Light" }}>
         <div className="mx-auto max-w-6xl py-[70px]">
           <ContentSection
             bg=""
@@ -75,8 +76,9 @@ const ServicePage = () => {
               </div>
             }
           />
-          <div className="grid gap-5 md:grid-cols-2 lg:gap-x-[30px]">
+          <div className="grid gap-5 px-6 md:grid-cols-2 lg:gap-x-[30px]">
             <FeatureSection
+              childPadding="px-0"
               padding="pb-[60px]"
               layout="vertical"
               icon={<Smartphone size={42} strokeWidth={4} />}
@@ -87,6 +89,7 @@ const ServicePage = () => {
             <FeatureSection
               layout="vertical"
               padding="pb-[60px]"
+              childPadding="px-0"
               icon={<Play size={42} strokeWidth={4} />}
               title={Constant.Services.interativeVoiceTitle}
               description={<p>{Constant.Services.interativeVoiceDesc}</p>}
@@ -104,26 +107,30 @@ const ServicePage = () => {
             }
           />
 
-          <FeatureSection
-            layout={"horizontal"}
-            icon={<TrendingUp size={42} strokeWidth={4} />}
-            title={Constant.Services.bespokeTitle}
-            description={
-              <>
-                <p>{Constant.Services.bespokeDesc}</p>
-              </>
-            }
-          />
-          <FeatureSection
-            layout={"horizontal"}
-            icon={<Accessibility size={42} strokeWidth={4} />}
-            title={Constant.Services.customizeSolutionTitle}
-            description={
-              <>
-                <p>{Constant.Services.customizeSolutionDesc}</p>
-              </>
-            }
-          />
+          <div className="mx-0 md:mx-0">
+            <FeatureSection
+              layout={"horizontal"}
+              icon={<TrendingUp size={42} strokeWidth={4} />}
+              title={Constant.Services.bespokeTitle}
+              description={
+                <>
+                  <p>{Constant.Services.bespokeDesc}</p>
+                </>
+              }
+            />
+          </div>
+          <div className="mx-0 md:mx-0">
+            <FeatureSection
+              layout={"horizontal"}
+              icon={<Accessibility size={42} strokeWidth={4} />}
+              title={Constant.Services.customizeSolutionTitle}
+              description={
+                <>
+                  <p>{Constant.Services.customizeSolutionDesc}</p>
+                </>
+              }
+            />
+          </div>
         </div>
       </div>
     </div>

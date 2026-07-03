@@ -17,13 +17,14 @@ export default function FeatureSection({
   buttonLink,
   padding = "py-5",
   className = "",
+  childPadding = "px-6",
 }: FeatureSectionProps) {
   return (
     <section className={`${padding} ${className}`}>
       <div
-        className={`mx-auto flex max-w-6xl gap-12 px-6 md:px-0 ${
+        className={`mx-auto flex max-w-6xl gap-12 ${
           imagePosition === "left" ? "lg:flex-row-reverse" : "lg:flex-row"
-        } flex-col`}
+        } flex-col ${childPadding}`}
       >
         {/* Content */}
 

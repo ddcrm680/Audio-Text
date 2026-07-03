@@ -5,7 +5,7 @@ import { Phone, Smartphone, SlidersHorizontal, PenTool } from "lucide-react";
 import { ServiceCardProp } from "@/types/services";
 import { iconMap } from "@/utils/constants";
 import React from "react";
-
+import { motion } from "framer-motion";
 export default function ServiceCard({
   description,
   icon,
@@ -14,30 +14,84 @@ export default function ServiceCard({
   iconClassName = "h-21 w-21",
   imageContainerClassName = "h-42 w-42",
   parentClassName,
+  enableScrollAnimation = false,
+  animationDirection = "left",
   enableHoverScale = true,
   descClassName = "text-[15px]",
 }: ServiceCardProp) {
   const router = useRouter();
 
   const Icon = icon ? iconMap[icon] : null;
+  const iconVariants = {
+    hidden: {
+      opacity: 0,
+      x:
+        animationDirection === "left"
+          ? -80
+          : animationDirection === "right"
+            ? 80
+            : 0,
+    },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 0.8,
+        ease: [0.25, 0.1, 0.25, 1] as const, // custom cubic bezier
+      },
+    },
+  };
 
+  const textVariants = {
+    hidden: {
+      opacity: 0,
+      scale: 0.8,
+      y: 25,
+    },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+        delay: 0.25,
+        ease: "easeOut" as const,
+      },
+    },
+  };
   return (
     <div
       className={`group mx-auto flex h-full cursor-pointer flex-col items-center text-center md:max-w-[275px] ${parentClassName}`}
       onClick={() => router.push("/services")}
     >
       {Icon && (
-        <div
+        <motion.div
+          variants={iconVariants}
+          initial={enableScrollAnimation ? "hidden" : false}
+          whileInView={enableScrollAnimation ? "visible" : undefined}
+          viewport={{ once: true, amount: 0.4 }}
           style={{ backgroundColor: color }}
-          className={`mb-[25px] flex items-center justify-center rounded-full transition duration-300 ${enableHoverScale ? "group-hover:scale-105" : ""} ${imageContainerClassName} `}
+          className={`mb-[25px] flex items-center justify-center rounded-full transition duration-300 ${
+            enableHoverScale ? "group-hover:scale-105" : ""
+          } ${imageContainerClassName}`}
         >
           <Icon className={`text-white ${iconClassName}`} strokeWidth={1.8} />
-        </div>
+        </motion.div>
       )}
+
       {title}
-      <p className={`leading-6 text-black dark:text-gray-300 ${descClassName}`}>
-        {description}
-      </p>
+      <motion.div
+        variants={textVariants}
+        initial={enableScrollAnimation ? "hidden" : false}
+        whileInView={enableScrollAnimation ? "visible" : undefined}
+        viewport={{ once: true, amount: 0.4 }}
+      >
+        <p
+          className={`leading-6 text-black dark:text-gray-300 ${descClassName}`}
+        >
+          {description}
+        </p>
+      </motion.div>
     </div>
   );
 }

@@ -25,6 +25,13 @@ layer(base);
   font-style: normal;
   font-display: swap;
 }
+@font-face {
+  font-family: "Aileron";
+  src: url("/fonts/aileron-thin-webfont.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
 @import "tailwindcss";
 
 @custom-variant dark (&:is(.dark *));

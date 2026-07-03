@@ -18,6 +18,10 @@ import { Colors } from "./color";
 export const API_ENDPOINTS = {
   TEST: "/api/test",
 };
+export const URLs = {
+  registerBg:
+    "https://www.audiotextsolutions.com/wp-content/themes/codeus/images/backgrounds/title/01.jpg",
+};
 export const FOOTER_LINKS = [
   {
     title: "Services",
@@ -506,5 +510,29 @@ The packages of our exclusive services and products would definitely assist you 
         "and get some exciting and exclusive offers, best products, and beneficial deals. Further, you do not need to worry about your payment since we make it secure and swift via reliable money transfer partners like Western Union, MoneyGram, and Bank Wire. In addition, you get a Dedicated Account Manager available 24x7x365 to resolve your issues.",
     },
     featureTitle: "Get benefitted with these outstanding features",
+    regularResellerTitle: "Regular Reseller",
+    regularResellerDesc1:
+      "After successful registration, clients are entitled to get these basic benefits",
+    regularResellerDescPoint1: "Ability to create their own customers",
+    regularResellerDescPoint2: "One way billing",
+    regularResellerDescPoint3: "24x7x365 basic support",
+    regularResellerDescPoint4: "Live call monitoring",
+    superResellerTitle: "Super Reseller",
+    superResellerDesc:
+      "Once you become our super reseller, you get access over these advance services",
+    superResellerDescPoint1: "Can make Sub-Resellers and Regular resellers",
+    superResellerDescPoint3: "Customized Billing",
+    superResellerDescPoint5: "Priority Service",
+    superResellerDescPoint7: "Mobile Support",
+    superResellerDescPoint2: "Special Rates and Payout",
+    superResellerDescPoint4: "Exclusive Terminations",
+    superResellerDescPoint6: "Customizable Panel",
+    superResellerDescPoint8: "Can use their own brand/company logo",
+    wantToBeReseller: "Want to be our reseller?",
+    wantToBeResellerDesc:
+      "Now create your own reseller account and dedicated accounts for your customers too!",
+    registerNow: "Register Now",
+    registerTitle: "Register With Us",
+    registerDesc: "Expand your horizons with us",
   },
 };

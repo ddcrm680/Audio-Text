@@ -10,6 +10,8 @@ export interface ServiceCardProp {
   titleClassName?: string;
   descClassName?: string;
   enableHoverScale?: boolean;
+  enableScrollAnimation?: boolean;
+  animationDirection?: "left" | "right" | "center";
   icon?: string;
   color?: string;
 }

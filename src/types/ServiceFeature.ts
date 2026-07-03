@@ -3,7 +3,7 @@ import { ReactNode } from "react";
 export interface FeatureSectionProps {
   title: string;
   description: ReactNode;
-
+  childPadding?: string;
   icon: ReactNode;
 
   image?: string;
