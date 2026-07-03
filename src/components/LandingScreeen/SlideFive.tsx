@@ -288,7 +288,7 @@ export default function SlideFive() {
           whileHover={{ scale: 1.08 }}
           onClick={() => router.push("/register_with_us")}
           whileTap={{ scale: 0.95 }}
-          className="mt-5 rounded-full bg-[#7d2d67] px-[12px] py-[6px] text-lg font-light text-white transition hover:bg-[#63214f] lg:mt-2"
+          className="mt-5 cursor-pointer rounded-full bg-[#7d2d67] px-[12px] py-[6px] text-lg font-light text-white transition hover:bg-[#63214f] lg:mt-2"
         >
           Sign Up Now
         </motion.button>
