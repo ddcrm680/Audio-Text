@@ -74,7 +74,7 @@ export default function FormUpload({
       >
         <input {...getInputProps()} />
 
-        <h3 className="text-3xl font-light text-sky-400 uppercase">
+        <h3 className="text-[22px] font-light text-sky-400 uppercase md:text-3xl">
           Drag & Drop Files Here
         </h3>
 
