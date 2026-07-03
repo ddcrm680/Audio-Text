@@ -120,6 +120,8 @@ const ResellersPage = () => {
           <ResellerBenefits
             icon={<Crosshair size={24} />}
             title={Constant.RESELLERS.superResellerTitle}
+            animateDescription
+            animatePoints
             description={Constant.RESELLERS.superResellerDesc}
             columns={2}
             points={[
