@@ -563,7 +563,79 @@ The packages of our exclusive services and products would definitely assist you 
     registerNow: "Register Now",
     registerTitle: "Register With Us",
     registerDesc: "Expand your horizons with us",
+
     submit: "Submit",
+  },
+  FAQ: {
+    faqTitle: "FAQ",
+    faqDesc: "Got a query? Ask us!",
+    faqHeading: "FREQUENTLY ASKED QUESTIONS",
+
+    items: [
+      {
+        question: "Why ATS?",
+        answer:
+          "ATS believes in acquiring the core potentials of a client centric organization, including innovation, integrity, client satisfaction, and uprightness. We keep our valued clients at the main front of our focus and intend to offer them world class services. We provide you the best opportunities to earn more with our premium rate numbers. Further there are numerous other advantages that you may avail once you get connected with us. These advantages include excellent rates, no set up costs, 100% up time, and 24×7 technical support.",
+      },
+      {
+        question: "How can I start using your services?",
+        answer:
+          "You may contact our sales team to know about various offers for our international premium rate numbers along with our access list. The sign up procedure for your new numbers is quick and easy-the entire process usually takes less than 24 hours. However, we usually have numbers ready in our stock. All you need to do is to send us an email at info@audiotextsolutions.com to get in touch with our sales team and we will revert you back at the earliest.",
+      },
+      {
+        question: "How can you check the test numbers and their accessibility?",
+        answer:
+          "You may contact our sales team to know about various offers for our international premium rate numbers along with our access list. The sign up procedure for your new numbers is quick and easy-the entire process usually takes less than 24 hours. However, we usually have numbers ready in our stock. All you need to do is to send us an email at info@audiotextsolutions.com to get in touch with our sales team and we will revert you back at the earliest.",
+      },
+      {
+        question:
+          "How may I know whether the connected number is correct or not?",
+        answer:
+          "When you make a call to a number, if you listen to a recorded audio or view the live call in our panel, the number is correct.",
+      },
+      {
+        question:
+          "Can I make sub-users on test account and send traffic to the test numbers?",
+        answer:
+          "No, you can neither make sub-users on test account, nor send traffic to the test numbers since test numbers are meant to check the accessibility. You may send your traffic to your numbers only.",
+      },
+      {
+        question: "How can I send the traffic?",
+        answer:
+          "You can send the traffic via live chats, voting, quiz shows, or using any other kind of organizational internet access.",
+      },
+      {
+        question:
+          "Are there any monthly charges or do I need to pay any sort of setup fee?",
+        answer:
+          "Certainly not. You are paid in accordance with the volume of minutes you send to your numbers as per the fixed rates indicated in the contract. If, for some reason, you cannot manage to generate any minutes on your numbers, you do not need to pay anything.",
+      },
+      {
+        question: "How does ATS process payments?",
+        answer:
+          "ATS transfers you the funds exclusively via Bank Wire, Western Union, or Moneygram in order to ensure the maximum security.",
+      },
+      {
+        question: "How often do I get paid?",
+        answer:
+          "The payment schedule is determined by the sort of premium rate numbers you select and the payment can be made on a regular or weekly basis.",
+      },
+      {
+        question: "How can I get in touch with a sales representative?",
+        answer:
+          "You can reach our sales representatives via Skype, email, or yahoo messenger between 10:00 AM to 6:00 PM from Monday to Saturday. However, on Sundays and bank holidays, we generally operate as a scaled down team.",
+      },
+      {
+        question: "How may I figure out the amount I will get paid?",
+        answer:
+          "Once you get registered with one of our sales manager, you are assigned with a username and password which enables you to access all statistics relating to the calls on your account. This also empowers you to access information about the amount of money you are making at your convenience.",
+      },
+      {
+        question: "Do these numbers work all across the world?",
+        answer:
+          "No, there are different access methods for different countries. You may get in touch with our sales representatives in this regard. They will provide you access over the test numbers to check the best fitted extension for your requirements. You may also get the latest access list for vast majority of our extensions.",
+      },
+    ],
   },
 };
 export const PAYMENT_METHODS = [
