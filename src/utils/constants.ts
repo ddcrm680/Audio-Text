@@ -26,7 +26,7 @@ export const registerInitialValues = {
   // Personal Details
   firstName: "",
   lastName: "",
-  dateOfBirth: null,
+  dateOfBirth: "",
   street: "",
   country: "",
   state: "",

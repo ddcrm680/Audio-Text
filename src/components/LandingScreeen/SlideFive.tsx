@@ -16,10 +16,12 @@ import scaleCalculator from "../../../public/images/hero/Slide5_El8 (1).webp";
 import specs from "../../../public/images/hero/specs.webp";
 import { useState } from "react";
 import { useMediaQuery } from "@/hook/useMediaQuery";
+import { useRouter } from "next/navigation";
 
 export default function SlideFive() {
   const [mouse, setMouse] = useState({ x: 0, y: 0 });
 
+  const router = useRouter();
   const handleMove = (e: React.MouseEvent<HTMLDivElement>) => {
     const { width, height, left, top } =
       e.currentTarget.getBoundingClientRect();
@@ -284,6 +286,7 @@ export default function SlideFive() {
 
         <motion.button
           whileHover={{ scale: 1.08 }}
+          onClick={() => router.push("/register_with_us")}
           whileTap={{ scale: 0.95 }}
           className="mt-5 rounded-full bg-[#7d2d67] px-[12px] py-[6px] text-lg font-light text-white transition hover:bg-[#63214f] lg:mt-2"
         >

@@ -5,10 +5,12 @@ import Image from "next/image";
 
 import woman from "../../../public/images/hero/tech_girl.webp";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 export default function SlideTwo() {
   const [mouse, setMouse] = useState({ x: 0, y: 0 });
 
+  const router = useRouter();
   const handleMove = (e: React.MouseEvent<HTMLDivElement>) => {
     const { width, height, left, top } =
       e.currentTarget.getBoundingClientRect();
@@ -131,6 +133,7 @@ export default function SlideTwo() {
           </motion.p>
 
           <motion.button
+            onClick={() => router.push("/register_with_us")}
             initial={{
               opacity: 0,
               y: 40,
