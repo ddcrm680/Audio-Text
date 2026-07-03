@@ -38,12 +38,21 @@ export default function FormSelect({
         {...field}
         id={name}
         disabled={disabled}
-        className={`mt-1 h-[42px] w-full rounded border border-[#d9d9d9] bg-white px-4 transition outline-none focus:border-[#48AFDB] ${className}`}
+        className={`mt-1 h-[42px] w-full rounded border border-[#d9d9d9] bg-white px-4 transition outline-none focus:border-[#48AFDB] dark:border-slate-500 dark:bg-slate-800 dark:text-slate-100 ${className}`}
       >
-        <option value="">{placeholder}</option>
+        <option
+          value=""
+          className="bg-white text-gray-500 dark:bg-slate-900 dark:text-slate-100"
+        >
+          {placeholder}
+        </option>
 
         {options.map((option) => (
-          <option key={option.value} value={option.value}>
+          <option
+            key={option.value}
+            value={option.value}
+            className="bg-white text-gray-900 dark:bg-slate-900 dark:text-slate-100"
+          >
             {option.label}
           </option>
         ))}

@@ -5,7 +5,7 @@ function FormLabel({ name, label, required }: formLabelType) {
   return (
     <label
       htmlFor={name}
-      className="mb-1 text-[17px] font-light text-[#2d3142]"
+      className="mb-1 text-[17px] font-light text-[#2d3142] dark:text-slate-100"
     >
       {label}
 
