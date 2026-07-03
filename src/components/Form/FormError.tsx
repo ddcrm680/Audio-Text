@@ -11,5 +11,5 @@ export default function FormError({ name }: FormErrorProps) {
 
   if (!meta.touched && submitCount === 0) return null;
 
-  return <p className="mt-1 text-sm text-red-500">{meta.error}</p>;
+  return <p className="mt-[15px] text-sm text-red-500">{meta.error}</p>;
 }
