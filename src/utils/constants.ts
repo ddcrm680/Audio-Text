@@ -639,6 +639,7 @@ The packages of our exclusive services and products would definitely assist you 
   },
   Policy: {
     policyTitle: "Policy",
+    cookiesPolicyTitle: "Cookies Policy",
   },
 };
 export const PAYMENT_METHODS = [
