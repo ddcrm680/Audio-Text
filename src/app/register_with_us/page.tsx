@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 const RegisterWithUsPage = () => {
   return (
-    <div style={{ fontFamily: "Aileron Light" }}>
+    <div>
       <SectionBanner
         backgroundImage={URLs.registerBg}
         title={Constant.RESELLERS.registerTitle}

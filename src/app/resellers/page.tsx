@@ -30,7 +30,7 @@ export const metadata: Metadata = {
 
 const ResellersPage = () => {
   return (
-    <div style={{ fontFamily: "Aileron Light" }}>
+    <div>
       <SectionBanner
         title={Constant.RESELLERS.title}
         subtitle={Constant.RESELLERS.subTitle}

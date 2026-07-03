@@ -17,12 +17,12 @@ export const metadata: Metadata = {
 
 const AboutPage = () => {
   return (
-    <div style={{ fontFamily: "Aileron Light" }}>
+    <div>
       <SectionBanner
         title={Constant.ABOUT.title}
         subtitle={Constant.ABOUT.subTitle}
       />
-      <div className="px-5">
+      <div className="px-5" style={{ fontFamily: "Aileron Light" }}>
         <div className="mx-auto max-w-6xl py-[70px]">
           <div className="grid gap-[30px] md:grid-cols-[2fr_1fr]">
             <div className="grid grid-cols-1 gap-[30px]">

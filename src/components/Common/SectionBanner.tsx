@@ -7,7 +7,7 @@ export default function SectionBanner({
 }: SectionBannerProps) {
   return (
     <section
-      className="bg-[#48AFDB] bg-cover bg-center bg-no-repeat py-[23px] md:py-10"
+      className={`${backgroundImage ? "" : "bg-[#48AFDB]"} bg-cover bg-center bg-no-repeat py-[23px] md:py-10`}
       style={{
         fontFamily: "Aileron UltraLight",
         backgroundImage: backgroundImage
