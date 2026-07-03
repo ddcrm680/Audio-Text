@@ -135,46 +135,48 @@ const ResellersPage = () => {
               Constant.RESELLERS.superResellerDescPoint8,
             ]}
           />
-          <section
-            className={`mx-6 mt-[35px] bg-[#f0f4f7] px-8 py-10 dark:bg-slate-800`}
-          >
-            <div className="flex flex-col items-start justify-between gap-8 lg:flex-row lg:items-center">
-              <div className="flex items-start gap-6 md:items-center">
-                <div className="flex h-[60px] w-[60px] shrink-0 items-center justify-center rounded-full bg-[#48AFDB] text-white sm:h-[100px] sm:w-[100px]">
-                  <Flag
-                    strokeWidth={1.5}
-                    className="h-[30px] w-[30px] -rotate-[15deg] fill-[#3d3f56] text-[#3d3f56] sm:h-[50px] sm:w-[50px]"
-                  />
-                </div>
-                <div>
-                  <h2 className="text-4xl font-light text-[#48AFDB] uppercase">
-                    {Constant.RESELLERS.wantToBeReseller}
-                  </h2>
+          <div className="px-6">
+            <section
+              className={`mt-[35px] bg-[#f0f4f7] px-8 py-10 dark:bg-slate-800`}
+            >
+              <div className="flex flex-col items-start justify-between gap-8 lg:flex-row lg:items-center">
+                <div className="flex items-start gap-6 md:items-center">
+                  <div className="flex h-[60px] w-[60px] shrink-0 items-center justify-center rounded-full bg-[#48AFDB] text-white sm:h-[100px] sm:w-[100px]">
+                    <Flag
+                      strokeWidth={1.5}
+                      className="h-[30px] w-[30px] -rotate-[15deg] fill-[#3d3f56] text-[#3d3f56] sm:h-[50px] sm:w-[50px]"
+                    />
+                  </div>
+                  <div>
+                    <h2 className="text-4xl font-light text-[#48AFDB] uppercase">
+                      {Constant.RESELLERS.wantToBeReseller}
+                    </h2>
 
-                  <p className='mt-5 hidden max-w-2xl font-["Aileron_Light"] text-[17px] leading-8 sm:inline'>
-                    {Constant.RESELLERS.wantToBeResellerDesc}
-                  </p>
+                    <p className='mt-5 hidden max-w-2xl font-["Aileron_Light"] text-[17px] leading-8 sm:inline'>
+                      {Constant.RESELLERS.wantToBeResellerDesc}
+                    </p>
+                  </div>
+                </div>
+                <p className='inline max-w-2xl font-["Aileron_Light"] text-[17px] leading-8 sm:hidden'>
+                  {Constant.RESELLERS.wantToBeResellerDesc}
+                </p>
+                <div className="flex w-full items-end justify-end lg:w-auto">
+                  <Link
+                    href="/register_with_us"
+                    className="flex w-full shrink-0 items-center justify-center gap-3 bg-[#48AFDB] px-8 py-4 text-white transition hover:bg-[#39a6d6] md:w-auto"
+                  >
+                    <span className="flex h-7 w-7 items-center justify-center rounded-full border border-white">
+                      <ChevronRight size={14} />
+                    </span>
+
+                    <span className="text-[21px] leading-[1.8] font-light whitespace-nowrap text-white dark:text-gray-300">
+                      {Constant.RESELLERS.registerNow}
+                    </span>
+                  </Link>
                 </div>
               </div>
-              <p className='inline max-w-2xl font-["Aileron_Light"] text-[17px] leading-8 sm:hidden'>
-                {Constant.RESELLERS.wantToBeResellerDesc}
-              </p>
-              <div className="flex w-full items-end justify-end lg:w-auto">
-                <Link
-                  href="/register_with_us"
-                  className="flex w-full shrink-0 items-center justify-center gap-3 bg-[#48AFDB] px-8 py-4 text-white transition hover:bg-[#39a6d6] md:w-auto"
-                >
-                  <span className="flex h-7 w-7 items-center justify-center rounded-full border border-white">
-                    <ChevronRight size={14} />
-                  </span>
-
-                  <span className="text-[21px] leading-[1.8] font-light whitespace-nowrap text-white dark:text-gray-300">
-                    {Constant.RESELLERS.registerNow}
-                  </span>
-                </Link>
-              </div>
-            </div>
-          </section>
+            </section>
+          </div>
         </div>
       </div>
     </div>
