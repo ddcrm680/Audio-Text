@@ -22,6 +22,35 @@ export const URLs = {
   registerBg:
     "https://www.audiotextsolutions.com/wp-content/themes/codeus/images/backgrounds/title/01.jpg",
 };
+export const registerInitialValues = {
+  // Personal Details
+  firstName: "",
+  lastName: "",
+  dateOfBirth: null,
+  street: "",
+  country: "",
+  state: "",
+  city: "",
+  zipCode: "",
+
+  // Contact Details
+  contactNo: "",
+  email: "",
+  skypeId: "",
+  otherImId: "",
+
+  // Bank Details
+  beneficiaryName: "",
+  bankName: "",
+  beneficiaryAddress: "",
+  bankAddress: "",
+  accountNumber: "",
+  swiftCode: "",
+  additionalInformation: "",
+  uploadId: [],
+  paymentMethod: "bank_transfer",
+  captcha: "",
+};
 export const FOOTER_LINKS = [
   {
     title: "Services",
@@ -534,5 +563,24 @@ The packages of our exclusive services and products would definitely assist you 
     registerNow: "Register Now",
     registerTitle: "Register With Us",
     registerDesc: "Expand your horizons with us",
+    submit: "Submit",
   },
 };
+export const PAYMENT_METHODS = [
+  {
+    label: "Bank Transfer",
+    value: "bank_transfer",
+  },
+  {
+    label: "PayPal",
+    value: "paypal",
+  },
+  {
+    label: "Western Union / MoneyGram",
+    value: "western_union_moneygram",
+  },
+  {
+    label: "Credit Card",
+    value: "credit_card",
+  },
+];

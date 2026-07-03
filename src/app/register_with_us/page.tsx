@@ -1,34 +1,15 @@
-import AboutSection from "@/components/About/AboutSection";
-import AboutSectionOne from "@/components/About/AboutSectionOne";
-import AboutSectionTwo from "@/components/About/AboutSectionTwo";
-import SkillsChart from "@/components/About/SkillChart";
-import Breadcrumb from "@/components/Common/Breadcrumb";
 import SectionBanner from "@/components/Common/SectionBanner";
-import ContentSection from "@/components/ContentSection";
-import ServiceCard from "@/components/Hero/ServiceCard";
-import ResellerBenefits from "@/components/resellers/ResellerBenefits";
-import { Colors } from "@/utils/color";
-import { Constant, RESELLER_FEATURES, SERVICES, URLs } from "@/utils/constants";
-import {
-  Bookmark,
-  ChevronRight,
-  Crosshair,
-  Eye,
-  Flag,
-  Rocket,
-  User,
-  Users,
-} from "lucide-react";
+import RegisterForm from "@/components/Register/RegisterForm";
+import { Constant, URLs } from "@/utils/constants";
 
 import { Metadata } from "next";
-import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Register with Us | Audio Text",
   // other metadata
 };
 
-const ResellersPage = () => {
+const RegisterWithUsPage = () => {
   return (
     <div style={{ fontFamily: "Aileron Light" }}>
       <SectionBanner
@@ -37,10 +18,21 @@ const ResellersPage = () => {
         subtitle={Constant.RESELLERS.registerDesc}
       />
       <div className="" style={{ fontFamily: "Aileron Light" }}>
-        <div className="mx-auto max-w-6xl py-[70px]"></div>
+        <div className="mx-auto max-w-6xl py-[70px]">
+          <div className="mt-[15px] mb-[35px] text-center">
+            <h2 className="text-[24px] leading-[46px] font-light text-[#48AFDB] uppercase">
+              Register With Us
+            </h2>
+
+            <div className="mx-auto h-[2px] w-[100px] bg-[#1bb998]" />
+          </div>
+          <div className="px-6">
+            <RegisterForm></RegisterForm>
+          </div>
+        </div>
       </div>
     </div>
   );
 };
 
-export default ResellersPage;
+export default RegisterWithUsPage;
