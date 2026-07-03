@@ -75,7 +75,7 @@ export default function ResellerBenefits({
       </div>
 
       <motion.h5
-        variants={descriptionVariants}
+        variants={itemVariants}
         initial={animateDescription ? "hidden" : false}
         whileInView={animateDescription ? "visible" : undefined}
         viewport={{ once: true, amount: 0.3 }}
