@@ -13,9 +13,12 @@ export default function FeatureSection({
   imageAlt,
   imagePosition = "right",
   layout = "horizontal",
+  descClassName,
   buttonText,
   buttonLink,
+  imageContainerClassName,
   padding = "py-5",
+  titleClassName,
   className = "",
   childPadding = "px-6",
 }: FeatureSectionProps) {
@@ -38,19 +41,23 @@ export default function FeatureSection({
           <div
             className={`${layout === "vertical" ? "mx-auto mb-[35px]" : "mx-auto h-full"} flex w-[40%] items-center justify-center`}
           >
-            <div className="flex h-[103px] w-[103px] items-center justify-center rounded-full border border-gray-200">
+            <div
+              className={`flex h-[103px] w-[103px] items-center justify-center rounded-full border border-gray-200 ${imageContainerClassName}`}
+            >
               <div className="text-primary-blue">{icon}</div>
             </div>
           </div>
 
           <div>
             <h2
-              className={`mb-5 ${layout === "vertical" ? "text-center" : ""} text-primary-blue text-4xl leading-[46px] font-light uppercase md:text-4xl dark:text-sky-400`}
+              className={`mb-5 ${layout === "vertical" ? "text-center" : ""} text-primary-blue text-4xl leading-[46px] font-light uppercase md:text-4xl dark:text-sky-400 ${titleClassName}`}
             >
               {title}
             </h2>
 
-            <div className="text-[15px] leading-[1.8] font-light text-black dark:text-gray-300">
+            <div
+              className={`text-[15px] leading-[1.8] font-light text-black dark:text-gray-300 ${descClassName}`}
+            >
               {description}
             </div>
 

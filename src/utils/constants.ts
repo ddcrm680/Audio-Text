@@ -2,9 +2,12 @@ import SlideFive from "@/components/LandingScreeen/SlideFive";
 import SlideFour from "@/components/LandingScreeen/SlideFour";
 import SlideOne from "@/components/LandingScreeen/SlideOne";
 import SlideThree from "@/components/LandingScreeen/SlideThree";
+import discover from "../../public/images/payment/discover.png";
 import SlideTwo from "@/components/LandingScreeen/SlideTwo";
 import {
+  Banknote,
   CreditCard,
+  CreditCardIcon,
   Gift,
   Headphones,
   LogIn,
@@ -14,6 +17,7 @@ import {
   Smartphone,
 } from "lucide-react";
 import { Colors } from "./color";
+import { PaymentMethod } from "@/types/payment";
 
 export const API_ENDPOINTS = {
   TEST: "/api/test",
@@ -648,7 +652,42 @@ The packages of our exclusive services and products would definitely assist you 
     ourZealousTeamDesc:
       "Audio Text Solutions Pte. Ltd. comprises of various teams like Sales, Technical Support, Finance, and Customer Relationship Management. Highly qualified professionals are the sole strength of all these teams who persistently endeavor to take the reputation of the organization to another height. The foremost focus of our teams is into satisfying the expectations of our clients in every possible extent.",
   },
+  Payment: {
+    title: "Payment",
+    desc: "Customization of your payment was never so easy!",
+    paymentTerms: "Payment Terms",
+    paymentDesc:
+      "ATS introduces two types of payment terms namely, 1/3 Daily Payment and 7/3 Weekly Payment. You may choose the one that suits you. We have devised an automatic billing system which generates your bills and processes your payments exactly as per the payment term you’ve picked.",
+    paymentSubDesc:
+      "Please note that the minimal amount for payment should be 300 USD/EUR.",
+    dailyPayment: "1/3 Daily Payment",
+    dailyPaymentDesc:
+      "We generate and deliver the invoices regularly in accordance with the minutes delivered to you on the previous day. The respective payment is released on the next day. It takes two working days to get the payment processed.",
+    weeklyPayment: "7/3 Weekly Payment",
+    weeklyPaymentDesc:
+      "We provide you an invoice every Monday for the amount you delivered for the entire previous week (Mon-Sun). The payment is released next day to your account and can be received within 1-3 working days, after the status of your payment is updated to paid.",
+    paymentMethods: "PAYMENT METHODS",
+    paymentMethodDesc:
+      "With ATS, you get various payment methods to choose from. These methods include MoneyGram, Western Union, and Bank Wire. You don’t have to worry about the smooth processing of your payment. We have a dedicated finance team to carry out your transaction cycle with immense effectiveness.",
+  },
 };
+export const PAYMENT_METHOD: PaymentMethod[] = [
+  {
+    title: "MoneyGram",
+    icon: Banknote,
+    desc: "It can be used in case you don’t have the bank account. You can receive the payment from any part of the world.",
+  },
+  {
+    icon: CreditCard,
+    title: "Western Union",
+    desc: "It can be used in case you don’t have the bank account. You can receive the payment from any part of the world.",
+  },
+  {
+    image: discover,
+    title: "Bank Wire",
+    desc: "Bank Wire transfer is very suitable if you have a bank account, depending upon the location and capabilities of your bank.",
+  },
+];
 
 export const TEAM_MEMBERS = [
   {

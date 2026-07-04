@@ -5,7 +5,9 @@ export interface FeatureSectionProps {
   description: ReactNode;
   childPadding?: string;
   icon: ReactNode;
-
+  descClassName?: string;
+  titleClassName?: string;
+  imageContainerClassName?: string;
   image?: string;
   padding?: string;
   imageAlt?: string;
