@@ -1,6 +1,7 @@
 import Breadcrumb from "@/components/Common/Breadcrumb";
 import SectionBanner from "@/components/Common/SectionBanner";
 import Contact from "@/components/Contact";
+import MapWrapper from "@/components/Contact/MapWrapper";
 // import Map from "@/components/Contact/Map";
 import ContentSection from "@/components/ContentSection";
 import { Constant, ContactList } from "@/utils/constants";
@@ -15,12 +16,7 @@ export const metadata: Metadata = {
   title: "Contact | Audio Text",
   // other metadata
 };
-const Map = dynamic(() => import("@/components/Contact/Map"), {
-  ssr: true,
-  loading: () => (
-    <div className="h-[180px] w-full animate-pulse rounded-lg bg-gray-200 md:h-[500px] dark:bg-slate-800" />
-  ),
-});
+
 const ContactPage = () => {
   return (
     <>
@@ -59,7 +55,7 @@ const ContactPage = () => {
               );
             })}
           </div>
-          <Map />
+          <MapWrapper />
           <ContentSection
             bg=""
             subParentClassName="!px-0 mt-[32px] "
