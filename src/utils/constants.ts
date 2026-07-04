@@ -670,6 +670,48 @@ The packages of our exclusive services and products would definitely assist you 
     paymentMethodDesc:
       "With ATS, you get various payment methods to choose from. These methods include MoneyGram, Western Union, and Bank Wire. You don’t have to worry about the smooth processing of your payment. We have a dedicated finance team to carry out your transaction cycle with immense effectiveness.",
   },
+  Career: {
+    title: "Careers",
+
+    joinUsTitle: "JOIN US",
+    joinUsDesc:
+      "Are you worrying about your career? Come and join ATS for an absolutely distinct career prospective. We have numerous opportunities for talented professionals as well as for freshers. At ATS, we've maintained various teams like Sales, Finance, Technical Support, and Carrier Relationship Management. You just need to click on the 'Current Job Openings' button provided below to see the validation of your candidature. If you find yourself suitable for any job, just click on 'Apply Now' and send your latest resume to us. If you fit in our expectations, we shall contact you for further rounds of selection procedure.",
+
+    openingTitle: "CURRENT OPENINGS IN ATS",
+
+    profile: "Profile : Laravel Developer",
+    experience: "1 - 2 Years",
+    location: "Noida Sec. 2",
+    salary: "Up to 3 LPA",
+    contactEmail: "hr@audiotextsolutions.com",
+    companyWebsite: "www.audiotextsolutions.com",
+
+    responsibilityTitle: "Roles & Responsibilities:",
+
+    responsibilities: [
+      "Must have worked on more than 2-3 different projects on Laravel.",
+      "Must have good skills in Core PHP, MySQL, jQuery, JavaScript, AJAX, API development.",
+      "Hands-on experience with SQL schema design, SOLID principles, REST API design.",
+      "Additional knowledge of CodeIgniter/any other Frameworks, HTML5, CSS, Vue JS/Angular JS, etc. will be a plus point.",
+      "MySQL profiling and query optimization.",
+      "Creative and efficient problem solver.",
+    ],
+
+    note: "Only work from office/No work from home.",
+
+    sisterCompanyTitle: "Sister concern companies:",
+
+    sisterCompanies: [
+      "https://www.detailingdevils.com/",
+      "https://www.facebook.com/DetailingDevils/",
+      "https://instagram.com/detailingdevils?igshid=YmMyMTA2M2Y=",
+      "https://www.nutsandboltz.in/",
+      "http://www.lumilor.co.in/",
+      "https://www.facebook.com/LumiLorIndia/",
+      "https://instagram.com/lumilorindia?igshid=YmMyMTA2M2Y=",
+      "https://instagram.com/devilscustom?igshid=YmMyMTA2M2Y=",
+    ],
+  },
 };
 export const PAYMENT_METHOD: PaymentMethod[] = [
   {
