@@ -641,7 +641,65 @@ The packages of our exclusive services and products would definitely assist you 
     policyTitle: "Policy",
     cookiesPolicyTitle: "Cookies Policy",
   },
+  Team: {
+    title: "Team",
+    desc: "Our team is our sole strength",
+    ourZealousTeamTitle: "Our Zealous Team",
+    ourZealousTeamDesc:
+      "Audio Text Solutions Pte. Ltd. comprises of various teams like Sales, Technical Support, Finance, and Customer Relationship Management. Highly qualified professionals are the sole strength of all these teams who persistently endeavor to take the reputation of the organization to another height. The foremost focus of our teams is into satisfying the expectations of our clients in every possible extent.",
+  },
 };
+
+export const TEAM_MEMBERS = [
+  {
+    image:
+      "https://www.audiotextsolutions.com/wp-content/uploads/2015/08/asean_Sales.jpg",
+    title: "SALES",
+    points: [
+      "Dedicated Account Manager",
+      "Tranquil Registration Process",
+      "24x7x365 Customized Expert Advice",
+    ],
+    skype: "skype:live:sales.audiotext_1",
+    email: "mailto:sales.audiotextsoltions.com",
+  },
+  {
+    image:
+      "https://www.audiotextsolutions.com/wp-content/uploads/2015/08/asean_CRM.jpg",
+    title: "CRM",
+    points: [
+      "Excellent Portfolio with 251 Countries",
+      "5400+ Access Points",
+      "More than 5 Lakh Numbers",
+    ],
+    skype: "support:sales.audiotext?chat",
+    email: "mailto:support@audiotextsoltions.com",
+  },
+  {
+    image:
+      "https://www.audiotextsolutions.com/wp-content/uploads/2015/09/tech_support.jpg",
+    title: "TECH SUPPORT",
+    points: [
+      "Timely Conveyed Support",
+      "24x7x365 Support for Hosting Numbers",
+      "24x7x365 Technical Assistance",
+    ],
+    skype: "skype:live:sales.audiotext_1",
+    email: "mailto:support@audiotextsoltions.com",
+  },
+  {
+    image:
+      "https://www.audiotextsolutions.com/wp-content/uploads/2015/09/Finance_asian.jpg",
+    title: "FINANCE",
+    points: [
+      "Secured Online Payment Service",
+      "Flexible Payment Options",
+      "24x7x365 Chat Support for Billing Queries",
+    ],
+    skype: "support@audiotextsolutions.com",
+    email: "mailto:finance@audiotextsoltions.com",
+  },
+];
 export const PAYMENT_METHODS = [
   {
     label: "Bank Transfer",

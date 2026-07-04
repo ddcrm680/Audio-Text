@@ -7,6 +7,14 @@ const nextConfig = {
         hostname: "cdn.sanity.io",
         port: "",
       },
+      {
+        protocol: "https",
+        hostname: "new.audiotextsolutions.com",
+      },
+      {
+        protocol: "https",
+        hostname: "www.audiotextsolutions.com",
+      },
     ],
   },
 };
