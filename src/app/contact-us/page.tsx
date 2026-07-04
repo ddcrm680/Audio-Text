@@ -1,12 +1,13 @@
 import Breadcrumb from "@/components/Common/Breadcrumb";
 import SectionBanner from "@/components/Common/SectionBanner";
 import Contact from "@/components/Contact";
-import Map from "@/components/Contact/Map";
+// import Map from "@/components/Contact/Map";
 import ContentSection from "@/components/ContentSection";
 import { Constant, ContactList } from "@/utils/constants";
 import { Mail, MapPin } from "lucide-react";
 
 import { Metadata } from "next";
+import dynamic from "next/dynamic";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -14,7 +15,12 @@ export const metadata: Metadata = {
   title: "Contact | Audio Text",
   // other metadata
 };
-
+const Map = dynamic(() => import("@/components/Contact/Map"), {
+  ssr: true,
+  loading: () => (
+    <div className="h-[180px] w-full animate-pulse rounded-lg bg-gray-200 md:h-[500px] dark:bg-slate-800" />
+  ),
+});
 const ContactPage = () => {
   return (
     <>
