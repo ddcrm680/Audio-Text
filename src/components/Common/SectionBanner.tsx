@@ -7,7 +7,7 @@ export default function SectionBanner({
 }: SectionBannerProps) {
   return (
     <section
-      className={`${backgroundImage ? "" : "bg-primary-blue"} bg-cover bg-center bg-no-repeat py-[23px] md:py-10`}
+      className={`${backgroundImage ? "" : "bg-primary-blue"} bg-cover bg-center bg-no-repeat pt-[23px] pb-[26px]`}
       style={{
         fontFamily: "Aileron UltraLight",
         backgroundImage: backgroundImage
@@ -16,14 +16,10 @@ export default function SectionBanner({
       }}
     >
       <div className="mx-auto flex max-w-7xl flex-col items-center justify-center px-4 text-center">
-        {title && (
-          <h1 className="text-[44px] font-bold text-white md:text-5xl">
-            {title}
-          </h1>
-        )}
+        {title && <h1 className="text-[58px] font-bold text-white">{title}</h1>}
 
         {subtitle && (
-          <h2 className="mt-[11px] text-4xl font-bold text-[#FFF200]">
+          <h2 className="mt-[11px] mb-[20px] text-4xl font-bold text-[#FFF200]">
             {subtitle}
           </h2>
         )}
