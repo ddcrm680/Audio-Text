@@ -40,7 +40,7 @@ export default function ContentSection({
             )}
 
             <h2
-              className={`text-primary-blue text-4xl leading-[46px] font-light whitespace-nowrap uppercase md:text-4xl dark:text-sky-400`}
+              className={`text-primary-blue text-4xl leading-[46px] font-light uppercase md:text-4xl xl:whitespace-nowrap dark:text-sky-400`}
             >
               {title}
             </h2>
