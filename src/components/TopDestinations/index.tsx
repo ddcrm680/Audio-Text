@@ -28,7 +28,7 @@ export default function TopDestinations() {
   return (
     <section className="bg-[#e8ecef] py-16 dark:bg-slate-900">
       <div className="mx-auto max-w-7xl px-4">
-        <h2 className="mb-10 text-center text-5xl text-[#48AFDB] uppercase">
+        <h2 className="text-primary-blue mb-10 text-center text-5xl uppercase">
           Top Destinations
         </h2>
 
@@ -36,7 +36,7 @@ export default function TopDestinations() {
           {/* Previous */}
           <button
             onClick={scrollPrev}
-            className="group absolute top-1/2 left-[-70px] z-20 hidden h-16 w-16 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full border border-[#48AFDB] lg:flex"
+            className="group border-primary-blue absolute top-1/2 left-[-70px] z-20 hidden h-16 w-16 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full border lg:flex"
           >
             <ChevronLeft className="transition-transform duration-300 group-hover:-translate-x-2" />
           </button>
@@ -44,7 +44,7 @@ export default function TopDestinations() {
           {/* Next */}
           <button
             onClick={scrollNext}
-            className="group absolute top-1/2 right-[-70px] z-20 hidden h-16 w-16 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full border border-[#48AFDB] lg:flex"
+            className="group border-primary-blue absolute top-1/2 right-[-70px] z-20 hidden h-16 w-16 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full border lg:flex"
           >
             <ChevronRight className="transition-transform duration-300 group-hover:translate-x-2" />
           </button>
@@ -74,14 +74,14 @@ export default function TopDestinations() {
           <div className="mt-8 flex justify-center gap-5 lg:hidden">
             <button
               onClick={scrollPrev}
-              className="group flex h-14 w-14 items-center justify-center rounded-full border border-[#48AFDB]"
+              className="group border-primary-blue flex h-14 w-14 items-center justify-center rounded-full border"
             >
               <ChevronLeft className="transition-transform duration-300 group-hover:-translate-x-1" />
             </button>
 
             <button
               onClick={scrollNext}
-              className="group flex h-14 w-14 items-center justify-center rounded-full border border-[#48AFDB]"
+              className="group border-primary-blue flex h-14 w-14 items-center justify-center rounded-full border"
             >
               <ChevronRight className="transition-transform duration-300 group-hover:translate-x-1" />
             </button>

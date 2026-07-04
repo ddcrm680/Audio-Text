@@ -26,7 +26,7 @@ export default function GetToKnowUs() {
             and currently, we are one of the{" "}
             <Link
               href="/services"
-              className="font-medium text-[#48AFDB] hover:underline"
+              className="text-primary-blue font-medium hover:underline"
             >
               best premium rate numbers providers
             </Link>
@@ -37,14 +37,14 @@ export default function GetToKnowUs() {
             We strive to provide you{" "}
             <Link
               href="/services"
-              className="font-medium text-[#48AFDB] hover:underline"
+              className="text-primary-blue font-medium hover:underline"
             >
               domestic premium rate numbers
             </Link>{" "}
             as well as{" "}
             <Link
               href="/services"
-              className="font-medium text-[#48AFDB] hover:underline"
+              className="text-primary-blue font-medium hover:underline"
             >
               international premium numbers
             </Link>{" "}
@@ -56,14 +56,14 @@ export default function GetToKnowUs() {
             support. We provide PRN (IVR & DPRN),{" "}
             <Link
               href="/#"
-              className="font-medium text-[#48AFDB] hover:underline"
+              className="text-primary-blue font-medium hover:underline"
             >
               IVR Hosting
             </Link>
             , SIP on premium rate calls and other{" "}
             <Link
               href="/services"
-              className="font-medium text-[#48AFDB] hover:underline"
+              className="text-primary-blue font-medium hover:underline"
             >
               premium rate services
             </Link>{" "}

@@ -134,8 +134,8 @@ const Header = () => {
                           href={menuItem.path}
                           className={`block w-full px-[25px] py-[7px] text-left text-[15px] font-light tracking-[0.02em] uppercase transition-colors duration-300 md:w-auto md:px-0 md:py-8 lg:px-5 lg:py-[14px] ${
                             usePathName === menuItem.path
-                              ? "text-[#48AFDB] dark:text-white"
-                              : "text-black hover:text-[#48AFDB] dark:text-white/70 dark:hover:text-white"
+                              ? "text-primary-blue dark:text-white"
+                              : "hover:text-primary-blue text-black dark:text-white/70 dark:hover:text-white"
                           }`}
                         >
                           {menuItem.title}
@@ -146,8 +146,8 @@ const Header = () => {
                             onClick={() => handleSubmenu(index)}
                             className={`flex w-full items-center justify-between px-[25px] py-[7px] text-[15px] font-light tracking-[0.02em] uppercase transition-colors duration-300 md:w-auto md:px-0 md:py-8 lg:px-5 lg:py-[14px] ${
                               usePathName === menuItem.path
-                                ? "text-[#48AFDB]"
-                                : "text-black hover:text-[#48AFDB] dark:text-white/70"
+                                ? "text-primary-blue"
+                                : "hover:text-primary-blue text-black dark:text-white/70"
                             }`}
                             // className="text-dark group-hover:text-primary flex cursor-pointer items-center justify-between py-2 text-base lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 dark:text-white/70 dark:group-hover:text-white"
                           >
@@ -188,8 +188,8 @@ const Header = () => {
                                 href={submenuItem.path}
                                 className={`block border-l-2 border-transparent px-8 py-3 text-[14px] font-light transition-all duration-200 ${
                                   usePathName === submenuItem.path
-                                    ? "border-[#48AFDB] bg-[#eef9fe] text-[#48AFDB] dark:bg-[#1f2937]"
-                                    : "text-black hover:border-[#48AFDB] hover:bg-[#f4fbff] hover:text-[#48AFDB] dark:text-white/80 dark:hover:bg-[#2a3142] dark:hover:text-[#48AFDB]"
+                                    ? "border-primary-blue text-primary-blue bg-[#eef9fe] dark:bg-[#1f2937]"
+                                    : "hover:border-primary-blue hover:text-primary-blue dark:hover:text-primary-blue text-black hover:bg-[#f4fbff] dark:text-white/80 dark:hover:bg-[#2a3142]"
                                 }`}
                               >
                                 {submenuItem.title}

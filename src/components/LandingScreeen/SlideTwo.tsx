@@ -31,19 +31,19 @@ export default function SlideTwo() {
       <motion.div
         animate={{ y: [-8, 8, -8] }}
         transition={{ duration: 5, repeat: Infinity }}
-        className="absolute top-[35px] left-[62%] h-4 w-4 rounded-full bg-[#48AFDB]"
+        className="bg-primary-blue absolute top-[35px] left-[62%] h-4 w-4 rounded-full"
       />
 
       <motion.div
         animate={{ y: [8, -8, 8] }}
         transition={{ duration: 6, repeat: Infinity }}
-        className="absolute top-[120px] left-[64%] h-2.5 w-2.5 rounded-full bg-[#48AFDB]"
+        className="bg-primary-blue absolute top-[120px] left-[64%] h-2.5 w-2.5 rounded-full"
       />
 
       <motion.div
         animate={{ y: [-10, 10, -10] }}
         transition={{ duration: 4, repeat: Infinity }}
-        className="absolute top-[250px] right-[14%] h-7 w-7 rounded-full bg-[#48AFDB]"
+        className="bg-primary-blue absolute top-[250px] right-[14%] h-7 w-7 rounded-full"
       />
 
       <motion.div
@@ -80,7 +80,7 @@ export default function SlideTwo() {
               stiffness: 70,
               damping: 18,
             }}
-            className="text-[28px] leading-none font-extralight text-[#48AFDB] md:text-5xl lg:text-[80px]"
+            className="text-primary-blue text-[28px] leading-none font-extralight md:text-5xl lg:text-[80px]"
           >
             Be Our Reseller
           </motion.h2>
@@ -129,7 +129,7 @@ export default function SlideTwo() {
             Now creating a reseller account is
             <br />
             absolutely
-            <span className="text-[#48AFDB]"> Hassle-Free!</span>
+            <span className="text-primary-blue"> Hassle-Free!</span>
           </motion.p>
 
           <motion.button
@@ -152,7 +152,7 @@ export default function SlideTwo() {
             whileTap={{
               scale: 0.95,
             }}
-            className="mt-4 cursor-pointer rounded-full bg-[#48AFDB] px-[12px] py-[6px] text-lg font-light text-white transition hover:bg-sky-500 lg:mt-2"
+            className="bg-primary-blue mt-4 cursor-pointer rounded-full px-[12px] py-[6px] text-lg font-light text-white transition hover:bg-sky-500 lg:mt-2"
           >
             Register Now
           </motion.button>

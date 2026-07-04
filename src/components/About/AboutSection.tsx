@@ -16,7 +16,7 @@ export default function AboutSection({
           <Icon className="h-6 w-6 text-white" strokeWidth={2} />
         </div>
 
-        <h2 className="text-4xl text-[#48AFDB] uppercase">{title}</h2>
+        <h2 className="text-primary-blue text-4xl uppercase">{title}</h2>
       </div>
 
       {typeof description === "string" ? (

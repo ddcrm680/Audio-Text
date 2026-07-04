@@ -223,7 +223,7 @@ export default function SlideFive() {
       <motion.div
         animate={{ y: [-8, 8, -8] }}
         transition={{ duration: 5, repeat: Infinity }}
-        className="absolute top-[18px] left-[63%] h-4 w-4 rounded-full bg-[#48AFDB]"
+        className="bg-primary-blue absolute top-[18px] left-[63%] h-4 w-4 rounded-full"
       />
       <motion.div
         animate={{ y: [10, -10, 10] }}
@@ -233,7 +233,7 @@ export default function SlideFive() {
       <motion.div
         animate={{ y: [-8, 8, -8] }}
         transition={{ duration: 6, repeat: Infinity }}
-        className="absolute bottom-[150px] left-[68%] h-3 w-3 rounded-full bg-[#48AFDB]"
+        className="bg-primary-blue absolute bottom-[150px] left-[68%] h-3 w-3 rounded-full"
       />
       {/* Right Content */}
       <motion.div className="absolute top-1/2 left-1/2 z-20 flex w-[90%] -translate-x-1/2 -translate-y-1/2 flex-col items-center text-center lg:top-[20%] lg:right-[15%] lg:left-auto lg:w-auto lg:translate-x-0 lg:translate-y-0 lg:items-end">

@@ -51,7 +51,7 @@ const ResellersPage = () => {
 
                   <Link
                     href={Constant.RESELLERS.beOurSellerDesc1.linkHref}
-                    className="text-[#48AFDB] hover:text-[#2b98c7]"
+                    className="text-primary-blue hover:text-[#2b98c7]"
                   >
                     {Constant.RESELLERS.beOurSellerDesc1.linkText}
                   </Link>
@@ -63,7 +63,7 @@ const ResellersPage = () => {
 
                   <Link
                     href={Constant.RESELLERS.beOurSellerDesc2.linkHref}
-                    className="text-[#48AFDB] hover:text-[#2b98c7]"
+                    className="text-primary-blue hover:text-[#2b98c7]"
                   >
                     {Constant.RESELLERS.beOurSellerDesc2.linkText}
                   </Link>
@@ -75,7 +75,7 @@ const ResellersPage = () => {
           />
           <div className="px-5 pb-[35px] md:p-0 md:pb-[35px]">
             <div className="flex items-center justify-center">
-              <h2 className="mb-[30px] text-center text-[25px] leading-snug font-light text-[#48AFDB] md:text-4xl lg:w-full dark:text-sky-400">
+              <h2 className="text-primary-blue mb-[30px] text-center text-[25px] leading-snug font-light md:text-4xl lg:w-full dark:text-sky-400">
                 {Constant.RESELLERS.featureTitle}
               </h2>
             </div>
@@ -86,7 +86,7 @@ const ResellersPage = () => {
                   {...feature}
                   title={
                     <h2
-                      className={`mb-[15px] text-4xl leading-[46px] font-light text-[#48AFDB] uppercase md:text-2xl dark:text-sky-400`}
+                      className={`text-primary-blue mb-[15px] text-4xl leading-[46px] font-light uppercase md:text-2xl dark:text-sky-400`}
                     >
                       {feature.title}
                     </h2>
@@ -96,11 +96,11 @@ const ResellersPage = () => {
                   enableHoverScale={false}
                   descClassName="text-[17px]"
                   parentClassName={"!cursor-default"}
-                  titleClassName={"!text-[#48AFDB]"}
+                  titleClassName={"!text-primary-blue"}
                   key={feature.title}
-                  iconClassName={"h-[60px] w-[60px] !text-[#48AFDB]"}
+                  iconClassName={"h-[60px] w-[60px] !text-primary-blue"}
                   imageContainerClassName={
-                    "w-[100px] h-[100px] !bg-white !border-[#48AFDB] border-[4px] !group-hover:scale-0"
+                    "w-[100px] h-[100px] !bg-white !border-primary-blue border-[4px] !group-hover:scale-0"
                   }
                 />
               ))}
@@ -137,18 +137,18 @@ const ResellersPage = () => {
           />
           <div className="px-6">
             <section
-              className={`mt-[35px] bg-[#f0f4f7] px-8 py-10 dark:bg-slate-800`}
+              className={`bg-registerBg mt-[35px] px-8 py-10 dark:bg-slate-800`}
             >
               <div className="flex flex-col items-start justify-between gap-8 lg:flex-row lg:items-center">
                 <div className="flex items-start gap-6 md:items-center">
-                  <div className="flex h-[60px] w-[60px] shrink-0 items-center justify-center rounded-full bg-[#48AFDB] text-white sm:h-[100px] sm:w-[100px]">
+                  <div className="bg-primary-blue flex h-[60px] w-[60px] shrink-0 items-center justify-center rounded-full text-white sm:h-[100px] sm:w-[100px]">
                     <Flag
                       strokeWidth={1.5}
                       className="h-[30px] w-[30px] -rotate-[15deg] fill-[#3d3f56] text-[#3d3f56] sm:h-[50px] sm:w-[50px]"
                     />
                   </div>
                   <div>
-                    <h2 className="text-4xl font-light text-[#48AFDB] uppercase">
+                    <h2 className="text-primary-blue text-4xl font-light uppercase">
                       {Constant.RESELLERS.wantToBeReseller}
                     </h2>
 
@@ -163,7 +163,7 @@ const ResellersPage = () => {
                 <div className="flex w-full items-end justify-end lg:w-auto">
                   <Link
                     href="/register_with_us"
-                    className="flex w-full shrink-0 items-center justify-center gap-3 bg-[#48AFDB] px-8 py-4 text-white transition hover:bg-[#39a6d6] md:w-auto"
+                    className="bg-primary-blue flex w-full shrink-0 items-center justify-center gap-3 px-8 py-4 text-white transition hover:bg-[#39a6d6] md:w-auto"
                   >
                     <span className="flex h-7 w-7 items-center justify-center rounded-full border border-white">
                       <ChevronRight size={14} />

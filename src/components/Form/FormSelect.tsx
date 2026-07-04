@@ -38,7 +38,7 @@ export default function FormSelect({
         {...field}
         id={name}
         disabled={disabled}
-        className={`mt-1 h-[42px] w-full rounded border border-[#d9d9d9] bg-white px-4 transition outline-none focus:border-[#48AFDB] dark:border-slate-500 dark:bg-slate-800 dark:text-slate-100 ${className}`}
+        className={`focus:border-primary-blue mt-1 h-[42px] w-full rounded border border-[#d9d9d9] bg-white px-4 transition outline-none dark:border-slate-500 dark:bg-slate-800 dark:text-slate-100 ${className}`}
       >
         <option
           value=""

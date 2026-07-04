@@ -62,13 +62,13 @@ export default function SlideThree() {
       <motion.div
         animate={{ y: [-8, 8, -8] }}
         transition={{ duration: 4, repeat: Infinity }}
-        className="absolute top-[200px] left-[50%] h-4 w-4 rounded-full bg-[#48AFDB]"
+        className="bg-primary-blue absolute top-[200px] left-[50%] h-4 w-4 rounded-full"
       />
 
       <motion.div
         animate={{ y: [10, -10, 10] }}
         transition={{ duration: 5, repeat: Infinity }}
-        className="absolute right-[18%] bottom-[110px] h-3 w-3 rounded-full bg-[#48AFDB]"
+        className="bg-primary-blue absolute right-[18%] bottom-[110px] h-3 w-3 rounded-full"
       />
       <div className="pointer-events-none absolute inset-x-0 top-0 z-1 h-10 bg-gradient-to-r from-red-300/59 via-cyan-300/59 to-lime-300/59 blur-xl" />
       {/* Content */}
@@ -99,7 +99,7 @@ export default function SlideThree() {
               stiffness: 70,
               damping: 18,
             }}
-            className="text-[28px] leading-none font-extralight text-[#48AFDB] md:text-[50px] xl:text-[74px]"
+            className="text-primary-blue text-[28px] leading-none font-extralight md:text-[50px] xl:text-[74px]"
           >
             Fast Payment Terms
           </motion.h2>
@@ -142,7 +142,7 @@ export default function SlideThree() {
               stiffness: 70,
               damping: 18,
             }}
-            className="mt-2 text-[20px] font-light text-[#48AFDB] xl:text-[28px]"
+            className="text-primary-blue mt-2 text-[20px] font-light xl:text-[28px]"
           >
             Making your payment your way!
           </motion.p>
@@ -166,7 +166,7 @@ export default function SlideThree() {
             className="mt-6 max-w-[620px] text-[20px] leading-snug font-light text-[#4b4b4b] xl:text-[26px] dark:text-white"
           >
             Now choose your payment term and get your payment processed in a{" "}
-            <span className="text-[#48AFDB]">Highly Protected</span> way.
+            <span className="text-primary-blue">Highly Protected</span> way.
           </motion.p>
         </motion.div>
 

@@ -44,7 +44,7 @@ export default function DestinationCard({
       />
       {/* Blue Overlay */}
       <div
-        className={`pointer-events-none absolute inset-0 bg-[#48AFDB]/40 transition-opacity duration-300 ${
+        className={`bg-primary-blue/40 pointer-events-none absolute inset-0 transition-opacity duration-300 ${
           open ? "opacity-100" : "opacity-0"
         }`}
       />

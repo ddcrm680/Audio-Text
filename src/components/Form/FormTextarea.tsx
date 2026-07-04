@@ -36,7 +36,7 @@ export default function FormTextarea({
         readOnly={readOnly}
         maxLength={maxLength}
         onChange={handleChange}
-        className={`mt-1 w-full rounded border border-[#d9d9d9] px-4 py-3 text-[16px] transition outline-none focus:border-[#48AFDB] ${className}`}
+        className={`focus:border-primary-blue mt-1 w-full rounded border border-[#d9d9d9] px-4 py-3 text-[16px] transition outline-none ${className}`}
       />
 
       <FormError name={name} />

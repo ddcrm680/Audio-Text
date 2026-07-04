@@ -15,12 +15,13 @@ import SlideFive from "../LandingScreeen/SlideFive";
 import LandingSlide from "../LandingScreeen";
 
 const Hero = () => {
-  // useEffect(() => {
-  //   async function test() {
-  //     const response = await getApi(API_ENDPOINTS.TEST);
-  //   }
-  //   test();
-  // });
+  useEffect(() => {
+    async function test() {
+      const response = await getApi(API_ENDPOINTS.TEST);
+      console.log(response, "response");
+    }
+    // test();
+  });
   return (
     <>
       <section

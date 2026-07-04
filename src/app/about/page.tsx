@@ -81,7 +81,7 @@ const AboutPage = () => {
         {/* Footer Message */}
         <div className="mx-auto max-w-5xl pt-[35px] pb-[70px] text-center">
           <h2
-            className="text-[36px] leading-[46px] font-light text-[#48AFDB] md:text-[38px]"
+            className="text-primary-blue text-[36px] leading-[46px] font-light md:text-[38px]"
             style={{ fontFamily: "Aileron Light" }}
           >
             {Constant.ABOUT.aboutFooterMessage}

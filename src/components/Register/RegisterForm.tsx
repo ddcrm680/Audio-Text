@@ -31,7 +31,7 @@ export default function RegisterForm() {
         <div className="flex w-full items-end justify-start lg:w-auto">
           <button
             type="submit"
-            className="flex w-full shrink-0 cursor-pointer items-center justify-center gap-3 bg-[#48AFDB] px-[25px] py-[14px] text-white transition hover:bg-[#39a6d6] md:w-auto"
+            className="bg-primary-blue flex w-full shrink-0 cursor-pointer items-center justify-center gap-3 px-[25px] py-[14px] text-white transition hover:bg-[#39a6d6] md:w-auto"
           >
             <span className="text-[19px] leading-[1.8] font-light whitespace-nowrap">
               {Constant.RESELLERS.submit}

@@ -174,17 +174,18 @@ export default function SlideOne() {
           className="mt-6 text-[14px] font-light text-white sm:text-lg lg:text-[33px] xl:-ml-[10%]"
         >
           <span className="inline lg:hidden">
-            A Giant <span className="text-[#48AFDB]">Telecom Partner</span> that
-            understands your <span className="text-[#48AFDB]">Business</span>{" "}
-            well Connecting the <span className="text-[#48AFDB]">World</span>{" "}
-            with highly acquiescent{" "}
-            <span className="text-[#48AFDB]">Premium Rate Numbers</span>
+            A Giant <span className="text-primary-blue">Telecom Partner</span>{" "}
+            that understands your{" "}
+            <span className="text-primary-blue">Business</span> well Connecting
+            the <span className="text-primary-blue">World</span> with highly
+            acquiescent{" "}
+            <span className="text-primary-blue">Premium Rate Numbers</span>
           </span>
 
           <span className="hidden lg:inline">
-            A Giant <span className="text-[#48AFDB]">Telecom Partner</span> that
-            understands your <span className="text-[#48AFDB]">Business</span>{" "}
-            well
+            A Giant <span className="text-primary-blue">Telecom Partner</span>{" "}
+            that understands your{" "}
+            <span className="text-primary-blue">Business</span> well
           </span>
         </motion.h2>
 
@@ -214,9 +215,9 @@ export default function SlideOne() {
           }}
           className="mt-5 hidden text-sm font-light text-white sm:text-base lg:inline lg:text-xl lg:text-[26px] xl:-ml-[5%]"
         >
-          Connecting the <span className="text-[#48AFDB]">World</span> with
+          Connecting the <span className="text-primary-blue">World</span> with
           highly acquiescent{" "}
-          <span className="text-[#48AFDB]">Premium Rate Numbers</span>
+          <span className="text-primary-blue">Premium Rate Numbers</span>
         </motion.p>
       </div>
     </section>

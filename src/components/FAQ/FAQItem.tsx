@@ -25,11 +25,11 @@ export default function FAQItem({
         onClick={() => setOpen(!open)}
         className="flex w-full cursor-pointer items-start gap-5 text-left md:items-center"
       >
-        <div className="flex h-[28px] w-[28px] shrink-0 items-center justify-center rounded-full bg-[#48AFDB] text-white">
+        <div className="bg-primary-blue flex h-[28px] w-[28px] shrink-0 items-center justify-center rounded-full text-white">
           {open ? <Minus size={15} /> : <Plus size={15} />}
         </div>
 
-        <h5 className="text-[21px] text-[#48AFDB] uppercase transition dark:text-sky-400">
+        <h5 className="text-primary-blue text-[21px] uppercase transition dark:text-sky-400">
           {number}. {question}
         </h5>
       </button>

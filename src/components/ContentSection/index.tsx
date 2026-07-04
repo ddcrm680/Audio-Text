@@ -30,12 +30,12 @@ export default function ContentSection({
         <div className="flex-2">
           <div className="mt-1 mb-5 flex items-start gap-4 md:items-center">
             {titleIcon && (
-              <div className="mt-2 flex h-[40px] w-[40px] shrink-0 items-center justify-center rounded-full bg-[#48AFDB] text-white md:mt-0">
+              <div className="bg-primary-blue mt-2 flex h-[40px] w-[40px] shrink-0 items-center justify-center rounded-full text-white md:mt-0">
                 {titleIcon}
               </div>
             )}
 
-            <h2 className="text-4xl leading-[46px] font-light text-[#48AFDB] uppercase md:text-4xl dark:text-sky-400">
+            <h2 className="text-primary-blue text-4xl leading-[46px] font-light uppercase md:text-4xl dark:text-sky-400">
               {title}
             </h2>
           </div>
@@ -47,7 +47,7 @@ export default function ContentSection({
           {buttonText && buttonLink && (
             <Link
               href={buttonLink}
-              className="mt-10 inline-flex items-center gap-4 bg-[#48AFDB] px-8 py-4 text-[18px] font-light text-white uppercase transition-all duration-300 hover:bg-[#3aa3d3]"
+              className="bg-primary-blue mt-10 inline-flex items-center gap-4 px-8 py-4 text-[18px] font-light text-white uppercase transition-all duration-300 hover:bg-[#3aa3d3]"
             >
               <span className="flex h-8 w-8 items-center justify-center rounded-full border border-white">
                 <ChevronRight size={22} strokeWidth={1.5} />

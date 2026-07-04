@@ -41,7 +41,7 @@ export default function ShareMenu({ share }: ShareMenuProps) {
   const [active, setActive] = useState(5);
 
   return (
-    <div className="flex h-[60px] bg-[#48AFDB]">
+    <div className="bg-primary-blue flex h-[60px]">
       {socials.map((item, index) => (
         <a
           key={index}

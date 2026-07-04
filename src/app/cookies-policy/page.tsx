@@ -100,7 +100,7 @@ const CookiesPolicyPage = () => {
               use them see our Cookie policy
               <Link
                 href="/cookies-policy/"
-                className="ml-1 font-medium text-[#48AFDB] hover:underline"
+                className="text-primary-blue ml-1 font-medium hover:underline"
               >
                 www.audiotextsolutions.com/cookies-policy
               </Link>
@@ -278,7 +278,7 @@ const CookiesPolicyPage = () => {
             Privacy Terms web page:
             <Link
               href="https://policies.google.com/privacy?hl=en"
-              className="ml-1 font-medium text-[#48AFDB] hover:underline"
+              className="text-primary-blue ml-1 font-medium hover:underline"
             >
               http://www.google.com/intl/en/policies/privacy/
             </Link>

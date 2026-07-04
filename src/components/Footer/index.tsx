@@ -43,7 +43,7 @@ const Footer = () => {
                 <a
                   href="https://twitter.com/audiotexts"
                   target="_blank"
-                  className="flex h-13 w-13 items-center justify-center rounded-full bg-[#707789] text-[#3f4253] transition hover:bg-[#48AFDB] hover:text-white"
+                  className="hover:bg-primary-blue flex h-13 w-13 items-center justify-center rounded-full bg-[#707789] text-[#3f4253] transition hover:text-white"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -75,7 +75,7 @@ const Footer = () => {
               <div className="space-y-[9px]">
                 <a
                   href="https://teams.microsoft.com/l/chat/0/0?users=support@audiotextsolutions.com"
-                  className="flex items-center gap-[5px] text-white transition hover:text-[#48AFDB]"
+                  className="hover:text-primary-blue flex items-center gap-[5px] text-white transition"
                 >
                   <Image src={Teams} width={20} height={20} alt="teams" />
                   <strong> support@audiotextsolutions.com</strong>
@@ -83,7 +83,7 @@ const Footer = () => {
 
                 <a
                   href="mailto:sales@audiotextsolutions.com"
-                  className="flex items-center gap-[5px] text-white transition hover:text-[#48AFDB]"
+                  className="hover:text-primary-blue flex items-center gap-[5px] text-white transition"
                 >
                   <Image src={Mail} width={20} height={20} alt="mail" />
                   <strong>sales@audiotextsolutions.com</strong>
@@ -101,9 +101,9 @@ const Footer = () => {
                 <li key={id}>
                   <Link
                     href={item.link}
-                    className="flex items-center text-[16px] font-light text-white transition hover:text-[#48AFDB]"
+                    className="hover:text-primary-blue flex items-center text-[16px] font-light text-white transition"
                   >
-                    <span className="mr-2 text-[#48AFDB]">&gt;</span>
+                    <span className="text-primary-blue mr-2">&gt;</span>
                     {item.title}
                   </Link>
                 </li>

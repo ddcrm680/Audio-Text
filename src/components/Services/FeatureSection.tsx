@@ -39,13 +39,13 @@ export default function FeatureSection({
             className={`${layout === "vertical" ? "mx-auto mb-[35px]" : "mx-auto h-full"} flex w-[40%] items-center justify-center`}
           >
             <div className="flex h-[103px] w-[103px] items-center justify-center rounded-full border border-gray-200">
-              <div className="text-[#48AFDB]">{icon}</div>
+              <div className="text-primary-blue">{icon}</div>
             </div>
           </div>
 
           <div>
             <h2
-              className={`mb-5 ${layout === "vertical" ? "text-center" : ""} text-4xl leading-[46px] font-light text-[#48AFDB] uppercase md:text-4xl dark:text-sky-400`}
+              className={`mb-5 ${layout === "vertical" ? "text-center" : ""} text-primary-blue text-4xl leading-[46px] font-light uppercase md:text-4xl dark:text-sky-400`}
             >
               {title}
             </h2>
@@ -57,7 +57,7 @@ export default function FeatureSection({
             {buttonText && (
               <Link
                 href={buttonLink!}
-                className="mt-8 inline-flex items-center gap-4 bg-[#48AFDB] px-8 py-4 text-white"
+                className="bg-primary-blue mt-8 inline-flex items-center gap-4 px-8 py-4 text-white"
               >
                 <ChevronRight />
 

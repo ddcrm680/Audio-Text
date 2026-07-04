@@ -20,7 +20,7 @@ const RegisterWithUsPage = () => {
       <div className="" style={{ fontFamily: "Aileron Light" }}>
         <div className="mx-auto max-w-6xl py-[70px]">
           <div className="mt-[15px] mb-[35px] text-center">
-            <h2 className="text-[24px] leading-[46px] font-light text-[#48AFDB] uppercase">
+            <h2 className="text-primary-blue text-[24px] leading-[46px] font-light uppercase">
               Register With Us
             </h2>
 

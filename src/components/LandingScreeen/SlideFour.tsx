@@ -32,7 +32,7 @@ export default function SlideFour() {
           x: mouse.x * 0.4,
         }}
         transition={{ duration: 4, repeat: Infinity }}
-        className="absolute bottom-[100px] left-[60%] h-4 w-4 rounded-full bg-[#48AFDB]"
+        className="bg-primary-blue absolute bottom-[100px] left-[60%] h-4 w-4 rounded-full"
       />
 
       <div className="mx-auto flex h-[380px] items-center justify-center gap-0 px-10 md:h-[470px]">
@@ -48,7 +48,7 @@ export default function SlideFour() {
           <div className="absolute inset-0 bg-black/45" />
 
           {/* Optional blue tint */}
-          <div className="absolute inset-0 bg-[#48AFDB]/15" />
+          <div className="bg-primary-blue/15 absolute inset-0" />
         </div>
         <motion.div
           initial={{
@@ -113,7 +113,7 @@ export default function SlideFour() {
           <div className="mt-8 flex flex-col justify-center space-y-1 text-[14px] leading-[24px] font-light text-[#bababa] md:space-y-3 md:text-[22px] md:leading-[26px] xl:mt-14 xl:text-[29px] xl:text-[#5b5b5b]">
             <span className="text-center md:ml-28 md:text-left">
               Analyse your{" "}
-              <span className="text-[#48AFDB]">live statistics</span>
+              <span className="text-primary-blue">live statistics</span>
             </span>
 
             <p className="text-center md:ml-40 md:text-left">

@@ -29,7 +29,7 @@ const FaqPage = () => {
         style={{ fontFamily: "Aileron Light" }}
       >
         <div className="mx-auto max-w-6xl">
-          <h2 className="mb-[20px] text-center text-[36px] tracking-wide text-[#48AFDB] uppercase">
+          <h2 className="text-primary-blue mb-[20px] text-center text-[36px] tracking-wide uppercase">
             {Constant.FAQ.faqHeading}
           </h2>
 
