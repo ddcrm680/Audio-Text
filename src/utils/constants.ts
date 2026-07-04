@@ -660,7 +660,7 @@ export const TEAM_MEMBERS = [
       "Tranquil Registration Process",
       "24x7x365 Customized Expert Advice",
     ],
-    skype: "skype:live:sales.audiotext_1",
+    skype: "/team/skype:live:sales.audiotext_1",
     email: "mailto:sales.audiotextsoltions.com",
   },
   {
@@ -672,7 +672,7 @@ export const TEAM_MEMBERS = [
       "5400+ Access Points",
       "More than 5 Lakh Numbers",
     ],
-    skype: "support:sales.audiotext?chat",
+    skype: "/teeam/support:sales.audiotext?chat",
     email: "mailto:support@audiotextsoltions.com",
   },
   {
@@ -684,7 +684,7 @@ export const TEAM_MEMBERS = [
       "24x7x365 Support for Hosting Numbers",
       "24x7x365 Technical Assistance",
     ],
-    skype: "skype:live:sales.audiotext_1",
+    skype: "/team/skype:live:sales.audiotext_1",
     email: "mailto:support@audiotextsoltions.com",
   },
   {
@@ -696,7 +696,7 @@ export const TEAM_MEMBERS = [
       "Flexible Payment Options",
       "24x7x365 Chat Support for Billing Queries",
     ],
-    skype: "support@audiotextsolutions.com",
+    skype: "/team/support@audiotextsolutions.com",
     email: "mailto:finance@audiotextsoltions.com",
   },
 ];
