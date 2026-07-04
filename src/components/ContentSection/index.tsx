@@ -15,7 +15,9 @@ export default function ContentSection({
   buttonText,
   buttonLink,
   padding = "p-[50px]",
+  titleClassName,
   bg = "bg-white",
+  subParentClassName,
   className = "",
 }: ContentSectionProps) {
   return (
@@ -23,19 +25,23 @@ export default function ContentSection({
       <div
         className={`mx-auto flex flex-col items-center gap-[30px] px-6 md:max-w-4xl md:gap-[30px] lg:max-w-5xl xl:max-w-7xl ${
           imagePosition === "left" ? "md:flex-row-reverse" : "md:flex-row"
-        }`}
+        } ${subParentClassName}`}
       >
         {/* Content */}
 
-        <div className="flex-2">
-          <div className="mt-1 mb-5 flex items-start gap-4 md:items-center">
+        <div className="w-full flex-2 md:w-auto">
+          <div
+            className={`mt-1 mb-5 flex items-start gap-4 md:items-center ${titleClassName}`}
+          >
             {titleIcon && (
               <div className="bg-primary-blue mt-2 flex h-[40px] w-[40px] shrink-0 items-center justify-center rounded-full text-white md:mt-0">
                 {titleIcon}
               </div>
             )}
 
-            <h2 className="text-primary-blue text-4xl leading-[46px] font-light uppercase md:text-4xl dark:text-sky-400">
+            <h2
+              className={`text-primary-blue text-4xl leading-[46px] font-light whitespace-nowrap uppercase md:text-4xl dark:text-sky-400`}
+            >
               {title}
             </h2>
           </div>

@@ -7,7 +7,7 @@ import { Inter } from "next/font/google";
 import "yet-another-react-lightbox/styles.css";
 import "../styles/index.css";
 import { Lato } from "next/font/google";
-
+import "leaflet/dist/leaflet.css";
 const lato = Lato({
   subsets: ["latin"],
   weight: ["300", "400", "700"],

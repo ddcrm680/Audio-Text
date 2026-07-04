@@ -66,7 +66,7 @@ const Header = () => {
   return (
     <>
       <header
-        className={`dark:bg-gray-dark fixed top-0 left-0 z-50 w-full border-b border-[#ececec] bg-white transition-all duration-300 ${
+        className={`dark:bg-gray-dark fixed top-0 left-0 z-9999 w-full border-b border-[#ececec] bg-white transition-all duration-300 ${
           sticky ? "shadow-sm" : ""
         }`}
       >

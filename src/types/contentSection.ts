@@ -5,7 +5,9 @@ export interface ContentSectionProps {
 
   image?: string;
 
+  subParentClassName?: string;
   imageAlt?: string;
+  titleClassName?: string;
   bg?: string;
 
   imagePosition?: "left" | "right";

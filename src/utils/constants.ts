@@ -26,6 +26,14 @@ export const URLs = {
   registerBg:
     "https://www.audiotextsolutions.com/wp-content/themes/codeus/images/backgrounds/title/01.jpg",
 };
+export const contactUsInitialValues = {
+  name: "",
+  skypeId: "",
+  email: "",
+  subject: "",
+  message: "",
+  captcha: "",
+};
 export const registerInitialValues = {
   // Personal Details
   firstName: "",
@@ -670,6 +678,13 @@ The packages of our exclusive services and products would definitely assist you 
     paymentMethodDesc:
       "With ATS, you get various payment methods to choose from. These methods include MoneyGram, Western Union, and Bank Wire. You don’t have to worry about the smooth processing of your payment. We have a dedicated finance team to carry out your transaction cycle with immense effectiveness.",
   },
+  Contact: {
+    title: "Contact Us",
+    desc: "Connect with us and get greater benefits!",
+    contactSales: "Contact Sales",
+    wantToGetInTouch: "WANT TO GET IN TOUCH WITH US?",
+    send: "Send",
+  },
   Career: {
     title: "Careers",
 
@@ -713,6 +728,22 @@ The packages of our exclusive services and products would definitely assist you 
     ],
   },
 };
+export const ContactList = [
+  {
+    name: "CORP. OFFICE",
+    desc: "GLOBAL AUDIO TEXT SOLUTIONS PVT. LTD. D-50, Sector 2, Noida, Uttar Pradesh – 201301 INDIA",
+  },
+  {
+    name: "HEAD OFFICE",
+    contact: "mailto:sales@audiotextsolutions.com?Subject=Website%20Query",
+    desc: "AUDIO TEXT SOLUTIONS PTE LTD 2 VENTURE DRIVE #11-15, VISION EXCHANGE, SINGAPORE 608526",
+  },
+  {
+    name: "BUSINESS ADDRESS",
+    desc: "AUDIO TEXT SOLUTIONS PTE LTD 2 VENTURE DRIVE #11-15, VISION EXCHANGE, SINGAPORE 608526",
+    contact: "mailto:sales@audiotextsolutions.com?Subject=Website%20Query",
+  },
+];
 export const PAYMENT_METHOD: PaymentMethod[] = [
   {
     title: "MoneyGram",
