@@ -80,7 +80,7 @@ const PaymentPage = () => {
               {Constant.Payment.paymentMethodDesc}
             </p>
           </div>
-          <div className="grid gap-5 px-6 md:grid-cols-3 lg:gap-x-[30px]">
+          <div className="grid gap-5 px-6 lg:grid-cols-3 lg:gap-x-[30px]">
             {PAYMENT_METHOD.map((item) => (
               <FeatureSection
                 key={item.title}
