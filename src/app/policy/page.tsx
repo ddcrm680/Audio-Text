@@ -62,11 +62,11 @@ const PolicyPage = () => {
             address, email address and phone number, financial and credit card
             information.
           </p>
-          <ul className="list-disc pl-8">
+          <ul className="list-disc pl-10">
             <li>
               <strong>Data we collect about you.</strong> We may automatically
               collect the following information whenever you visit our website.
-              <ul className="mt-2 list-[circle] pl-8">
+              <ul className="mt-2 list-[circle] pl-10">
                 <li>
                   Information such as Internet protocol (IP) address, login
                   details, browser version and type, time zone settings, browser
@@ -117,7 +117,7 @@ const PolicyPage = () => {
             strict compliance of legal norms. This means that we will regularly
             appraise the three elements of the ‘legitimate interests’ test:
           </p>
-          <ul className="list-disc pl-8">
+          <ul className="list-disc pl-10">
             <li>
               <strong>Purpose:</strong> The delivery of a secure, swift and
               effective payment and billing service which benefits our direct
@@ -152,7 +152,7 @@ const PolicyPage = () => {
             <strong> How we use your information</strong>
           </p>
           <p>We use the collected information for the following reasons.</p>
-          <ul className="list-disc pl-8">
+          <ul className="list-disc pl-10">
             <li>
               to exercise our rights and/or carry out our obligations arising
               from any contracts entered-into between you and us and to provide
@@ -221,7 +221,7 @@ const PolicyPage = () => {
             Under certain circumstances, as per the guidelines, you have the
             following rights you can exercise according to your will.
           </p>
-          <ul className="list-disc pl-8">
+          <ul className="list-disc pl-10">
             <li>
               Right to confirmation – we are happy to comply with any query from
               your end regarding your data collection, its security, and its
