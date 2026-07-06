@@ -1,10 +1,8 @@
 import SingleBlog from "@/components/Blog/SingleBlog";
 import SectionBanner from "@/components/Common/SectionBanner";
-import { BlogList, Constant } from "@/utils/constants";
+import { BlogList, Constant, PER_PAGE } from "@/utils/constants";
 import Link from "next/link";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-
-const PER_PAGE = 2;
 
 export default async function Blog({
   searchParams,

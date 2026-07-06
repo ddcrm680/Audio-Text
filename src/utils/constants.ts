@@ -740,6 +740,17 @@ The packages of our exclusive services and products would definitely assist you 
     ],
   },
 };
+export const category = [
+  {
+    name: "Premium Rate Numbers",
+    slug: "premium-rate-numbers",
+  },
+  {
+    name: "ATS",
+    slug: "ats",
+  },
+];
+export const PER_PAGE = 2;
 export const BlogList = [
   {
     id: 1,
@@ -754,7 +765,12 @@ This is extremely beneficial for those who have lots of different services and c
 
 The ultimate question is where can you find IPRN with great access? Audio Text Solutions has been providing IPRN with ip routing for more than a decade. It has established its frontier in the telecom industry and had made real sweet connections with Tier-1 carriers.`,
     publish_at: "2021-08-19",
-    category: ["ATS"],
+    category: [
+      {
+        name: "ATS",
+        slug: "ats",
+      },
+    ],
     socialLinks: {
       twitter:
         "https://twitter.com/intent/tweet?text=Best Ivr Hosting Solutions | Ip Routing&url=https://www.audiotextsolutions.com/best-ivr-hosting-solutions-ip-routing/",
@@ -779,7 +795,12 @@ That is the reason they are charged higher than the usual number.`,
     publish_at: "2021-08-11",
     slug: "what-is-dprn-and-how-to-earn-money-through-it",
 
-    category: ["ATS"],
+    category: [
+      {
+        name: "ATS",
+        slug: "ats",
+      },
+    ],
     socialLinks: {
       twitter:
         "https://twitter.com/intent/tweet?text=What is DPRN and how to earn money through it?&url=https://www.audiotextsolutions.com/what-is-dprn-and-how-to-earn-money-through-it/",
@@ -801,7 +822,12 @@ That is the reason they are charged higher than the usual number.`,
 
     desc: `Everyone thinks of a business which can earn money in a quick way without requiring many resources! Though every business is required to have a particular amount of investment and a handful of resources to continue forward.`,
     publish_at: "2021-08-12",
-    category: ["Premium Rate Numbers"],
+    category: [
+      {
+        name: "Premium Rate Numbers",
+        slug: "premium-rate-numbers",
+      },
+    ],
     socialLinks: {
       twitter:
         "https://twitter.com/intent/tweet?text=Why are premium rate numbers beneficial to work on?&url=https://www.audiotextsolutions.com/why-are-premium-rate-numbers-beneficial-to-work-on/",

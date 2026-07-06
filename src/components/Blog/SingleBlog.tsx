@@ -50,12 +50,12 @@ export default function SingleBlog({ index, blog, isLast = false }: Props) {
         <div className="mt-[29px] flex items-center justify-between">
           <div className="flex flex-wrap items-center">
             {blog.category.map((cat, index) => (
-              <div key={cat} className="flex items-center">
+              <div key={cat.slug} className="flex items-center">
                 <Link
-                  href={`/blog/category/${encodeURIComponent(cat)}`}
+                  href={`/blog/category/${cat.slug}`}
                   className="text-[15px] text-[#48AFDB] hover:underline"
                 >
-                  {cat}
+                  {cat.name}
                 </Link>
 
                 {index !== blog.category.length - 1 && (

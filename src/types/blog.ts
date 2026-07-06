@@ -13,7 +13,7 @@ export interface Blog {
   image: StaticImageData;
   desc: string;
   publish_at: string;
-  category: string[];
+  category: { name: string; slug: string }[];
   socialLinks: {
     twitter: string;
     facebook: string;
