@@ -66,27 +66,27 @@ export const registerInitialValues = {
 export const FOOTER_LINKS = [
   {
     title: "Services",
-    link: "/services/",
+    link: "/services",
   },
   {
     title: "Resellers",
-    link: "/resellers/",
+    link: "/resellers",
   },
   {
     title: "Blog",
-    link: "/blog/",
+    link: "/blog",
   },
   {
     title: "Contact Us",
-    link: "/contact-us/",
+    link: "/contact-us",
   },
   {
     title: "FAQ",
-    link: "/faq/",
+    link: "/faq",
   },
   {
     title: "Policy",
-    link: "/policy/",
+    link: "/policy",
   },
 ];
 
@@ -481,6 +481,11 @@ export const Landing_screen = [
 
 export const slideList = [SlideOne, SlideTwo, SlideThree, SlideFour, SlideFive];
 export const Constant = {
+  COMMON: {
+    pageNotFound: "Page not found",
+    backToHome: "Back To Home",
+    pageNotFoundDesc: "Sorry, but the page you requested could not be found.",
+  },
   ABOUT: {
     title: "About Us",
     subTitle: "We understand your business needs",
