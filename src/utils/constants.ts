@@ -756,6 +756,7 @@ export const BlogList = [
     id: 1,
     title: "Best Ivr Hosting Solutions | Ip Routing",
     image: Blog1,
+    author: "ATS",
     slug: "best-ivr-hosting-solutions-ip-routing",
     desc: `IPRN is considered to be the safest channel, like totally hack-proof, and it is strictly confidential. It does not require details like credit card or bank account numbers. It just do its stuff while on the call. And, hence it is the safest.
 
@@ -783,10 +784,20 @@ The ultimate question is where can you find IPRN with great access? Audio Text S
       stumble:
         "http://www.stumbleupon.com/submit?url=https://www.audiotextsolutions.com/best-ivr-hosting-solutions-ip-routing/&title=Best Ivr Hosting Solutions | Ip Routing",
     },
+    tag: [
+      {
+        name: "International Premium Rate Numbers",
+        slug: "international-premium-rate-numbers",
+      },
+      {
+        name: "Premium Rate Numbers",
+        slug: "premium-rate-numbers",
+      },
+    ],
   },
   {
     id: 2,
-
+    author: "ATS",
     title: "What is DPRN and how to earn money through it?",
     image: Blog2,
     desc: `Telecommunication companies earn a higher number of their revenue through premium rate numbers. These premium rate numbers actively provide a lot of telecom services with the highest possible quality.
@@ -813,13 +824,19 @@ That is the reason they are charged higher than the usual number.`,
       stumble:
         "http://www.stumbleupon.com/submit?url=https://www.audiotextsolutions.com/what-is-dprn-and-how-to-earn-money-through-it/&title=What is DPRN and how to earn money through it?",
     },
+    tag: [
+      {
+        name: "International Premium Rate Numbers",
+        slug: "international-premium-rate-numbers",
+      },
+    ],
   },
   {
     id: 3,
     title: "Why are premium rate numbers beneficial to work on?",
     image: Blog1,
     slug: "why-are-premium-rate-numbers-beneficial-to-work-on",
-
+    author: "ATS",
     desc: `Everyone thinks of a business which can earn money in a quick way without requiring many resources! Though every business is required to have a particular amount of investment and a handful of resources to continue forward.`,
     publish_at: "2021-08-12",
     category: [
@@ -840,6 +857,12 @@ That is the reason they are charged higher than the usual number.`,
       stumble:
         "http://www.stumbleupon.com/submit?url=https://www.audiotextsolutions.com/why-are-premium-rate-numbers-beneficial-to-work-on/&title=Why are premium rate numbers beneficial to work on?",
     },
+    tag: [
+      {
+        name: "Premium Rate Numbers",
+        slug: "premium-rate-numbers",
+      },
+    ],
   },
 ];
 export const ContactList = [
