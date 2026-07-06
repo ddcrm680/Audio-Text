@@ -1,15 +1,24 @@
+import { StaticImageData } from "next/image";
+
 type Author = {
   name: string;
   image: string;
   designation: string;
 };
 
-export type Blog = {
+export interface Blog {
   id: number;
   title: string;
-  paragraph: string;
-  image: string;
-  author: Author;
-  tags: string[];
-  publishDate: string;
-};
+  slug: string;
+  image: StaticImageData;
+  desc: string;
+  publish_at: string;
+  category: string[];
+  socialLinks: {
+    twitter: string;
+    facebook: string;
+    linkedin: string;
+    google: string;
+    stumble: string;
+  };
+}

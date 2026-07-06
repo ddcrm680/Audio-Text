@@ -1,99 +1,89 @@
 import SingleBlog from "@/components/Blog/SingleBlog";
-import blogData from "@/components/Blog/blogData";
-import Breadcrumb from "@/components/Common/Breadcrumb";
+import SectionBanner from "@/components/Common/SectionBanner";
+import { BlogList, Constant } from "@/utils/constants";
+import Link from "next/link";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
-import { Metadata } from "next";
+const PER_PAGE = 2;
 
-export const metadata: Metadata = {
-  title: "Blog | Audio Text",
-  description: "This is Blog Page for Startup Nextjs Template",
-  // other metadata
-};
+export default async function Blog({
+  searchParams,
+}: {
+  searchParams: Promise<{ page?: string }>;
+}) {
+  const params = await searchParams;
 
-const Blog = () => {
+  const currentPage = Number(params.page ?? 1);
+
+  const totalPages = Math.ceil(BlogList.length / PER_PAGE);
+
+  const blogs = BlogList.slice(
+    (currentPage - 1) * PER_PAGE,
+    currentPage * PER_PAGE,
+  );
+
   return (
-    <>
-      <Breadcrumb
-        pageName="Blog Grid"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In varius eros eget sapien consectetur ultrices. Ut quis dapibus libero."
+    <div style={{ fontFamily: "Aileron Light" }}>
+      <SectionBanner
+        title={Constant.BLOG.title}
+        subtitle={Constant.BLOG.desc}
       />
-
-      <section className="pt-[120px] pb-[120px]">
-        <div className="container">
-          <div className="-mx-4 flex flex-wrap justify-center">
-            {blogData.map((blog) => (
-              <div
+      <div className="px-5" style={{ fontFamily: "Aileron Light" }}>
+        <div className="mx-auto max-w-6xl py-[70px]">
+          <div className="flex flex-col">
+            {blogs.map((blog, index) => (
+              <SingleBlog
+                index={index}
                 key={blog.id}
-                className="w-full px-4 md:w-2/3 lg:w-1/2 xl:w-1/3"
-              >
-                <SingleBlog blog={blog} />
-              </div>
+                blog={blog}
+                isLast={index === blogs.length - 1}
+              />
             ))}
           </div>
 
-          <div className="-mx-4 flex flex-wrap" data-wow-delay=".15s">
-            <div className="w-full px-4">
-              <ul className="flex items-center justify-center pt-8">
-                <li className="mx-1">
-                  <a
-                    href="#0"
-                    className="bg-body-color/15 text-body-color hover:bg-primary flex h-9 min-w-[36px] items-center justify-center rounded-md px-4 text-sm transition hover:text-white"
+          {/* Pagination */}
+
+          <div className="mt-[20px] mb-[30px] flex justify-center">
+            <div className="flex items-center gap-[17px]">
+              {currentPage > 1 && (
+                <Link
+                  href={`/blog?page=${currentPage - 1}`}
+                  className="flex h-[49px] w-[49px] items-center justify-center rounded-full border border-[#48AFDB] text-[#48AFDB] transition hover:bg-[#48AFDB] hover:text-white"
+                >
+                  <ChevronLeft size={30} />
+                </Link>
+              )}
+
+              {Array.from({ length: totalPages }, (_, i) => {
+                const page = i + 1;
+
+                return (
+                  <Link
+                    key={page}
+                    href={`/blog?page=${page}`}
+                    className={`flex h-[49px] w-[49px] items-center justify-center rounded-full border text-[30px] font-light transition ${
+                      currentPage === page
+                        ? "border-[#48AFDB] bg-[#48AFDB] text-white"
+                        : "border-[#48AFDB] text-[#444] hover:bg-[#48AFDB] hover:text-white dark:text-gray-300"
+                    }`}
                   >
-                    Prev
-                  </a>
-                </li>
-                <li className="mx-1">
-                  <a
-                    href="#0"
-                    className="bg-body-color/15 text-body-color hover:bg-primary flex h-9 min-w-[36px] items-center justify-center rounded-md px-4 text-sm transition hover:text-white"
-                  >
-                    1
-                  </a>
-                </li>
-                <li className="mx-1">
-                  <a
-                    href="#0"
-                    className="bg-body-color/15 text-body-color hover:bg-primary flex h-9 min-w-[36px] items-center justify-center rounded-md px-4 text-sm transition hover:text-white"
-                  >
-                    2
-                  </a>
-                </li>
-                <li className="mx-1">
-                  <a
-                    href="#0"
-                    className="bg-body-color/15 text-body-color hover:bg-primary flex h-9 min-w-[36px] items-center justify-center rounded-md px-4 text-sm transition hover:text-white"
-                  >
-                    3
-                  </a>
-                </li>
-                <li className="mx-1">
-                  <span className="bg-body-color/15 text-body-color flex h-9 min-w-[36px] cursor-not-allowed items-center justify-center rounded-md px-4 text-sm">
-                    ...
-                  </span>
-                </li>
-                <li className="mx-1">
-                  <a
-                    href="#0"
-                    className="bg-body-color/15 text-body-color hover:bg-primary flex h-9 min-w-[36px] items-center justify-center rounded-md px-4 text-sm transition hover:text-white"
-                  >
-                    12
-                  </a>
-                </li>
-                <li className="mx-1">
-                  <a
-                    href="#0"
-                    className="bg-body-color/15 text-body-color hover:bg-primary flex h-9 min-w-[36px] items-center justify-center rounded-md px-4 text-sm transition hover:text-white"
-                  >
-                    Next
-                  </a>
-                </li>
-              </ul>
+                    {page}
+                  </Link>
+                );
+              })}
+
+              {currentPage < totalPages && (
+                <Link
+                  href={`/blog?page=${currentPage + 1}`}
+                  className="flex h-[49px] w-[49px] items-center justify-center rounded-full border border-[#48AFDB] text-[#48AFDB] transition hover:bg-[#48AFDB] hover:text-white"
+                >
+                  <ChevronRight size={30} />
+                </Link>
+              )}
             </div>
           </div>
         </div>
-      </section>
-    </>
+      </div>
+    </div>
   );
-};
-
-export default Blog;
+}

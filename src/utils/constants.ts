@@ -3,6 +3,9 @@ import SlideFour from "@/components/LandingScreeen/SlideFour";
 import SlideOne from "@/components/LandingScreeen/SlideOne";
 import SlideThree from "@/components/LandingScreeen/SlideThree";
 import discover from "../../public/images/payment/discover.png";
+import Blog2 from "../../public/images/blog/blog-2.jpg";
+
+import Blog1 from "../../public/images/blog/blog-1.jpg";
 import SlideTwo from "@/components/LandingScreeen/SlideTwo";
 import {
   Banknote,
@@ -481,6 +484,10 @@ export const Landing_screen = [
 
 export const slideList = [SlideOne, SlideTwo, SlideThree, SlideFour, SlideFive];
 export const Constant = {
+  BLOG: {
+    title: "Blog",
+    desc: "Follow us to know us more",
+  },
   COMMON: {
     pageNotFound: "Page not found",
     backToHome: "Back To Home",
@@ -733,6 +740,82 @@ The packages of our exclusive services and products would definitely assist you 
     ],
   },
 };
+export const BlogList = [
+  {
+    id: 1,
+    title: "Best Ivr Hosting Solutions | Ip Routing",
+    image: Blog1,
+    slug: "best-ivr-hosting-solutions-ip-routing",
+    desc: `IPRN is considered to be the safest channel, like totally hack-proof, and it is strictly confidential. It does not require details like credit card or bank account numbers. It just do its stuff while on the call. And, hence it is the safest.
+
+People can also provide ivr hosting through IPRN. IVR is Interactive Voice Response, like you might have heard that lady instruct you, “for services Press 2” and so on.
+
+This is extremely beneficial for those who have lots of different services and categories to provide.
+
+The ultimate question is where can you find IPRN with great access? Audio Text Solutions has been providing IPRN with ip routing for more than a decade. It has established its frontier in the telecom industry and had made real sweet connections with Tier-1 carriers.`,
+    publish_at: "2021-08-19",
+    category: ["ATS"],
+    socialLinks: {
+      twitter:
+        "https://twitter.com/intent/tweet?text=Best Ivr Hosting Solutions | Ip Routing&url=https://www.audiotextsolutions.com/best-ivr-hosting-solutions-ip-routing/",
+      facebook:
+        "https://www.facebook.com/sharer/sharer.php?s=100&p[url]=https://www.audiotextsolutions.com/best-ivr-hosting-solutions-ip-routing/&p[title]=Best Ivr Hosting Solutions | Ip Routing",
+      linkedin:
+        "http://www.linkedin.com/shareArticle?mini=true&url=https://www.audiotextsolutions.com/best-ivr-hosting-solutions-ip-routing/&title=Best Ivr Hosting Solutions | Ip Routing",
+      google:
+        "https://plus.google.com/share?url=https://www.audiotextsolutions.com/best-ivr-hosting-solutions-ip-routing/",
+      stumble:
+        "http://www.stumbleupon.com/submit?url=https://www.audiotextsolutions.com/best-ivr-hosting-solutions-ip-routing/&title=Best Ivr Hosting Solutions | Ip Routing",
+    },
+  },
+  {
+    id: 2,
+
+    title: "What is DPRN and how to earn money through it?",
+    image: Blog2,
+    desc: `Telecommunication companies earn a higher number of their revenue through premium rate numbers. These premium rate numbers actively provide a lot of telecom services with the highest possible quality.
+
+That is the reason they are charged higher than the usual number.`,
+    publish_at: "2021-08-11",
+    slug: "what-is-dprn-and-how-to-earn-money-through-it",
+
+    category: ["ATS"],
+    socialLinks: {
+      twitter:
+        "https://twitter.com/intent/tweet?text=What is DPRN and how to earn money through it?&url=https://www.audiotextsolutions.com/what-is-dprn-and-how-to-earn-money-through-it/",
+      facebook:
+        "https://www.facebook.com/sharer/sharer.php?s=100&p[url]=https://www.audiotextsolutions.com/what-is-dprn-and-how-to-earn-money-through-it/&p[title]=What is DPRN and how to earn money through it?",
+      linkedin:
+        "http://www.linkedin.com/shareArticle?mini=true&url=https://www.audiotextsolutions.com/what-is-dprn-and-how-to-earn-money-through-it/&title=What is DPRN and how to earn money through it?",
+      google:
+        "https://plus.google.com/share?url=https://www.audiotextsolutions.com/what-is-dprn-and-how-to-earn-money-through-it/",
+      stumble:
+        "http://www.stumbleupon.com/submit?url=https://www.audiotextsolutions.com/what-is-dprn-and-how-to-earn-money-through-it/&title=What is DPRN and how to earn money through it?",
+    },
+  },
+  {
+    id: 3,
+    title: "Why are premium rate numbers beneficial to work on?",
+    image: Blog1,
+    slug: "why-are-premium-rate-numbers-beneficial-to-work-on",
+
+    desc: `Everyone thinks of a business which can earn money in a quick way without requiring many resources! Though every business is required to have a particular amount of investment and a handful of resources to continue forward.`,
+    publish_at: "2021-08-12",
+    category: ["Premium Rate Numbers"],
+    socialLinks: {
+      twitter:
+        "https://twitter.com/intent/tweet?text=Why are premium rate numbers beneficial to work on?&url=https://www.audiotextsolutions.com/why-are-premium-rate-numbers-beneficial-to-work-on/",
+      facebook:
+        "https://www.facebook.com/sharer/sharer.php?s=100&p[url]=https://www.audiotextsolutions.com/why-are-premium-rate-numbers-beneficial-to-work-on/&p[title]=Why are premium rate numbers beneficial to work on?",
+      linkedin:
+        "http://www.linkedin.com/shareArticle?mini=true&url=https://www.audiotextsolutions.com/why-are-premium-rate-numbers-beneficial-to-work-on/&title=Why are premium rate numbers beneficial to work on?",
+      google:
+        "https://plus.google.com/share?url=https://www.audiotextsolutions.com/why-are-premium-rate-numbers-beneficial-to-work-on/",
+      stumble:
+        "http://www.stumbleupon.com/submit?url=https://www.audiotextsolutions.com/why-are-premium-rate-numbers-beneficial-to-work-on/&title=Why are premium rate numbers beneficial to work on?",
+    },
+  },
+];
 export const ContactList = [
   {
     name: "CORP. OFFICE",
