@@ -7,13 +7,40 @@ import { formatDate } from "@/utils/helpers";
 interface Props {
   blog: Blog;
   index: number;
+  isShare?: boolean;
   isLast?: boolean;
 }
 
-export default function SingleBlog({ index, blog, isLast = false }: Props) {
+export default function SingleBlog({
+  index,
+  blog,
+  isShare = false,
+  isLast = false,
+}: Props) {
   const { day, month } = formatDate(blog.publish_at);
-  console.log(index, "indexindexindex");
+  const socials = [
+    {
+      icon: "/images/destination/facebook.png",
+      link: blog.socialLinks.facebook,
+    },
+    {
+      icon: "/images/destination/twitter.png",
+      link: blog.socialLinks.twitter,
+    },
+    {
+      icon: "/images/destination/google-plus-logo.png",
+      link: blog.socialLinks.google,
+    },
 
+    {
+      icon: "/images/destination/linkedin.png",
+      link: blog.socialLinks.linkedin,
+    },
+    {
+      icon: "/images/destination/stumble.png",
+      link: blog.socialLinks.stumble,
+    },
+  ];
   return (
     <article className={`flex gap-6 ${index == 0 ? " " : "pt-15"}`}>
       {/* Date */}
@@ -37,7 +64,7 @@ export default function SingleBlog({ index, blog, isLast = false }: Props) {
           </h2>
         </Link>
 
-        <div className="mx-auto mt-[9px] mb-[20px] w-full max-w-[1100px] md:w-[500px]">
+        <div className="mx-auto mt-[9px] mb-[70px] w-full max-w-[1100px] md:w-[500px]">
           <Link href={`/blog/${blog.slug}`}>
             <Image
               src={blog.image}
@@ -46,7 +73,21 @@ export default function SingleBlog({ index, blog, isLast = false }: Props) {
             />
           </Link>
         </div>
-
+        {isShare && (
+          <div className="flex h-[35px] items-center gap-4">
+            {socials.map((item, index) => (
+              <a
+                key={index}
+                href={item.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`hover:bg-primary-blue dark:hover:bg-primary-blue flex h-[35px] w-[35px] items-center justify-center rounded-full bg-gray-300 transition-colors duration-200`}
+              >
+                <Image src={item.icon} alt="" width={20} height={20} />
+              </a>
+            ))}
+          </div>
+        )}
         <div className="mt-[29px] flex items-center justify-between">
           <div className="flex flex-wrap items-center">
             {blog.category.map((cat, index) => (

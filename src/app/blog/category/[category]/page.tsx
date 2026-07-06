@@ -44,6 +44,7 @@ export default async function BlogCategory({ params, searchParams }: Props) {
                     index={index}
                     key={blog.id}
                     blog={blog}
+                    isShare={true}
                     isLast={index === blogs.length - 1}
                   />
                 ))}

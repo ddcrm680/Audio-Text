@@ -78,7 +78,7 @@ export default async function BlogDetails({ params }: Props) {
                       />
 
                       <div
-                        className="mx-auto max-w-full text-[17px] leading-[30px] text-[#555] [&_a]:text-[#48AFDB] [&_a]:underline [&_h1]:mb-6 [&_h2]:mt-10 [&_h2]:mb-6 [&_h2]:text-[42px] [&_h2]:font-extralight [&_h2]:text-[#48AFDB] [&_h2]:uppercase [&_h3]:mt-8 [&_h3]:mb-5 [&_h3]:text-[30px] [&_h3]:font-light [&_h3]:text-[#48AFDB] [&_li]:mb-2 [&_p]:mb-5 [&_ul]:my-6 [&_ul]:list-disc [&_ul]:pl-8"
+                        className="mx-auto max-w-full text-[17px] leading-[30px] text-[#555] dark:text-gray-300 [&_a]:text-[#48AFDB] [&_a]:underline [&_h1]:mb-6 [&_h2]:mt-10 [&_h2]:mb-6 [&_h2]:text-[42px] [&_h2]:font-extralight [&_h2]:text-[#48AFDB] [&_h2]:uppercase [&_h3]:mt-8 [&_h3]:mb-5 [&_h3]:text-[30px] [&_h3]:font-light [&_h3]:text-[#48AFDB] [&_li]:mb-2 [&_p]:mb-5 [&_ul]:my-6 [&_ul]:list-disc [&_ul]:pl-8"
                         dangerouslySetInnerHTML={{
                           __html: blog.desc,
                         }}
@@ -86,7 +86,7 @@ export default async function BlogDetails({ params }: Props) {
                     </div>
 
                     {/* Author */}
-                    <div className="mt-[53px] w-full bg-[#f4f7fa] px-[35px] py-[30px]">
+                    <div className="mt-[53px] w-full bg-[#f4f7fa] px-[35px] py-[30px] dark:bg-[#1f2937]">
                       <div className="flex items-start gap-6">
                         <div className="flex h-[94px] w-[94px] items-center justify-center rounded-full bg-white">
                           <Image
@@ -99,11 +99,11 @@ export default async function BlogDetails({ params }: Props) {
                         </div>
 
                         <div>
-                          <h3 className="text-[24px] font-light text-black">
+                          <h3 className="text-[24px] font-light text-black dark:text-white">
                             {blog?.author}
                           </h3>
 
-                          <p className="mt-[3px] flex flex-wrap items-center text-[15px] text-[#75889C]">
+                          <p className="mt-[3px] flex flex-wrap items-center text-[15px] text-[#75889C] dark:text-gray-400">
                             <span>
                               {formatBlogDate(blog.publish_at)} in&nbsp;
                             </span>
@@ -121,7 +121,9 @@ export default async function BlogDetails({ params }: Props) {
                                 </Link>
 
                                 {index < blog.category.length - 1 && (
-                                  <span className="mx-1 text-[#75889C]">,</span>
+                                  <span className="mx-1 text-[#75889C] dark:text-gray-400">
+                                    ,
+                                  </span>
                                 )}
                               </span>
                             ))}
@@ -129,7 +131,7 @@ export default async function BlogDetails({ params }: Props) {
                         </div>
                       </div>
                     </div>
-                    <div className="mt-[52px] mb-[23px] flex w-full flex-col gap-[18px] border-b border-[#d6dde3] pb-[10px]">
+                    <div className="mt-[52px] mb-[23px] flex w-full flex-col gap-[18px] border-b border-[#d6dde3] pb-[10px] dark:border-gray-700">
                       {/* Share Icons */}
                       <div className="flex h-[35px] items-center gap-4">
                         {socials.map((item, index) => (
@@ -138,7 +140,7 @@ export default async function BlogDetails({ params }: Props) {
                             href={item.link}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className={`flex h-[35px] w-[35px] items-center justify-center rounded-full bg-gray-300 hover:bg-primary-blue  transition-colors duration-200`}
+                            className={`dark:hover:bg-primary-blue hover:bg-primary-blue flex h-[35px] w-[35px] items-center justify-center rounded-full bg-gray-300 transition-colors duration-200 dark:bg-[#2d3748]`}
                           >
                             <Image
                               src={item.icon}
@@ -180,7 +182,7 @@ export default async function BlogDetails({ params }: Props) {
                             </div>
 
                             <div>
-                              <p className="text-[15px] text-[#444] uppercase">
+                              <p className="text-[15px] text-[#444] uppercase dark:text-gray-300">
                                 Previous Post
                               </p>
                             </div>
@@ -197,7 +199,7 @@ export default async function BlogDetails({ params }: Props) {
                             className="group flex items-center gap-2"
                           >
                             <div className="text-right">
-                              <p className="text-[15px] text-[#444] uppercase">
+                              <p className="text-[15px] text-[#444] uppercase dark:text-gray-300">
                                 Next Post
                               </p>
                             </div>
@@ -217,14 +219,15 @@ export default async function BlogDetails({ params }: Props) {
                         Related Posts
                       </h2>
                       <div className="flex gap-[18px]">
-                        {relatedPosts.slice(0, 3).map((blog, index) => (
+                        {relatedPosts.slice(0, 3).map((blog, index, arr) => (
                           <div
                             key={blog.id}
-                            className={`${index !== 0 ? "pt-[34px]" : ""} ${
-                              index !== 2 ? "" : "mb-[35px] pb-[35px]"
-                            }`}
+                            className={` ${index !== 0 ? "pt-[34px]" : ""} ${
+                              index === arr.length - 1
+                                ? "border-b border-[#d9d9d9] pb-[35px] lg:border-0 lg:pb-0 dark:border-gray-700"
+                                : ""
+                            } `}
                           >
-                            {" "}
                             <RelatedPost
                               title={blog.title}
                               image={blog.image}
@@ -237,7 +240,6 @@ export default async function BlogDetails({ params }: Props) {
                     </div>
                   </div>
                 </div>
-                <div></div>
               </div>
             </BlogWrapper>
           </div>

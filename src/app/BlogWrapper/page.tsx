@@ -6,6 +6,7 @@ import Image from "next/image";
 
 import { Metadata } from "next";
 import { BlogList } from "@/utils/constants";
+import { formatBlogDate } from "@/utils/helpers";
 
 export const metadata: Metadata = {
   title: "Blog Details | Audio Text",
@@ -19,7 +20,7 @@ const BlogWrapper = ({ children }: { children: any }) => {
       <section className="overflow-hidden">
         <div className="container">
           <div className="flex w-full flex-wrap">
-            <div className="w-full pr-16 lg:w-8/12">{children}</div>
+            <div className="w-full lg:w-8/12 lg:pr-16">{children}</div>
             <div className="w-full lg:w-4/12">
               <div className="mb-[14px]">
                 <h2 className="mb-[22px] text-[28px] leading-[38px] font-extralight text-[#48AFDB] uppercase">
@@ -32,7 +33,7 @@ const BlogWrapper = ({ children }: { children: any }) => {
                       className={`${index !== 0 ? "pt-[34px]" : ""} ${
                         index !== 2
                           ? ""
-                          : "mb-[35px] border-b border-[#d9d9d9] pb-[35px]"
+                          : "mb-[35px] border-b border-[#d9d9d9] pb-[35px] dark:border-gray-700"
                       }`}
                     >
                       {" "}
@@ -40,7 +41,7 @@ const BlogWrapper = ({ children }: { children: any }) => {
                         title={blog.title}
                         image={blog.image}
                         slug={blog.slug}
-                        date={blog.publish_at}
+                        date={formatBlogDate(blog.publish_at)}
                       />
                     </li>
                   ))}
@@ -61,7 +62,7 @@ const BlogWrapper = ({ children }: { children: any }) => {
                         title={blog.title}
                         image={blog.image}
                         slug={blog.slug}
-                        date={blog.publish_at}
+                        date={formatBlogDate(blog.publish_at)}
                       />
                     </li>
                   ))}
