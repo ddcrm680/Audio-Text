@@ -55,7 +55,9 @@ const ContactPage = () => {
               );
             })}
           </div>
-          <MapWrapper />
+          <div className="mx-auto flex items-center justify-center md:max-w-4xl lg:max-w-5xl xl:max-w-7xl">
+            <MapWrapper />
+          </div>
           <ContentSection
             bg=""
             subParentClassName="!px-0 mt-[32px] "
