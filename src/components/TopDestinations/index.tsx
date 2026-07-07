@@ -7,10 +7,13 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { destinations } from "@/utils/constants";
 import DestinationCard from "./DestinationCard";
 import Lightbox from "yet-another-react-lightbox";
+import { StaticImageData } from "next/image";
 
 export default function TopDestinations() {
   const [openShare, setOpenShare] = useState<number | null>(null);
-  const [previewImage, setPreviewImage] = useState<string | null>(null);
+  const [previewImage, setPreviewImage] = useState<StaticImageData | null>(
+    null,
+  );
   const [emblaRef, emblaApi] = useEmblaCarousel({
     loop: true,
     slidesToScroll: 3,
@@ -91,7 +94,7 @@ export default function TopDestinations() {
       <Lightbox
         open={!!previewImage}
         close={() => setPreviewImage(null)}
-        slides={previewImage ? [{ src: previewImage }] : []}
+        slides={previewImage ? [{ src: previewImage.src }] : []}
         controller={{ closeOnBackdropClick: true }}
         carousel={{ finite: true }}
         render={{

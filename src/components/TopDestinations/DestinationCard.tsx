@@ -31,15 +31,19 @@ export default function DestinationCard({
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [open, onClose]);
+  console.log(image, "imageimage");
+
   return (
     <div
       ref={cardRef}
       className="relative overflow-hidden bg-white shadow-sm dark:bg-slate-700"
     >
-      <img
+      <Image
         src={image}
-        onClick={onImageClick}
         alt={title}
+        width={370}
+        height={210}
+        onClick={onImageClick}
         className="h-[210px] w-full cursor-pointer object-cover"
       />
       {/* Blue Overlay */}

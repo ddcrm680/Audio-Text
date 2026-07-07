@@ -4,6 +4,25 @@ import SlideOne from "@/components/LandingScreeen/SlideOne";
 import SlideThree from "@/components/LandingScreeen/SlideThree";
 import discover from "../../public/images/payment/discover.png";
 import Blog2 from "../../public/images/blog/blog-2.jpg";
+
+import ANGUILLA from "../../public/images/destination/ANGUILLA.jpg";
+import COMROS from "../../public/images/destination/COMROS.jpg";
+import CONGO from "../../public/images/destination/CONGO.jpg";
+import cuba from "../../public/images/destination/cuba.jpg";
+import Estonia from "../../public/images/destination/Estonia.jpg";
+import GAMBIA from "../../public/images/destination/GAMBIA.jpg";
+import GuineaBissau from "../../public/images/destination/Guinea-Bissau.jpg";
+import Holland from "../../public/images/destination/Holland.jpg";
+import LATVIA from "../../public/images/destination/LATVIA.jpg";
+import LIbya from "../../public/images/destination/LIbya.jpg";
+import sierra from "../../public/images/destination/sierra.jpg";
+import Morrocco from "../../public/images/destination/Morrocco.jpg";
+
+import asean_Sales from "../../public/images/team/asean_Sales.jpg";
+import asean_CRM from "../../public/images/team/asean_CRM.jpg";
+import Finance_asian from "../../public/images/team/Finance_asian.jpg";
+import tech_support from "../../public/images/team/tech_support.jpg";
+
 import secondaryBannerBg from "../../public/images/common/Secondary_banner_bg.jpg";
 import Blog1 from "../../public/images/blog/blog-1.jpg";
 import SlideTwo from "@/components/LandingScreeen/SlideTwo";
@@ -165,8 +184,7 @@ export const RESELLER_FEATURES = [
 export const destinations = [
   {
     title: "COMROS – 2693231060",
-    image:
-      "https://www.audiotextsolutions.com/wp-content/uploads/2015/08/COMROS-370x210.jpg",
+    image: COMROS,
 
     share: {
       facebook:
@@ -183,8 +201,7 @@ export const destinations = [
   },
   {
     title: "CONGO – 242800100654",
-    image:
-      "https://www.audiotextsolutions.com/wp-content/uploads/2015/08/congo.jpg",
+    image: CONGO,
 
     share: {
       facebook:
@@ -207,8 +224,7 @@ export const destinations = [
   },
   {
     title: "LATVIA – 37120901550",
-    image:
-      "https://www.audiotextsolutions.com/wp-content/uploads/2015/08/LATVIA-370x210.jpg",
+    image: LATVIA,
     share: {
       facebook:
         "https://www.facebook.com/sharer/sharer.php?s=100&p%5Burl%5D=https%3A%2F%2Fwww.audiotextsolutions.com%2Fwp-content%2Fuploads%2F2015%2F08%2FLATVIA.jpg&p%5Btitle%5D=LATVIA+%26%238211%3B+37120901550&p%5Bimages%5D%5B0%5D=https%3A%2F%2Fwww.audiotextsolutions.com%2Fwp-content%2Fuploads%2F2015%2F08%2FLATVIA.jpg",
@@ -231,8 +247,7 @@ export const destinations = [
   },
   {
     title: "HOLAND",
-    image:
-      "https://www.audiotextsolutions.com/wp-content/uploads/2015/08/Holland-370x210.jpg",
+    image: Holland,
     share: {
       facebook:
         "https://www.facebook.com/sharer/sharer.php?s=100&p%5Burl%5D=https%3A%2F%2Fwww.audiotextsolutions.com%2Fwp-content%2Fuploads%2F2015%2F08%2FHolland.jpg&p%5Btitle%5D=HOLAND&p%5Bimages%5D%5B0%5D=https%3A%2F%2Fwww.audiotextsolutions.com%2Fwp-content%2Fuploads%2F2015%2F08%2FHolland.jpg",
@@ -255,8 +270,7 @@ export const destinations = [
   },
   {
     title: "Estonia – 37240040900",
-    image:
-      "https://www.audiotextsolutions.com/wp-content/uploads/2015/08/Estonia.jpg",
+    image: Estonia,
 
     share: {
       facebook:
@@ -280,8 +294,7 @@ export const destinations = [
   },
   {
     title: "Guinea Bissau – 2455876600",
-    image:
-      "https://www.audiotextsolutions.com/wp-content/uploads/2015/08/Guinea-Bissau.jpg",
+    image: GuineaBissau,
 
     share: {
       facebook:
@@ -305,8 +318,7 @@ export const destinations = [
   },
   {
     title: "SIERRA LEONE – 23221109181",
-    image:
-      "https://www.audiotextsolutions.com/wp-content/uploads/2015/08/sierra.jpg",
+    image: sierra,
     share: {
       facebook:
         "https://www.facebook.com/sharer/sharer.php?s=100&p%5Burl%5D=https%3A%2F%2Fwww.audiotextsolutions.com%2Fwp-content%2Fuploads%2F2015%2F08%2Fsierra.jpg&p%5Btitle%5D=SIERRA+LEONE+%26%238211%3B+23221109181&p%5Bimages%5D%5B0%5D=https%3A%2F%2Fwww.audiotextsolutions.com%2Fwp-content%2Fuploads%2F2015%2F08%2Fsierra.jpg",
@@ -329,8 +341,7 @@ export const destinations = [
   },
   {
     title: "MOROCCO – 37745500001",
-    image:
-      "https://www.audiotextsolutions.com/wp-content/uploads/2015/08/Morrocco.jpg",
+    image: Morrocco,
     share: {
       facebook:
         "https://www.facebook.com/sharer/sharer.php?s=100&p%5Burl%5D=https%3A%2F%2Fwww.audiotextsolutions.com%2Fwp-content%2Fuploads%2F2015%2F08%2FMorrocco.jpg&p%5Btitle%5D=MOROCCO+%26%238211%3B+37745500001&p%5Bimages%5D%5B0%5D=https%3A%2F%2Fwww.audiotextsolutions.com%2Fwp-content%2Fuploads%2F2015%2F08%2FMorrocco.jpg",
@@ -354,8 +365,7 @@ export const destinations = [
 
   {
     title: "GAMBIA – 2201150700",
-    image:
-      "https://www.audiotextsolutions.com/wp-content/uploads/2015/08/GAMBIA.jpg",
+    image: GAMBIA,
     share: {
       facebook:
         "https://www.facebook.com/sharer/sharer.php?s=100&p%5Burl%5D=https%3A%2F%2Fwww.audiotextsolutions.com%2Fwp-content%2Fuploads%2F2015%2F08%2FGAMBIA.jpg&p%5Btitle%5D=GAMBIA+%26%238211%3B+2201150700&p%5Bimages%5D%5B0%5D=https%3A%2F%2Fwww.audiotextsolutions.com%2Fwp-content%2Fuploads%2F2015%2F08%2FGAMBIA.jpg",
@@ -377,8 +387,7 @@ export const destinations = [
   },
   {
     title: "Libya – 218923128025",
-    image:
-      "https://www.audiotextsolutions.com/wp-content/uploads/2015/08/LIbya.jpg",
+    image: LIbya,
     share: {
       facebook:
         "https://www.facebook.com/sharer/sharer.php?s=100&p%5Burl%5D=https%3A%2F%2Fwww.audiotextsolutions.com%2Fwp-content%2Fuploads%2F2015%2F08%2FLIbya.jpg&p%5Btitle%5D=Libya+%26%238211%3B+218923128025&p%5Bimages%5D%5B0%5D=https%3A%2F%2Fwww.audiotextsolutions.com%2Fwp-content%2Fuploads%2F2015%2F08%2FLIbya.jpg",
@@ -402,8 +411,7 @@ export const destinations = [
 
   {
     title: "Cuba – 5324413141",
-    image:
-      "https://www.audiotextsolutions.com/wp-content/uploads/2015/08/cuba.jpg",
+    image: cuba,
     share: {
       facebook:
         "https://www.facebook.com/sharer/sharer.php?s=100&p%5Burl%5D=https%3A%2F%2Fwww.audiotextsolutions.com%2Fwp-content%2Fuploads%2F2015%2F08%2Fcuba.jpg&p%5Btitle%5D=Cuba+%26%238211%3B+5324413141&p%5Bimages%5D%5B0%5D=https%3A%2F%2Fwww.audiotextsolutions.com%2Fwp-content%2Fuploads%2F2015%2F08%2Fcuba.jpg",
@@ -426,8 +434,7 @@ export const destinations = [
   },
   {
     title: "ANGUILLA -12645370230",
-    image:
-      "https://www.audiotextsolutions.com/wp-content/uploads/2015/08/ANGUILLA.jpg",
+    image: ANGUILLA,
 
     share: {
       facebook:
@@ -898,8 +905,7 @@ export const PAYMENT_METHOD: PaymentMethod[] = [
 
 export const TEAM_MEMBERS = [
   {
-    image:
-      "https://www.audiotextsolutions.com/wp-content/uploads/2015/08/asean_Sales.jpg",
+    image: asean_Sales,
     title: "SALES",
     points: [
       "Dedicated Account Manager",
@@ -910,8 +916,7 @@ export const TEAM_MEMBERS = [
     email: "mailto:sales.audiotextsoltions.com",
   },
   {
-    image:
-      "https://www.audiotextsolutions.com/wp-content/uploads/2015/08/asean_CRM.jpg",
+    image: asean_CRM,
     title: "CRM",
     points: [
       "Excellent Portfolio with 251 Countries",
@@ -922,8 +927,7 @@ export const TEAM_MEMBERS = [
     email: "mailto:support@audiotextsoltions.com",
   },
   {
-    image:
-      "https://www.audiotextsolutions.com/wp-content/uploads/2015/09/tech_support.jpg",
+    image: tech_support,
     title: "TECH SUPPORT",
     points: [
       "Timely Conveyed Support",
@@ -934,8 +938,7 @@ export const TEAM_MEMBERS = [
     email: "mailto:support@audiotextsoltions.com",
   },
   {
-    image:
-      "https://www.audiotextsolutions.com/wp-content/uploads/2015/09/Finance_asian.jpg",
+    image: Finance_asian,
     title: "FINANCE",
     points: [
       "Secured Online Payment Service",

@@ -1,5 +1,7 @@
+import { StaticImageData } from "next/image";
+
 export interface DestinationCardProps {
-  image: string;
+  image: string | StaticImageData;
   title: string;
   share: ShareLinks;
 
