@@ -70,7 +70,7 @@ const Header = () => {
           sticky ? "shadow-sm" : ""
         }`}
       >
-        <div className="flex flex-row px-[14px] md:flex-col md:justify-center lg:mx-auto lg:items-center lg:gap-8 xl:flex-row xl:justify-between 2xl:px-40">
+        <div className="flex flex-row px-[14px] md:flex-col md:justify-center xl:mx-auto xl:flex-row xl:items-center xl:justify-between xl:gap-8 2xl:px-40">
           <div className="flex flex-shrink-0 items-center justify-between">
             <Link
               href="/"

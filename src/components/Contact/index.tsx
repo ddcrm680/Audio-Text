@@ -20,10 +20,10 @@ const Contact = () => {
       validateOnBlur
     >
       <Form className="space-y-10">
-        <div className="grid gap-5 md:grid-cols-1">
-          <FormInput name="name" label="First Name" required />
+        <div className="grid gap-[15px] md:grid-cols-1">
+          <FormInput name="name" label="Name" required />
 
-          <FormInput name="skypeId" label="Skype ID" required />
+          <FormInput name="skypeId" label="Skype Id" required />
 
           <FormInput name="email" label="Email" required type="email" />
           <FormInput name="subject" label="Subject" required />
