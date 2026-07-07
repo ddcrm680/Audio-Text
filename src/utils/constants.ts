@@ -800,9 +800,7 @@ The ultimate question is where can you find IPRN with great access? Audio Text S
     author: "ATS",
     title: "What is DPRN and how to earn money through it?",
     image: Blog2,
-    desc: `Telecommunication companies earn a higher number of their revenue through premium rate numbers. These premium rate numbers actively provide a lot of telecom services with the highest possible quality.
-
-That is the reason they are charged higher than the usual number.`,
+    desc: "<p><strong>Business</strong> booms when its services are up to the mark...</p><h2>What could be the reason behind their higher rates you might ask?</h2><p>Well, these so called numbers...</p><ul><li>Ticketing</li><li>Songs on Demand</li><li>Live Chat</li></ul>",
     publish_at: "2021-08-11",
     slug: "what-is-dprn-and-how-to-earn-money-through-it",
 
