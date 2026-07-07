@@ -28,6 +28,7 @@ const PaymentPage = () => {
       <div className="px-5" style={{ fontFamily: "Aileron Light" }}>
         <div className="mx-auto max-w-6xl py-[70px]">
           <ContentSection
+            subParentClassName="!px-0"
             bg=""
             titleIcon={<CreditCard size={20} strokeWidth={2} />}
             padding="pb-[30px] "
@@ -47,7 +48,7 @@ const PaymentPage = () => {
               </div>
             }
           />
-          <div className="grid gap-[30px] px-6 md:grid-cols-2">
+          <div className="grid gap-[30px] md:grid-cols-2">
             <section className={`bg-registerBg dark:bg-slate-800`}>
               <div className="flex flex-col items-start gap-[30px] p-[40px]">
                 <h4 className="text-primary-blue text-[24px] font-light uppercase">
@@ -80,7 +81,7 @@ const PaymentPage = () => {
               {Constant.Payment.paymentMethodDesc}
             </p>
           </div>
-          <div className="grid gap-5 px-6 lg:grid-cols-3 lg:gap-x-[30px]">
+          <div className="grid gap-5 lg:grid-cols-3 lg:gap-x-[30px]">
             {PAYMENT_METHOD.map((item) => (
               <FeatureSection
                 key={item.title}

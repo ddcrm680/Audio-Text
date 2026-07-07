@@ -1,5 +1,7 @@
+import { StaticImageData } from "next/image";
+
 export interface TeamCardProps {
-  image: string;
+  image: string | StaticImageData;
   title: string;
   points: string[];
   skype: string;

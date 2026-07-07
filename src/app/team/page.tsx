@@ -30,6 +30,7 @@ const TeamPage = () => {
             bg=""
             titleIcon={<ThumbsUp size={20} strokeWidth={2} />}
             padding="pb-[20px] "
+            subParentClassName="!px-0"
             title={Constant.Team.ourZealousTeamTitle}
             description={
               <div className="relative">
@@ -38,7 +39,7 @@ const TeamPage = () => {
             }
           />
           <div className="bg-white pt-[70px] pb-[35px] dark:bg-slate-900">
-            <div className="mx-auto max-w-7xl px-5">
+            <div className="mx-auto max-w-7xl">
               <div className="grid gap-8 sm:grid-cols-2 xl:grid-cols-4">
                 {TEAM_MEMBERS.map((member) => (
                   <TeamCard key={member.title} {...member} />
