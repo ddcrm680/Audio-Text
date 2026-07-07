@@ -128,7 +128,7 @@ const Header = () => {
             </div>
             <nav
               id="navbarCollapse"
-              className={`navbar absolute right-0 z-30 mt-2 w-[230px] rounded border border-[#d9d9d9] bg-white py-2 shadow-lg duration-300 md:visible md:static md:mt-0 md:w-[100%] md:overflow-x-hidden md:border-none md:bg-transparent md:p-0 md:shadow-none lg:visible lg:static lg:w-auto lg:border-none lg:p-0 lg:opacity-100 xl:overflow-visible ${
+              className={`navbar dark:bg-gray-dark absolute right-0 z-30 mt-2 w-[230px] rounded border border-[#d9d9d9] bg-white py-2 shadow-lg duration-300 md:visible md:static md:mt-0 md:w-[100%] md:overflow-x-hidden md:border-none md:bg-transparent md:p-0 md:shadow-none lg:visible lg:static lg:w-auto lg:border-none lg:p-0 lg:opacity-100 xl:overflow-visible dark:border-gray-500 ${
                 navbarOpen
                   ? "visibility top-full opacity-100"
                   : "invisible top-[120%] opacity-0 md:visible md:opacity-100"
