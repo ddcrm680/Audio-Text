@@ -1,9 +1,11 @@
+import { StaticImageData } from "next/image";
+
 export interface ContentSectionProps {
   title: string;
 
   description: React.ReactNode;
 
-  image?: string;
+  image?: string | StaticImageData;
 
   subParentClassName?: string;
   imageAlt?: string;

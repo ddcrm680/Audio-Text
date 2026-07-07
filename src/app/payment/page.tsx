@@ -12,7 +12,7 @@ import { CreditCard, Eye, Flag, Rocket, Users } from "lucide-react";
 
 import { Metadata } from "next";
 import Image from "next/image";
-
+import payment from "../../../public/images/payment/payment.webp";
 export const metadata: Metadata = {
   title: "Payment | Audio Text",
   // other metadata
@@ -32,7 +32,7 @@ const PaymentPage = () => {
             titleIcon={<CreditCard size={20} strokeWidth={2} />}
             padding="pb-[30px] "
             title={Constant.Payment.paymentTerms}
-            image="https://www.audiotextsolutions.com/wp-content/uploads/2015/08/payment.jpg"
+            image={payment}
             imageAlt="Payment Term Image "
             description={
               <div className="relative">

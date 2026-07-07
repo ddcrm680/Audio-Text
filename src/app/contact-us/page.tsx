@@ -6,7 +6,7 @@ import MapWrapper from "@/components/Contact/MapWrapper";
 import ContentSection from "@/components/ContentSection";
 import { Constant, ContactList } from "@/utils/constants";
 import { Mail, MapPin } from "lucide-react";
-
+import Contact_Us from "../../../public/images/contact/contact_us.jpg";
 import { Metadata } from "next";
 import dynamic from "next/dynamic";
 import Image from "next/image";
@@ -66,9 +66,7 @@ const ContactPage = () => {
               <div className="mt-[50px] grid gap-[30px] md:grid-cols-2">
                 <Contact />
                 <Image
-                  src={
-                    "https://www.audiotextsolutions.com/wp-content/uploads/2015/08/contact_us.jpg"
-                  }
+                  src={Contact_Us}
                   alt={"Contact Us"}
                   width={700}
                   height={500}

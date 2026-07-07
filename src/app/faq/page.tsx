@@ -5,9 +5,7 @@ import SkillsChart from "@/components/About/SkillChart";
 import Breadcrumb from "@/components/Common/Breadcrumb";
 import SectionBanner from "@/components/Common/SectionBanner";
 import FAQAccordion from "@/components/FAQ/FAQAccordion";
-import { Colors } from "@/utils/color";
 import { Constant, URLs } from "@/utils/constants";
-import { Eye, Flag, Rocket, Users } from "lucide-react";
 
 import { Metadata } from "next";
 

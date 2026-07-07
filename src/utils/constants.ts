@@ -4,7 +4,7 @@ import SlideOne from "@/components/LandingScreeen/SlideOne";
 import SlideThree from "@/components/LandingScreeen/SlideThree";
 import discover from "../../public/images/payment/discover.png";
 import Blog2 from "../../public/images/blog/blog-2.jpg";
-
+import secondaryBannerBg from "../../public/images/common/Secondary_banner_bg.jpg";
 import Blog1 from "../../public/images/blog/blog-1.jpg";
 import SlideTwo from "@/components/LandingScreeen/SlideTwo";
 import {
@@ -26,8 +26,7 @@ export const API_ENDPOINTS = {
   TEST: "/api/test",
 };
 export const URLs = {
-  registerBg:
-    "https://www.audiotextsolutions.com/wp-content/themes/codeus/images/backgrounds/title/01.jpg",
+  registerBg: secondaryBannerBg,
 };
 export const contactUsInitialValues = {
   name: "",

@@ -1,5 +1,7 @@
+import { StaticImageData } from "next/image";
+
 export interface SectionBannerProps {
   title?: string;
   subtitle?: string;
-  backgroundImage?: string;
+  backgroundImage?: StaticImageData | string;
 }

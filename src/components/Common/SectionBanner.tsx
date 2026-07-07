@@ -11,7 +11,7 @@ export default function SectionBanner({
       style={{
         fontFamily: "Aileron UltraLight",
         backgroundImage: backgroundImage
-          ? `url(${backgroundImage})`
+          ? `url(${typeof backgroundImage === "string" ? backgroundImage : backgroundImage.src})`
           : undefined,
       }}
     >
