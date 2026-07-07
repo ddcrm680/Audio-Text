@@ -30,7 +30,7 @@ export default function RootLayout({
         <Providers>
           <div className="isolate">
             <Header />
-            <div className="pt-[105.79px] md:pt-[172.29px] lg:pt-[105.79px]">
+            <div className="pt-[105.79px] md:pt-[172.29px] lg:pt-[156.29px] xl:pt-[105.79px]">
               {children}
             </div>
             <Footer />
