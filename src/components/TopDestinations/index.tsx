@@ -39,7 +39,7 @@ export default function TopDestinations() {
           {/* Previous */}
           <button
             onClick={scrollPrev}
-            className="group border-primary-blue absolute top-1/2 left-[-70px] z-20 hidden h-16 w-16 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full border lg:flex"
+            className="group border-primary-blue absolute top-1/2 left-[-70px] z-20 hidden h-16 w-16 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full border 2xl:flex"
           >
             <ChevronLeft className="transition-transform duration-300 group-hover:-translate-x-2" />
           </button>
@@ -47,7 +47,7 @@ export default function TopDestinations() {
           {/* Next */}
           <button
             onClick={scrollNext}
-            className="group border-primary-blue absolute top-1/2 right-[-70px] z-20 hidden h-16 w-16 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full border lg:flex"
+            className="group border-primary-blue absolute top-1/2 right-[-70px] z-20 hidden h-16 w-16 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full border 2xl:flex"
           >
             <ChevronRight className="transition-transform duration-300 group-hover:translate-x-2" />
           </button>
@@ -74,7 +74,7 @@ export default function TopDestinations() {
           </div>
 
           {/* Mobile Buttons */}
-          <div className="mt-8 flex justify-center gap-5 lg:hidden">
+          <div className="mt-8 flex justify-center gap-5 2xl:hidden">
             <button
               onClick={scrollPrev}
               className="group border-primary-blue flex h-14 w-14 items-center justify-center rounded-full border"
