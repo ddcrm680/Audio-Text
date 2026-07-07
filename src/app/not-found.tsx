@@ -18,7 +18,7 @@ const NotFoundPage = () => {
         title={Constant.COMMON.pageNotFound}
       />
 
-      <section className="px-6 py-[90px]">
+      <section className="px-5 py-[70px]">
         <div className="mx-auto max-w-6xl">
           <h1 className="text-[58px] leading-none font-light text-[#48AFDB] uppercase md:text-[58px] dark:text-sky-400">
             Page Not Found.

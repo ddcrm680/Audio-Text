@@ -17,7 +17,7 @@ const CookiesPolicyPage = () => {
         title={Constant.Policy.cookiesPolicyTitle}
       />
       <section
-        className="px-6 py-[70px]"
+        className="px-5 py-[70px]"
         style={{ fontFamily: "Aileron Light" }}
       >
         <div className="mx-auto max-w-6xl text-[17px] leading-[25px] text-[#555] dark:text-gray-300 [&_h3]:mt-[18px] [&_h3]:mb-[15px] [&_h3]:leading-[30px] [&_h3]:capitalize [&>ul]:my-[17px]">

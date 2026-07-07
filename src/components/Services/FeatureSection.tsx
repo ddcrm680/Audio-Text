@@ -20,7 +20,7 @@ export default function FeatureSection({
   padding = "py-5",
   titleClassName,
   className = "",
-  childPadding = "px-6",
+  childPadding = "",
 }: FeatureSectionProps) {
   return (
     <section className={`${padding} ${className}`}>

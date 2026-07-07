@@ -35,12 +35,13 @@ const ResellersPage = () => {
         title={Constant.RESELLERS.title}
         subtitle={Constant.RESELLERS.subTitle}
       />
-      <div className="" style={{ fontFamily: "Aileron Light" }}>
+      <div className="px-5" style={{ fontFamily: "Aileron Light" }}>
         <div className="mx-auto max-w-6xl py-[70px]">
           <ContentSection
             bg=""
             titleIcon={<User size={20} strokeWidth={2} />}
             padding="pb-[30px] "
+            subParentClassName="!px-0"
             title={Constant.RESELLERS.beOurSellerTitle}
             image="/images/resellers/join_uss.jpg"
             imageAlt="reseller Image "
@@ -73,7 +74,7 @@ const ResellersPage = () => {
               </div>
             }
           />
-          <div className="px-5 pb-[35px] md:p-0 md:pb-[35px]">
+          <div className="pb-[35px] md:p-0 md:pb-[35px]">
             <div className="flex items-center justify-center">
               <h2 className="text-primary-blue mb-[30px] text-center text-[25px] leading-snug font-light md:text-4xl lg:w-full dark:text-sky-400">
                 {Constant.RESELLERS.featureTitle}
@@ -135,7 +136,7 @@ const ResellersPage = () => {
               Constant.RESELLERS.superResellerDescPoint8,
             ]}
           />
-          <div className="px-6">
+          <div className="">
             <section
               className={`bg-registerBg mt-[35px] px-8 py-10 dark:bg-slate-800`}
             >

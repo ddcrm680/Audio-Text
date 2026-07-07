@@ -30,7 +30,7 @@ export default function TopDestinations() {
 
   return (
     <section className="bg-[#e8ecef] py-16 dark:bg-slate-900">
-      <div className="mx-auto max-w-7xl px-4">
+      <div className="mx-auto max-w-7xl px-5">
         <h2 className="text-primary-blue mb-10 text-center text-5xl uppercase">
           Top Destinations
         </h2>
@@ -39,7 +39,7 @@ export default function TopDestinations() {
           {/* Previous */}
           <button
             onClick={scrollPrev}
-            className="group border-primary-blue absolute top-1/2 left-[-70px] z-20 hidden h-16 w-16 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full border 2xl:flex"
+            className="group border-primary-blue absolute top-1/2 left-[-80] z-20 hidden h-16 w-16 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full border 2xl:flex"
           >
             <ChevronLeft className="transition-transform duration-300 group-hover:-translate-x-2" />
           </button>
@@ -47,17 +47,17 @@ export default function TopDestinations() {
           {/* Next */}
           <button
             onClick={scrollNext}
-            className="group border-primary-blue absolute top-1/2 right-[-70px] z-20 hidden h-16 w-16 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full border 2xl:flex"
+            className="group border-primary-blue absolute top-1/2 right-[-80] z-20 hidden h-16 w-16 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full border 2xl:flex"
           >
             <ChevronRight className="transition-transform duration-300 group-hover:translate-x-2" />
           </button>
 
           <div className="overflow-hidden" ref={emblaRef}>
-            <div className="flex">
+            <div className="flex gap-8">
               {destinations.map((item, index) => (
                 <div
                   key={index}
-                  className="min-w-0 flex-[0_0_100%] px-4 md:flex-[0_0_50%] lg:flex-[0_0_33.3333%]"
+                  className="min-w-0 flex-[0_0_100%] md:flex-[0_0_50%] lg:flex-[0_0_33.3333%]"
                 >
                   <DestinationCard
                     {...item}

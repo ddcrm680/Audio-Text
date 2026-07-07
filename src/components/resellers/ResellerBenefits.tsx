@@ -63,7 +63,7 @@ export default function ResellerBenefits({
     },
   };
   return (
-    <section className="px-6 py-[35px]">
+    <section className="py-[35px]">
       <div className="mt-1 mb-5 flex items-start gap-4 sm:items-center">
         <div className="bg-primary-blue mt-2 flex h-[40px] w-[40px] shrink-0 items-center justify-center rounded-full text-white md:mt-0">
           {icon}

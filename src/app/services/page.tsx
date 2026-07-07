@@ -42,12 +42,13 @@ const ServicePage = () => {
         title={Constant.Services.title}
         subtitle={Constant.Services.subTitle}
       />
-      <div className="" style={{ fontFamily: "Aileron Light" }}>
+      <div className="px-5" style={{ fontFamily: "Aileron Light" }}>
         <div className="mx-auto max-w-6xl py-[70px]">
           <ContentSection
             bg=""
             titleIcon={<BriefcaseBusiness size={20} strokeWidth={2} />}
             padding="pb-[60px]"
+            subParentClassName="!px-0"
             title={Constant.Services.peculiarServiceTitle}
             image="/images/services/service_1.jpg"
             imageAlt="service Image "
@@ -64,6 +65,7 @@ const ServicePage = () => {
           />
           <ContentSection
             bg=""
+            subParentClassName="!px-0"
             titleIcon={<Globe size={20} strokeWidth={2} />}
             padding="pb-[60px]"
             title={Constant.Services.internationalPremiumTitle}
@@ -76,7 +78,7 @@ const ServicePage = () => {
               </div>
             }
           />
-          <div className="grid gap-5 px-6 md:grid-cols-2 lg:gap-x-[30px]">
+          <div className="grid gap-5 md:grid-cols-2 lg:gap-x-[30px]">
             <FeatureSection
               childPadding="px-0"
               padding="pb-[60px]"
@@ -96,6 +98,7 @@ const ServicePage = () => {
             />
           </div>
           <ContentSection
+            subParentClassName="!px-0"
             bg=""
             titleIcon={<Home size={20} strokeWidth={2} />}
             padding="pb-[50px]"

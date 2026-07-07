@@ -23,7 +23,7 @@ const FaqPage = () => {
         subtitle={Constant.FAQ.faqDesc}
       />
       <section
-        className="px-6 py-[70px]"
+        className="px-5 py-[70px]"
         style={{ fontFamily: "Aileron Light" }}
       >
         <div className="mx-auto max-w-6xl">

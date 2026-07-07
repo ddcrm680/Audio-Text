@@ -26,7 +26,7 @@ const RegisterWithUsPage = () => {
 
             <div className="mx-auto h-[2px] w-[100px] bg-[#1bb998]" />
           </div>
-          <div className="px-6">
+          <div className="px-5">
             <RegisterForm></RegisterForm>
           </div>
         </div>

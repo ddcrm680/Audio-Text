@@ -14,7 +14,7 @@ export default function CareersPage() {
       <SectionBanner title={career.title} />
 
       <section
-        className="px-6 py-[70px]"
+        className="px-5 py-[70px]"
         style={{ fontFamily: "Aileron Light" }}
       >
         <div className="mx-auto max-w-6xl text-[17px] leading-[25px] text-[#555] dark:text-gray-300 [&_ul]:mt-[17px]">
