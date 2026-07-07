@@ -78,10 +78,8 @@ export default async function BlogDetails({ params }: Props) {
                       />
 
                       <div
-                        className="mx-auto max-w-full text-[17px] leading-[30px] text-[#555] dark:text-gray-300 [&_a]:text-[#48AFDB] [&_a]:underline [&_h1]:mb-6 [&_h2]:mt-10 [&_h2]:mb-6 [&_h2]:text-[42px] [&_h2]:font-extralight [&_h2]:text-[#48AFDB] [&_h2]:uppercase [&_h3]:mt-8 [&_h3]:mb-5 [&_h3]:text-[30px] [&_h3]:font-light [&_h3]:text-[#48AFDB] [&_li]:mb-2 [&_p]:mb-5 [&_ul]:my-6 [&_ul]:list-disc [&_ul]:pl-8"
-                        dangerouslySetInnerHTML={{
-                          __html: blog.desc,
-                        }}
+                        className="prose prose-lg dark:prose-invert max-w-none [&_a]:text-[#48AFDB] [&_a]:no-underline hover:[&_a]:underline [&_blockquote]:border-l-4 [&_blockquote]:border-[#48AFDB] [&_blockquote]:pl-5 [&_blockquote]:italic [&_h1]:mb-6 [&_h1]:text-[52px] [&_h1]:leading-[60px] [&_h1]:font-extralight [&_h1]:text-[#48AFDB] [&_h1]:uppercase [&_h2]:mb-6 [&_h2]:text-[44px] [&_h2]:leading-[52px] [&_h2]:font-extralight [&_h2]:text-[#48AFDB] [&_h2]:uppercase [&_h3]:mb-5 [&_h3]:text-[34px] [&_h3]:leading-[42px] [&_h3]:font-light [&_h3]:text-[#48AFDB] [&_h4]:mb-4 [&_h4]:text-[28px] [&_h4]:leading-[36px] [&_h4]:font-light [&_h4]:text-[#48AFDB] [&_h5]:mb-3 [&_h5]:text-[24px] [&_h5]:font-light [&_h5]:text-[#48AFDB] [&_h6]:mb-3 [&_h6]:text-[20px] [&_h6]:font-medium [&_h6]:text-[#48AFDB] [&_img]:my-8 [&_img]:rounded-lg [&_li]:mb-2 [&_ol]:my-6 [&_ol]:list-decimal [&_ol]:pl-8 [&_p]:mb-5 [&_strong]:font-semibold [&_table]:w-full [&_table]:border-collapse [&_ul]:my-6 [&_ul]:list-disc [&_ul]:pl-8"
+                        dangerouslySetInnerHTML={{ __html: blog.desc }}
                       />
                     </div>
 
