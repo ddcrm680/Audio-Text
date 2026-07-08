@@ -27,7 +27,7 @@ const Contact = () => {
 
           <FormInput name="email" label="Email" required type="email" />
           <FormInput name="subject" label="Subject" required />
-          <FormTextarea name="messsage" label="Messages" required rows={3} />
+          <FormTextarea name="message" label="Messages" required rows={3} />
           <FormInput name="captcha" label="1 + 1 = ?" type="number" />
         </div>
         <div className="flex w-full items-end justify-start lg:w-auto">

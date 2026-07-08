@@ -4,7 +4,7 @@ export const contactUsSchema = Yup.object({
   // Personal Details
   name: Yup.string().trim().required("Name is required"),
 
-  skypeId: Yup.string().trim().required("Skype ID is required"),
+  skypeId: Yup.string().trim().required("Skype Id is required"),
 
   email: Yup.string()
     .trim()
