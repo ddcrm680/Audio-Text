@@ -13,6 +13,7 @@ import SlideThree from "../LandingScreeen/SlideThree";
 import SlideFour from "../LandingScreeen/SlideFour";
 import SlideFive from "../LandingScreeen/SlideFive";
 import LandingSlide from "../LandingScreeen";
+import { logger } from "@/utils/helpers";
 
 const Hero = () => {
   useEffect(() => {
@@ -26,6 +27,7 @@ const Hero = () => {
     }
     // test();
   });
+  logger.log("hi there");
   return (
     <>
       <section
