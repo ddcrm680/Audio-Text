@@ -11,7 +11,7 @@ import Autoplay from "embla-carousel-autoplay";
 export default function LandingSlide() {
   const autoplay = useRef(
     Autoplay({
-      // delay: 5000,
+      delay: 5000,
       stopOnInteraction: false,
       stopOnMouseEnter: false,
     }),
@@ -21,11 +21,9 @@ export default function LandingSlide() {
     {
       loop: true,
       align: "start",
-      // duration: 45, // try 40-60
+      duration: 45, // try 40-60
     },
-    [
-      // autoplay.current
-    ],
+    [autoplay.current],
   );
   const scrollNext = useCallback(() => {
     emblaApi?.scrollNext();
