@@ -29,7 +29,7 @@ export default function RegisterForm() {
         validateOnChange
         validateOnBlur
       >
-        <Form className="space-y-12">
+        <Form className="space-y-8">
           <PersonalDetails />
 
           <ContactDetails />
