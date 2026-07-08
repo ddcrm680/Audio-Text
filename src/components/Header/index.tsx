@@ -2,11 +2,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import ThemeToggler from "./ThemeToggler";
 import menuData from "./menuData";
 
 const Header = () => {
+  const menuButtonRef = useRef<HTMLDivElement>(null);
+  const navRef = useRef<HTMLElement>(null);
   // Navbar toggle
   const [navbarOpen, setNavbarOpen] = useState(false);
   const navbarToggleHandler = () => {
@@ -60,7 +62,29 @@ const Header = () => {
     setOpenIndex((prev) => (prev === index ? -1 : index));
   };
   const usePathName = usePathname();
+  useEffect(() => {
+    if (!navbarOpen) return;
 
+    const handleClickOutside = (e: MouseEvent) => {
+      const target = e.target as Node;
+
+      const clickedButton = menuButtonRef.current?.contains(target);
+
+      const clickedNav = navRef.current?.contains(target);
+
+      if (!clickedButton && !clickedNav) {
+        closeSidebar();
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, [navbarOpen]);
+  const closeSidebar = () => {
+    setNavbarOpen(false);
+    setOpenIndex(-1);
+  };
   return (
     <>
       <header
@@ -96,35 +120,41 @@ const Header = () => {
               <ThemeToggler />
             </div>
           </div>
-          <div className="flex flex-1 items-center justify-end md:justify-center lg:justify-end">
+          <div
+            // ref={navRef}
+            className="flex flex-1 items-center justify-end md:justify-center lg:justify-end"
+          >
             <div className="flex items-center gap-4 md:gap-8">
               <div className="block md:hidden">
                 <ThemeToggler />
               </div>
-              <button
-                onClick={navbarToggleHandler}
-                id="navbarToggler"
-                aria-label="Mobile Menu"
-                className="ring-primary block rounded-lg px-3 py-[6px] focus:ring-2 md:hidden"
-              >
-                <span
-                  className={`relative my-1.5 block h-0.5 w-[30px] bg-black transition-all duration-300 dark:bg-white ${
-                    navbarOpen ? "top-[7px] rotate-45" : " "
-                  }`}
-                />
-                <span
-                  className={`relative my-1.5 block h-0.5 w-[30px] bg-black transition-all duration-300 dark:bg-white ${
-                    navbarOpen ? "opacity-0" : " "
-                  }`}
-                />
-                <span
-                  className={`relative my-1.5 block h-0.5 w-[30px] bg-black transition-all duration-300 dark:bg-white ${
-                    navbarOpen ? "top-[-8px] -rotate-45" : " "
-                  }`}
-                />
-              </button>
+              <div ref={menuButtonRef}>
+                <button
+                  onClick={navbarToggleHandler}
+                  id="navbarToggler"
+                  aria-label="Mobile Menu"
+                  className="ring-primary block rounded-lg px-3 py-[6px] focus:ring-2 md:hidden"
+                >
+                  <span
+                    className={`relative my-1.5 block h-0.5 w-[30px] bg-black transition-all duration-300 dark:bg-white ${
+                      navbarOpen ? "top-[7px] rotate-45" : " "
+                    }`}
+                  />
+                  <span
+                    className={`relative my-1.5 block h-0.5 w-[30px] bg-black transition-all duration-300 dark:bg-white ${
+                      navbarOpen ? "opacity-0" : " "
+                    }`}
+                  />
+                  <span
+                    className={`relative my-1.5 block h-0.5 w-[30px] bg-black transition-all duration-300 dark:bg-white ${
+                      navbarOpen ? "top-[-8px] -rotate-45" : " "
+                    }`}
+                  />
+                </button>
+              </div>
             </div>
             <nav
+              ref={navRef}
               id="navbarCollapse"
               className={`navbar dark:bg-gray-dark absolute right-0 z-30 mt-2 w-[230px] rounded border border-[#d9d9d9] bg-white py-2 shadow-lg duration-300 md:visible md:static md:mt-0 md:w-[100%] md:overflow-x-hidden md:border-none md:bg-transparent md:p-0 md:shadow-none lg:visible lg:static lg:w-auto lg:border-none lg:p-0 lg:opacity-100 xl:overflow-visible dark:border-gray-500 ${
                 navbarOpen
@@ -138,6 +168,9 @@ const Header = () => {
                     {menuItem.path ? (
                       <Link
                         href={menuItem.path}
+                        onClick={() => {
+                          if (!isDesktop) closeSidebar();
+                        }}
                         className={`block w-full px-[25px] py-[7px] text-left text-[15px] font-light tracking-[0.02em] whitespace-nowrap uppercase transition-colors duration-300 md:w-auto md:px-0 md:py-8 lg:px-5 lg:py-[14px] ${
                           usePathName === menuItem.path
                             ? "text-primary-blue dark:text-white"
@@ -192,6 +225,9 @@ const Header = () => {
                             <Link
                               key={index}
                               href={submenuItem.path}
+                              onClick={() => {
+                                if (!isDesktop) closeSidebar();
+                              }}
                               className={`block border-l-2 border-transparent px-8 py-3 text-[14px] font-light transition-all duration-200 ${
                                 usePathName === submenuItem.path
                                   ? "border-primary-blue text-primary-blue bg-[#eef9fe] dark:bg-[#1f2937]"
