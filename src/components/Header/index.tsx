@@ -52,7 +52,7 @@ const Header = () => {
     window.addEventListener("scroll", handleStickyNavbar);
   });
 
-  // submenu handler
+  // submenu handler.
   const [openIndex, setOpenIndex] = useState(-1);
 
   const handleSubmenu = (index: number) => {
