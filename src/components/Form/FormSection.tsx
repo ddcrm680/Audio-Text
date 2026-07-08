@@ -1,21 +1,22 @@
 import { FormSectionProps } from "@/types/form";
-import { Info } from "lucide-react";
 
-export default function FormSection({ title, children }: FormSectionProps) {
+export default function FormSection({
+  title,
+  icon,
+  children,
+}: FormSectionProps) {
+  const Info = icon;
   return (
-    <div className="relative mt-[15px] mb-[35px] rounded-[10px] border border-[#ddd]">
-      <div className="absolute -top-[14px] left-2 flex items-center gap-2 bg-white px-2 dark:bg-slate-900">
-        <Info
-          size={16}
-          className="fill-[#2d3142] text-white"
-          strokeWidth={1.5}
-        />
+    <section className="mb-8 rounded border border-[#e3e8ef] bg-white dark:border-slate-700 dark:bg-slate-900">
+      <div className="flex items-center gap-2 border-b border-[#edf1f5] px-4 py-4 dark:border-slate-700">
+        <Info size={15} strokeWidth={2} className="text-primary-blue" />
 
-        <span className="text-[19px] font-medium text-[#444] dark:text-slate-100">
+        <h2 className="text-[16px] font-semibold text-[#2d3142] dark:text-white">
           {title}
-        </span>
+        </h2>
       </div>
-      <div className="px-[15px] py-[20px]">{children}</div>
-    </div>
+
+      <div className="p-4 md:p-4">{children}</div>
+    </section>
   );
 }

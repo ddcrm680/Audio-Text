@@ -70,20 +70,44 @@ export default function FormUpload({
 
       <div
         {...getRootProps()}
-        className="mt-1 cursor-pointer rounded border border-dashed border-gray-300 px-[20px] py-[15px] text-center transition hover:border-sky-400"
+        className="hover:border-primary-blue mt-1 flex min-h-[215px] cursor-pointer flex-col items-center justify-center rounded border border-dashed border-[#d9d9d9] px-6 py-8 text-center transition"
       >
         <input {...getInputProps()} />
 
-        <h3 className="text-[22px] font-light text-sky-400 uppercase md:text-3xl">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="text-primary-blue mb-3 h-10 w-10"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          strokeWidth={1.8}
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M7 17a4 4 0 010-8 5 5 0 019.7-1.5A3.5 3.5 0 1118 17H7zm5-8v8m0-8l-3 3m3-3l3 3"
+          />
+        </svg>
+
+        <h3 className="text-primary-blue text-[18px] font-semibold tracking-wide uppercase">
           Drag & Drop Files Here
         </h3>
 
-        <p className="my-2 text-[17px]">or</p>
+        <p className="my-0 text-[16px] text-black dark:text-white">or</p>
 
-        <span className="text-[17px] text-sky-500">Browse Files</span>
+        <span className="text-primary-blue cursor-pointer text-[16px] underline underline-offset-2">
+          Browse Files
+        </span>
 
-        <p className="mt-2 text-right text-[12px]">
-          {files.length} of {maxFiles}
+        <p className="text-primary-blue mt-6 text-center text-[13px] leading-7">
+          <span className="text-black">Acceptable file types:</span>{" "}
+          <span className="font-semibold">
+            jpg, jpeg, png, pdf, docx, zip Maximum file size: 10 MB
+          </span>
+        </p>
+
+        <p className="mt-2 text-[13px] text-gray-500 dark:text-gray-400">
+          {files.length} of {maxFiles} uploaded
         </p>
       </div>
 
@@ -94,16 +118,16 @@ export default function FormUpload({
               key={`${file.name}-${index}`}
               className="flex items-center gap-3"
             >
-              <FileText size={26} />
+              <FileText size={20} />
 
               <div className="flex-1">
-                <div className="flex justify-between text-[17px]">
+                <div className="flex justify-between text-[14px]">
                   <span className="truncate text-[#016d98]">{file.name}</span>
 
                   <em className="font-[700]">({formatSize(file.size)})</em>
                 </div>
 
-                <div className="mt-2 h-[14px] rounded-[5px] bg-gray-300">
+                <div className="mt-2 h-[10px] rounded-[5px] bg-gray-300">
                   <div className="h-full w-full rounded-[5px] bg-green-500" />
                 </div>
               </div>
@@ -115,11 +139,6 @@ export default function FormUpload({
           ))}
         </div>
       )}
-
-      <p className="mt-[15px] text-[15px] text-red-500">
-        Acceptable file types: jpg, jpeg, png, pdf, docx, zip & Maximum file
-        size: 10 MB.
-      </p>
 
       <FormError name={name} />
     </div>

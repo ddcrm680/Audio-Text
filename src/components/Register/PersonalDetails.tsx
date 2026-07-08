@@ -5,6 +5,7 @@ import FormSection from "../Form/FormSection";
 import FormSelect from "../Form/FormSelect";
 import FormTextarea from "../Form/FormTextarea";
 import { Country, State, City } from "country-state-city";
+import { User } from "lucide-react";
 export default function PersonalDetails() {
   const countries = Country.getAllCountries().map((country) => ({
     label: country.name,
@@ -22,24 +23,25 @@ export default function PersonalDetails() {
     }),
   );
   return (
-    <FormSection title="Personal Details">
-      <div className="grid gap-5">
+    <FormSection icon={User} title="Personal Details">
+      <div className="grid gap-4">
         {/* Row 1 */}
-        <div className="grid gap-5 md:grid-cols-2">
+        <div className="grid gap-4 md:grid-cols-2">
           <FormInput name="firstName" label="First Name" required />
 
           <FormInput name="lastName" label="Last Name" required />
         </div>
 
         {/* Row 2 */}
-        <div className="grid gap-5 md:grid-cols-2">
+        <div className="grid gap-4 md:grid-cols-2">
           <FormDatePicker name="dateOfBirth" label="Date Of Birth" />
-
+          <FormInput name="zipCode" label="Zip Code" required />
+        </div>
+        <div className="grid gap-4 md:grid-cols-1">
           <FormTextarea name="street" label="Street" required rows={3} />
         </div>
-
         {/* Row 3 */}
-        <div className="grid gap-5 md:grid-cols-3">
+        <div className="grid gap-4 md:grid-cols-3">
           <FormSelect
             name="country"
             label="Country"
@@ -63,11 +65,6 @@ export default function PersonalDetails() {
             placeholder="Select City"
             options={cities}
           />
-        </div>
-
-        {/* Row 4 */}
-        <div className="grid gap-5 md:grid-cols-2">
-          <FormInput name="zipCode" label="Zip Code" required />
         </div>
       </div>
     </FormSection>

@@ -18,8 +18,9 @@ export default function FormDatePicker({
 
   return (
     <div className="w-full">
-      <FormLabel name={name} label={label} required={required} />
-
+      <div className="mb-[1.5px]">
+        <FormLabel name={name} label={label} required={required} />
+      </div>
       <input
         {...field}
         id={name}
@@ -27,7 +28,7 @@ export default function FormDatePicker({
         disabled={disabled}
         min={min}
         max={max}
-        className={`focus:border-primary-blue mt-1 h-[48px] w-full rounded border border-[#d9d9d9] px-4 text-[16px] transition outline-none ${className}`}
+        className={`focus:border-primary-blue h-[42px] w-full rounded border border-[#d9d9d9] px-4 text-[14px] transition outline-none ${className}`}
       />
 
       <FormError name={name} />

@@ -4,20 +4,21 @@ import FormSection from "../Form/FormSection";
 import FormSelect from "../Form/FormSelect";
 import FormTextarea from "../Form/FormTextarea";
 import FormUpload from "../Form/FormUpload";
+import { Banknote, Wallet } from "lucide-react";
 
 export default function BankDetails() {
   return (
-    <FormSection title="Bank Details">
-      <div className="grid gap-5">
+    <FormSection icon={Wallet} title="Bank Details">
+      <div className="grid gap-4">
         {/* Row 1 */}
-        <div className="grid gap-5 md:grid-cols-2">
+        <div className="grid gap-4 md:grid-cols-2">
           <FormInput name="beneficiaryName" label="Beneficiary Name" />
 
           <FormInput name="bankName" label="Bank Name" />
         </div>
 
         {/* Row 2 */}
-        <div className="grid gap-5 md:grid-cols-2">
+        <div className="grid gap-4 md:grid-cols-2">
           <FormTextarea
             name="beneficiaryAddress"
             label="Beneficiary Address"
@@ -28,18 +29,18 @@ export default function BankDetails() {
         </div>
 
         {/* Row 3 */}
-        <div className="grid gap-5 md:grid-cols-2">
+        <div className="grid gap-4 md:grid-cols-2">
           <FormInput name="accountNumber" label="Account Number / IBAN" />
 
           <FormInput name="swiftCode" label="SWIFT Code" />
         </div>
 
         {/* Row 4 */}
-        <div className="grid gap-5 lg:grid-cols-2">
+        <div className="grid gap-4 lg:grid-cols-1">
           <FormTextarea
             name="additionalInformation"
             label="Additional Information"
-            rows={3}
+            rows={2}
           />
 
           <FormUpload
@@ -51,7 +52,7 @@ export default function BankDetails() {
         </div>
 
         {/* Row 5 */}
-        <div className="grid gap-5 md:grid-cols-2">
+        <div className="grid gap-4 md:grid-cols-2">
           <FormSelect
             name="paymentMethod"
             label="Payment Method"

@@ -40,7 +40,7 @@ export default function FormInput({
         maxLength={maxLength}
         autoComplete="off"
         onChange={handleChange}
-        className={`focus:border-primary-blue h-[42px] rounded-[4px] border border-[#d9d9d9] px-4 text-[16px] transition outline-none disabled:bg-gray-100 ${meta.touched && meta.error ? "border-red-500" : ""} ${className} `}
+        className={`focus:border-primary-blue h-[42px] rounded-[4px] border border-[#d9d9d9] px-4 text-[14px] transition outline-none disabled:bg-gray-100 ${meta.touched && meta.error ? "border-red-500" : ""} ${className} `}
       />
       <FormError name={name} />
     </div>

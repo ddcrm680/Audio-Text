@@ -1,3 +1,5 @@
+import { LucideIcon } from "lucide-react";
+import { StaticImageData } from "next/image";
 import { ReactNode } from "react";
 
 export interface FormTextareaProps {
@@ -16,6 +18,7 @@ export interface FormSelectProps {
 }
 export interface FormSectionProps {
   title: string;
+  icon: LucideIcon;
   children: ReactNode;
 }
 export interface FormInputProps {

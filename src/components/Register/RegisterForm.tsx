@@ -23,13 +23,13 @@ export default function RegisterForm() {
       validateOnChange
       validateOnBlur
     >
-      <Form className="space-y-10">
+      <Form className="space-y-12">
         <PersonalDetails />
 
         <ContactDetails />
 
         <BankDetails />
-        <div className="flex w-full items-end justify-start lg:w-auto">
+        <div className="flex justify-end pt-4">
           <button
             type="submit"
             className="bg-primary-blue flex w-full shrink-0 cursor-pointer items-center justify-center gap-3 px-[25px] py-[14px] text-white transition hover:bg-[#39a6d6] md:w-auto"
