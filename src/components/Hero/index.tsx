@@ -7,11 +7,6 @@ import { useEffect } from "react";
 import { Services } from "./Services";
 import GetToKnowUs from "../GetToKnowUs";
 import TopDestinations from "../TopDestinations";
-import SlideOne from "../LandingScreeen/SlideOne";
-import SlideTwo from "../LandingScreeen/SlideTwo";
-import SlideThree from "../LandingScreeen/SlideThree";
-import SlideFour from "../LandingScreeen/SlideFour";
-import SlideFive from "../LandingScreeen/SlideFive";
 import LandingSlide from "../LandingScreeen";
 import { logger } from "@/utils/helpers";
 
@@ -20,14 +15,13 @@ const Hero = () => {
     async function test() {
       try {
         const response = await getApi(API_ENDPOINTS.TEST);
-        // console.log(response, "response");
+        // logger.log(response, "response");
       } catch (e) {
-        // console.log(e);
+        // logger.log(e);
       }
     }
     // test();
   });
-  logger.log("hi there");
   return (
     <>
       <section

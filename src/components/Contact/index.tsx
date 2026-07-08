@@ -6,10 +6,11 @@ import * as Yup from "yup";
 import FormInput from "../Form/FormInput";
 import FormTextarea from "../Form/FormTextarea";
 import { contactUsSchema } from "@/validations/contactUsSchema";
+import { logger } from "@/utils/helpers";
 
 const Contact = () => {
   const handleSubmit = (values: typeof contactUsInitialValues) => {
-    // console.log(values);
+    // logger.log(values);
   };
   return (
     <Formik

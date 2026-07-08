@@ -8,10 +8,11 @@ import ContactDetails from "./ContactDetails";
 import BankDetails from "./BankDetails";
 import { validationSchema } from "@/validations/registerSchema";
 import { Constant, registerInitialValues } from "@/utils/constants";
+import { logger } from "@/utils/helpers";
 
 export default function RegisterForm() {
   const handleSubmit = (values: typeof registerInitialValues) => {
-    // console.log(values);
+    // logger.log(values);
   };
 
   return (
