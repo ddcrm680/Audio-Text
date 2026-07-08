@@ -31,7 +31,6 @@ export default function DestinationCard({
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [open, onClose]);
-  console.log(image, "imageimage");
 
   return (
     <div
