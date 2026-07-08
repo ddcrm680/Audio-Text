@@ -16,7 +16,7 @@ export default function FormTextarea({
   maxLength,
   className = "",
 }: FormTextareaProps) {
-  const [field, , helpers] = useField(name);
+  const [field, meta, helpers] = useField(name);
 
   const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     const value = e.target.value.replace(/^\s+/, "");
@@ -36,7 +36,7 @@ export default function FormTextarea({
         readOnly={readOnly}
         maxLength={maxLength}
         onChange={handleChange}
-        className={`focus:border-primary-blue mt-1 w-full rounded border border-[#d9d9d9] px-4 py-3 text-[16px] transition outline-none ${className}`}
+        className={`focus:border-primary-blue mt-1 w-full rounded border border-[#d9d9d9] px-4 py-3 text-[16px] transition outline-none ${meta.touched && meta.error ? "border-red-500" : ""} ${className}`}
       />
 
       <div className="-mt-2">
