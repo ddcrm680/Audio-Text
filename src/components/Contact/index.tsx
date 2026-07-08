@@ -9,7 +9,7 @@ import { contactUsSchema } from "@/validations/contactUsSchema";
 
 const Contact = () => {
   const handleSubmit = (values: typeof contactUsInitialValues) => {
-    console.log(values);
+    // console.log(values);
   };
   return (
     <Formik

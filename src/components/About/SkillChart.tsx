@@ -84,7 +84,6 @@ export default function SkillsChart({ items }: SkillsChartProps) {
                 strokeWidth={STROKE + 12}
                 pointerEvents="stroke"
                 onMouseEnter={() => {
-                  console.log(index);
                   setActiveIndex(index);
                 }}
                 onClick={() => setActiveIndex(index)}

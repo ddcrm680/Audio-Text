@@ -52,7 +52,6 @@ const Header = () => {
 
   // submenu handler
   const [openIndex, setOpenIndex] = useState(-1);
-  console.log(openIndex, "openIndex");
 
   const handleSubmenu = (index: number) => {
     // Desktop -> don't use click
@@ -61,7 +60,6 @@ const Header = () => {
     setOpenIndex((prev) => (prev === index ? -1 : index));
   };
   const usePathName = usePathname();
-  console.log(navbarOpen, "navbarOpen");
 
   return (
     <>

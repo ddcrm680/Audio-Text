@@ -21,7 +21,6 @@ export const metadata: Metadata = {
 };
 
 export default async function BlogDetails({ params }: Props) {
-  console.log(params, "paramsparams");
   const { slug: slug } = await params;
   const currentIndex = BlogList.findIndex((item) => item.slug === slug);
 

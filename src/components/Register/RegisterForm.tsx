@@ -11,7 +11,7 @@ import { Constant, registerInitialValues } from "@/utils/constants";
 
 export default function RegisterForm() {
   const handleSubmit = (values: typeof registerInitialValues) => {
-    console.log(values);
+    // console.log(values);
   };
 
   return (

@@ -17,8 +17,12 @@ import LandingSlide from "../LandingScreeen";
 const Hero = () => {
   useEffect(() => {
     async function test() {
-      const response = await getApi(API_ENDPOINTS.TEST);
-      console.log(response, "response");
+      try {
+        const response = await getApi(API_ENDPOINTS.TEST);
+        // console.log(response, "response");
+      } catch (e) {
+        // console.log(e);
+      }
     }
     // test();
   });
