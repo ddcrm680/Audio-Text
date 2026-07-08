@@ -100,7 +100,9 @@ export default function FormUpload({
         </span>
 
         <p className="text-primary-blue mt-6 text-center text-[13px] leading-7">
-          <span className="text-black">Acceptable file types:</span>{" "}
+          <span className="mr-2 text-black dark:text-white">
+            Acceptable file types:
+          </span>{" "}
           <span className="font-semibold">
             jpg, jpeg, png, pdf, docx, zip Maximum file size: 10 MB
           </span>

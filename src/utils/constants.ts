@@ -28,15 +28,18 @@ import Blog1 from "../../public/images/blog/blog-1.jpg";
 import SlideTwo from "@/components/LandingScreeen/SlideTwo";
 import {
   Banknote,
+  ContactRound,
   CreditCard,
   CreditCardIcon,
   Gift,
   Headphones,
+  Landmark,
   LogIn,
   PenTool,
   Phone,
   SlidersHorizontal,
   Smartphone,
+  User,
 } from "lucide-react";
 import { Colors } from "./color";
 import { PaymentMethod } from "@/types/payment";
@@ -757,6 +760,23 @@ export const category = [
   },
 ];
 export const PER_PAGE = 2;
+export const sections = [
+  {
+    id: "personal",
+    title: "Personal",
+    icon: User,
+  },
+  {
+    id: "contact",
+    title: "Contact",
+    icon: ContactRound,
+  },
+  {
+    id: "bank",
+    title: "Banking",
+    icon: Landmark,
+  },
+];
 export const BlogList = [
   {
     id: 1,

@@ -23,50 +23,52 @@ export default function PersonalDetails() {
     }),
   );
   return (
-    <FormSection icon={User} title="Personal Details">
-      <div className="grid gap-4">
-        {/* Row 1 */}
-        <div className="grid gap-4 md:grid-cols-2">
-          <FormInput name="firstName" label="First Name" required />
+    <section id="personal" className="scroll-mt-[112px]">
+      <FormSection icon={User} title="Personal Details">
+        <div className="grid gap-4">
+          {/* Row 1 */}
+          <div className="grid gap-4 md:grid-cols-2">
+            <FormInput name="firstName" label="First Name" required />
 
-          <FormInput name="lastName" label="Last Name" required />
-        </div>
+            <FormInput name="lastName" label="Last Name" required />
+          </div>
 
-        {/* Row 2 */}
-        <div className="grid gap-4 md:grid-cols-2">
-          <FormDatePicker name="dateOfBirth" label="Date Of Birth" />
-          <FormInput name="zipCode" label="Zip Code" required />
-        </div>
-        <div className="grid gap-4 md:grid-cols-1">
-          <FormTextarea name="street" label="Street" required rows={3} />
-        </div>
-        {/* Row 3 */}
-        <div className="grid gap-4 md:grid-cols-3">
-          <FormSelect
-            name="country"
-            label="Country"
-            required
-            placeholder="Select Country"
-            options={countries}
-          />
+          {/* Row 2 */}
+          <div className="grid gap-4 md:grid-cols-2">
+            <FormDatePicker name="dateOfBirth" label="Date Of Birth" />
+            <FormInput name="zipCode" label="Zip Code" required />
+          </div>
+          <div className="grid gap-4 md:grid-cols-1">
+            <FormTextarea name="street" label="Street" required rows={3} />
+          </div>
+          {/* Row 3 */}
+          <div className="grid gap-4 md:grid-cols-3">
+            <FormSelect
+              name="country"
+              label="Country"
+              required
+              placeholder="Select Country"
+              options={countries}
+            />
 
-          <FormSelect
-            name="state"
-            label="State"
-            required
-            placeholder="Select State"
-            options={states}
-          />
+            <FormSelect
+              name="state"
+              label="State"
+              required
+              placeholder="Select State"
+              options={states}
+            />
 
-          <FormSelect
-            name="city"
-            label="City"
-            required
-            placeholder="Select City"
-            options={cities}
-          />
+            <FormSelect
+              name="city"
+              label="City"
+              required
+              placeholder="Select City"
+              options={cities}
+            />
+          </div>
         </div>
-      </div>
-    </FormSection>
+      </FormSection>
+    </section>
   );
 }
