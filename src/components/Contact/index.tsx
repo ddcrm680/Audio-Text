@@ -20,8 +20,8 @@ const Contact = () => {
       validateOnChange
       validateOnBlur
     >
-      <Form className="space-y-10">
-        <div className="grid gap-[15px] md:grid-cols-1">
+      <Form className="space-y-8">
+        <div className="grid gap-4 md:grid-cols-1">
           <FormInput name="name" label="Name" required />
 
           <FormInput name="skypeId" label="Skype Id" required />
@@ -34,9 +34,9 @@ const Contact = () => {
         <div className="flex w-full items-end justify-start lg:w-auto">
           <button
             type="submit"
-            className="bg-primary-blue flex w-full shrink-0 cursor-pointer items-center justify-center gap-3 px-[25px] py-[14px] text-white transition hover:bg-[#39a6d6] md:w-auto"
+            className="bg-primary-blue hover:shadow-signUp flex h-10 shrink-0 cursor-pointer items-center justify-center px-6 text-white shadow-md transition duration-300 ease-in-out hover:bg-[#39a6d6]"
           >
-            <span className="text-[19px] leading-[1.8] font-light whitespace-nowrap uppercase">
+            <span className="dark:text-gray-dark text-[16px] leading-[1.8] font-light whitespace-nowrap">
               {Constant.Contact.send}
             </span>
           </button>
