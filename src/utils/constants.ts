@@ -926,7 +926,7 @@ export const PAYMENT_METHOD: PaymentMethod[] = [
 export const TEAM_MEMBERS = [
   {
     image: asean_Sales,
-    title: "SALES",
+    title: "Sales",
     points: [
       "Dedicated Account Manager",
       "Tranquil Registration Process",
@@ -943,12 +943,12 @@ export const TEAM_MEMBERS = [
       "5400+ Access Points",
       "More than 5 Lakh Numbers",
     ],
-    skype: "/teeam/support:sales.audiotext?chat",
+    skype: "/team/support:sales.audiotext?chat",
     email: "mailto:support@audiotextsoltions.com",
   },
   {
     image: tech_support,
-    title: "TECH SUPPORT",
+    title: "Tech Support",
     points: [
       "Timely Conveyed Support",
       "24x7x365 Support for Hosting Numbers",
@@ -959,7 +959,7 @@ export const TEAM_MEMBERS = [
   },
   {
     image: Finance_asian,
-    title: "FINANCE",
+    title: "Finance",
     points: [
       "Secured Online Payment Service",
       "Flexible Payment Options",

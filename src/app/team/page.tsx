@@ -6,6 +6,7 @@ import Breadcrumb from "@/components/Common/Breadcrumb";
 import SectionBanner from "@/components/Common/SectionBanner";
 import ContentSection from "@/components/ContentSection";
 import TeamCard from "@/components/Team/TeamCard";
+import TeamSection from "@/components/Team/TeamSection";
 import { Colors } from "@/utils/color";
 import { Constant, TEAM_MEMBERS } from "@/utils/constants";
 import { Eye, Flag, Rocket, ThumbsUp, Users } from "lucide-react";
@@ -26,25 +27,27 @@ const TeamPage = () => {
       />
       <div className="px-5" style={{ fontFamily: "Aileron Light" }}>
         <div className="mx-auto max-w-6xl py-[70px]">
-          <ContentSection
-            bg=""
-            titleIcon={<ThumbsUp size={20} strokeWidth={2} />}
-            padding="pb-[20px] "
-            subParentClassName="!px-0"
-            title={Constant.Team.ourZealousTeamTitle}
-            description={
-              <div className="relative">
-                <p>{Constant.Team.ourZealousTeamDesc}</p>
-              </div>
-            }
-          />
-          <div className="bg-white pt-[70px] pb-[35px] dark:bg-slate-900">
+          <div className="mb-[16px]">
+            <h1 className="text-[64px] leading-tight font-bold tracking-tight text-wrap lg:flex lg:items-center">
+              Zealous Team —
+              <span className="text-primary-blue block">Immersive Focus</span>
+            </h1>
+
+            <p className="mt-[32px] text-[16px] leading-[1.625] text-black dark:text-[#b9cacb]">
+              {Constant.Team.ourZealousTeamDesc}
+            </p>
+          </div>
+
+          <div className="bg-white pt-[30px] pb-[35px] dark:bg-slate-900">
             <div className="mx-auto max-w-7xl">
-              <div className="grid gap-8 sm:grid-cols-2 xl:grid-cols-4">
-                {TEAM_MEMBERS.map((member) => (
-                  <TeamCard key={member.title} {...member} />
-                ))}
+              <div className="mb-[48px] flex items-center justify-between">
+                <div>
+                  <h2 className="text-primary-blue text-[32px] leading-[40px] font-bold">
+                    Core Command Centers
+                  </h2>
+                </div>
               </div>
+              <TeamSection />
             </div>
           </div>
           <div className="mx-auto max-w-6xl border-t border-[#d8d8d8]" />
