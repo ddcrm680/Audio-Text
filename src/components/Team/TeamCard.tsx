@@ -26,8 +26,8 @@ export default function TeamCard({
         src={image}
         alt={title}
         fill
-        className={`object-cover transition-transform duration-700 ${
-          active ? "scale-[1.05]" : "scale-100 group-hover:scale-[1.05]"
+        className={`object-cover transition-all duration-700 ${
+          active ? "scale-115" : "scale-105 group-hover:scale-115"
         }`}
       />
       {/* Dark Overlay */}
