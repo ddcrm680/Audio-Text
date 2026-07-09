@@ -19,10 +19,10 @@ import LIbya from "../../public/images/destination/LIbya.jpg";
 import sierra from "../../public/images/destination/sierra.jpg";
 import Morrocco from "../../public/images/destination/Morrocco.jpg";
 
-import asean_Sales from "../../public/images/team/asean_Sales.jpg";
-import asean_CRM from "../../public/images/team/asean_CRM.jpg";
-import Finance_asian from "../../public/images/team/Finance_asian.jpg";
-import tech_support from "../../public/images/team/tech_support.jpg";
+import asean_Sales from "../../public/images/team/asean_Sales.png";
+import asean_CRM from "../../public/images/team/asean_CRM.png";
+import Finance_asian from "../../public/images/team/Finance_asian.png";
+import tech_support from "../../public/images/team/tech_support.png";
 
 import secondaryBannerBg from "../../public/images/common/Secondary_banner_bg.jpg";
 import Blog1 from "../../public/images/blog/blog-1.jpg";
