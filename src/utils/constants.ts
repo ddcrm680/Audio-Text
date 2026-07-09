@@ -15,6 +15,7 @@ import GuineaBissau from "../../public/images/destination/Guinea-Bissau.jpg";
 import Holland from "../../public/images/destination/Holland.jpg";
 import LATVIA from "../../public/images/destination/LATVIA.jpg";
 import LIbya from "../../public/images/destination/LIbya.jpg";
+
 import sierra from "../../public/images/destination/sierra.jpg";
 import Morrocco from "../../public/images/destination/Morrocco.jpg";
 
@@ -30,7 +31,6 @@ import {
   Banknote,
   ContactRound,
   CreditCard,
-  CreditCardIcon,
   Gift,
   Headphones,
   Landmark,
