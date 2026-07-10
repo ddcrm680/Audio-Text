@@ -156,8 +156,6 @@ const ResellersPage = () => {
                 Constant.RESELLERS.superResellerDescPoint8,
               ]}
               columns={2}
-              animateDescription
-              animatePoints
               variant="primary"
             />
           </div>
