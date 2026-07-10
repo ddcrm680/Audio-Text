@@ -109,7 +109,7 @@ export default function ServiceCard({
           className={
             cardVariant === "feature"
               ? `text-left text-[15px] leading-7 text-slate-500 dark:text-slate-400 ${descriptionClassName ?? ""} `
-              : `leading-6 text-black dark:text-gray-300 ${descClassName}`
+              : `leading-6 font-light text-black dark:text-gray-300 ${descClassName}`
           }
         >
           {description}
