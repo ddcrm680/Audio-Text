@@ -81,64 +81,89 @@ const ResellersPage = () => {
               </h2>
             </div>
 
-            <div className="grid gap-5 sm:grid-cols-2 lg:gap-x-[30px] lg:gap-y-16 xl:grid-cols-4">
+            <div className="grid gap-8 sm:grid-cols-2 lg:gap-8 xl:grid-cols-4">
               {RESELLER_FEATURES.map((feature, index) => (
                 <ServiceCard
                   {...feature}
+                  key={feature.title}
+                  // enableScrollAnimation
+                  animationDirection={index < 2 ? "left" : "right"}
+                  parentClassName="!cursor-default"
+                  cardVariant="feature"
                   title={
                     <h2
-                      className={`text-primary-blue mb-[15px] text-4xl leading-[46px] font-light uppercase md:text-2xl dark:text-sky-400`}
+                      className={`text-primary-blue mb-[15px] text-xl leading-[30px] font-semibold uppercase dark:text-sky-400`}
                     >
                       {feature.title}
                     </h2>
                   }
-                  enableScrollAnimation
-                  animationDirection={index < 2 ? "left" : "right"}
-                  enableHoverScale={false}
-                  descClassName="text-[17px]"
-                  parentClassName={"!cursor-default"}
-                  titleClassName={"!text-primary-blue"}
-                  key={feature.title}
-                  iconClassName={"h-[60px] w-[60px] !text-primary-blue"}
-                  imageContainerClassName={
-                    "w-[100px] h-[100px] !bg-white !border-primary-blue border-[4px] !group-hover:scale-0"
-                  }
+                  iconWrapperClassName="
+      h-14
+      w-14
+      rounded-xl
+      bg-primary-blue dark:bg-[#00dbe91a]
+  "
+                  iconClassName="h-7 w-7 !text-[#11d9ff]"
+                  descriptionClassName="
+      text-[15px]
+      leading-7
+      text-slate-500
+      dark:text-slate-400
+  "
+                  cardClassName="
+      p-4
+      rounded-xl
+      border
+      border-slate-200
+      bg-white
+      dark:bg-[#171a1f]
+      dark:border-slate-800
+      hover:border-[#11d9ff]/40
+      hover:shadow-xl
+      transition-all
+      duration-300
+  "
                 />
               ))}
             </div>
           </div>
-          <ResellerBenefits
-            icon={<Bookmark size={24} />}
-            title={Constant.RESELLERS.regularResellerTitle}
-            description={Constant.RESELLERS.regularResellerDesc1}
-            points={[
-              Constant.RESELLERS.regularResellerDescPoint1,
-              Constant.RESELLERS.regularResellerDescPoint2,
-              Constant.RESELLERS.regularResellerDescPoint3,
-              Constant.RESELLERS.regularResellerDescPoint4,
-            ]}
-          />
-          <ResellerBenefits
-            icon={<Crosshair size={24} />}
-            title={Constant.RESELLERS.superResellerTitle}
-            animateDescription
-            animatePoints
-            description={Constant.RESELLERS.superResellerDesc}
-            columns={2}
-            points={[
-              Constant.RESELLERS.superResellerDescPoint1,
-              Constant.RESELLERS.superResellerDescPoint2,
-              Constant.RESELLERS.superResellerDescPoint3,
-              Constant.RESELLERS.superResellerDescPoint4,
-              Constant.RESELLERS.superResellerDescPoint5,
-              Constant.RESELLERS.superResellerDescPoint6,
-              Constant.RESELLERS.superResellerDescPoint7,
-              Constant.RESELLERS.superResellerDescPoint8,
-            ]}
-          />
+          <div className="mt-12 flex flex-col gap-8 md:flex-row">
+            <ResellerBenefits
+              icon={<Bookmark size={22} />}
+              title={Constant.RESELLERS.regularResellerTitle}
+              description={Constant.RESELLERS.regularResellerDesc1}
+              points={[
+                Constant.RESELLERS.regularResellerDescPoint1,
+                Constant.RESELLERS.regularResellerDescPoint2,
+                Constant.RESELLERS.regularResellerDescPoint3,
+                Constant.RESELLERS.regularResellerDescPoint4,
+              ]}
+              variant="light"
+            />
+
+            <ResellerBenefits
+              icon={<Crosshair size={22} />}
+              title={Constant.RESELLERS.superResellerTitle}
+              description={Constant.RESELLERS.superResellerDesc}
+              points={[
+                Constant.RESELLERS.superResellerDescPoint1,
+                Constant.RESELLERS.superResellerDescPoint2,
+                Constant.RESELLERS.superResellerDescPoint3,
+                Constant.RESELLERS.superResellerDescPoint4,
+                Constant.RESELLERS.superResellerDescPoint5,
+                Constant.RESELLERS.superResellerDescPoint6,
+                Constant.RESELLERS.superResellerDescPoint7,
+                Constant.RESELLERS.superResellerDescPoint8,
+              ]}
+              columns={2}
+              animateDescription
+              animatePoints
+              variant="primary"
+            />
+          </div>
           <div className="">
             <section
-              className={`bg-registerBg mt-[35px] px-8 py-10 dark:bg-slate-800`}
+              className={`bg-registerBg mt-[82px] px-8 py-10 dark:bg-slate-800`}
             >
               <div className="flex flex-col items-start justify-between gap-8 lg:flex-row lg:items-center">
                 <div className="flex items-start gap-6 md:items-center">

@@ -3,11 +3,15 @@ import { ReactNode } from "react";
 
 export interface ServiceCardProp {
   title?: ReactNode;
+  cardVariant?: "default" | "feature";
+  cardClassName?: string;
+  titleClassName?: string;
+  descriptionClassName?: string;
+  iconWrapperClassName?: string;
   parentClassName?: string;
   iconClassName?: string;
   imageContainerClassName?: string;
   description?: string;
-  titleClassName?: string;
   descClassName?: string;
   enableHoverScale?: boolean;
   enableScrollAnimation?: boolean;

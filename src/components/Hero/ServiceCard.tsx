@@ -9,7 +9,12 @@ import { motion } from "framer-motion";
 export default function ServiceCard({
   description,
   icon,
+  cardVariant,
+  cardClassName,
+  descriptionClassName,
+  iconWrapperClassName,
   color,
+
   title,
   iconClassName = "h-21 w-21",
   imageContainerClassName = "h-42 w-42",
@@ -61,8 +66,12 @@ export default function ServiceCard({
   };
   return (
     <div
-      className={`group mx-auto flex h-full cursor-pointer flex-col items-center text-center md:max-w-[275px] ${parentClassName}`}
-      onClick={() => router.push("/services")}
+      className={`group mx-auto h-full ${
+        cardVariant === "feature"
+          ? `rounded-xl border border-slate-200 bg-white p-4 text-left shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl dark:border-slate-800 dark:bg-[#171a1f] dark:hover:border-[#1cc7ec]/40`
+          : "flex cursor-pointer flex-col items-center text-center md:max-w-[275px]"
+      } ${cardClassName ?? ""} ${parentClassName}`}
+      onClick={() => cardVariant === "default" && router.push("/services")}
     >
       {Icon && (
         <motion.div
@@ -70,12 +79,22 @@ export default function ServiceCard({
           initial={enableScrollAnimation ? "hidden" : false}
           whileInView={enableScrollAnimation ? "visible" : undefined}
           viewport={{ once: true, amount: 0.4 }}
-          style={{ backgroundColor: color }}
-          className={`mb-[25px] flex items-center justify-center rounded-full transition duration-300 ${
-            enableHoverScale ? "group-hover:scale-105" : ""
-          } ${imageContainerClassName}`}
+          className={` ${
+            cardVariant === "feature"
+              ? `mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-[#12c9ea]/10 transition-all duration-300 group-hover:bg-[#39a6d6] ${iconWrapperClassName ?? ""}`
+              : `mb-[25px] flex items-center justify-center rounded-full transition duration-300 ${
+                  enableHoverScale ? "group-hover:scale-105" : ""
+                } ${imageContainerClassName}`
+          } `}
         >
-          <Icon className={`text-white ${iconClassName}`} strokeWidth={1.8} />
+          <Icon
+            className={
+              cardVariant === "feature"
+                ? "dark:text-primary-blue h-7 w-7 text-white"
+                : `text-white ${iconClassName}`
+            }
+            strokeWidth={1.8}
+          />
         </motion.div>
       )}
 
@@ -87,7 +106,11 @@ export default function ServiceCard({
         viewport={{ once: true, amount: 0.4 }}
       >
         <p
-          className={`leading-6 text-black dark:text-gray-300 ${descClassName}`}
+          className={
+            cardVariant === "feature"
+              ? `text-left text-[15px] leading-7 text-slate-500 dark:text-slate-400 ${descriptionClassName ?? ""} `
+              : `leading-6 text-black dark:text-gray-300 ${descClassName}`
+          }
         >
           {description}
         </p>
