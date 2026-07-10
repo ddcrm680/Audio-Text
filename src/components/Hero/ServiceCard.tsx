@@ -82,7 +82,7 @@ export default function ServiceCard({
           className={` ${
             cardVariant === "feature"
               ? `mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-[#12c9ea]/10 transition-all duration-300 group-hover:bg-[#39a6d6] ${iconWrapperClassName ?? ""}`
-              : `mb-[25px] flex items-center justify-center rounded-full transition duration-300 ${
+              : `mb-[25px] flex items-center justify-center rounded-full bg-[#12c9ea] transition duration-300 ${
                   enableHoverScale ? "group-hover:scale-105" : ""
                 } ${imageContainerClassName}`
           } `}
