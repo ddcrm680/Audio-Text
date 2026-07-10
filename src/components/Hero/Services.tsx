@@ -18,6 +18,8 @@ export function Services() {
           {SERVICES.map((service) => (
             <ServiceCard
               {...service}
+              enableHoverScale={false}
+              cardVariant={"default"}
               key={service.title}
               title={
                 <h3
