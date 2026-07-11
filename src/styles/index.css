@@ -86,7 +86,7 @@ layer(base);
   --color-card-light: #eff4ff;
   --color-card-light-hover: #f5f9ff;
   --color-card-border-light: #d8e4f2;
-  /* common */
+  --color-payment-note-light: #0b4d7a;
   --color-primary-blue: #48afdb;
   /* register */
   --color-registerBg: #f0f4f7;
