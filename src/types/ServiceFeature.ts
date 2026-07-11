@@ -2,9 +2,9 @@ import { ReactNode } from "react";
 
 export interface FeatureSectionProps {
   title: string;
-  description: ReactNode;
+  description?: ReactNode;
   childPadding?: string;
-  icon: ReactNode;
+  icon?: ReactNode;
   descClassName?: string;
   titleClassName?: string;
   imageVerticalContainer?: string;

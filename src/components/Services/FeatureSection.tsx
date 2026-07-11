@@ -28,6 +28,8 @@ export default function FeatureSection({
   className = "",
   childPadding = "",
 }: FeatureSectionProps) {
+  console.log(icon, "iconicon");
+
   return (
     <section
       className={` ${padding} ${className} ${card ? "rounded-2xl transition-all duration-300 hover:-translate-y-1" : ""} ${cardClassName ?? ""} `}
@@ -47,15 +49,17 @@ export default function FeatureSection({
               : "flex flex-col items-start gap-8 md:flex-row"
           }`}
         >
-          <div
-            className={`${layout === "vertical" ? "mx-auto mb-[24px]" : "mx-auto h-full"} flex w-[40%] items-center justify-center ${imageVerticalContainer}`}
-          >
+          {icon && (
             <div
-              className={`flex h-[103px] w-[103px] items-center justify-center rounded-full border border-gray-200 ${imageContainerClassName} ${iconWrapperClassName}`}
+              className={`${layout === "vertical" ? "mx-auto mb-[24px]" : "mx-auto h-full"} flex w-[40%] items-center justify-center ${imageVerticalContainer}`}
             >
-              <div className="text-primary-blue">{icon}</div>
+              <div
+                className={`flex h-[103px] w-[103px] items-center justify-center rounded-full border border-gray-200 ${imageContainerClassName} ${iconWrapperClassName}`}
+              >
+                <div className="text-primary-blue">{icon}</div>
+              </div>
             </div>
-          </div>
+          )}
 
           <div className={contentClassName}>
             <h2

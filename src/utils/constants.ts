@@ -28,12 +28,16 @@ import Blog1 from "../../public/images/blog/blog-1.jpg";
 import SlideTwo from "@/components/LandingScreeen/SlideTwo";
 import {
   Banknote,
+  Bolt,
+  Car,
+  Cog,
   ContactRound,
   CreditCard,
   Gift,
   Headphones,
   Landmark,
   LogIn,
+  Microchip,
   PenTool,
   Phone,
   Search,
@@ -720,11 +724,12 @@ The packages of our exclusive services and products would definitely assist you 
   },
   Career: {
     title: "Careers",
-
-    joinUsTitle: "JOIN US",
-    joinUsDesc:
-      "Are you worrying about your career? Come and join ATS for an absolutely distinct career prospective. We have numerous opportunities for talented professionals as well as for freshers. At ATS, we've maintained various teams like Sales, Finance, Technical Support, and Carrier Relationship Management. You just need to click on the 'Current Job Openings' button provided below to see the validation of your candidature. If you find yourself suitable for any job, just click on 'Apply Now' and send your latest resume to us. If you fit in our expectations, we shall contact you for further rounds of selection procedure.",
-
+    workWithUs: "Work With Us",
+    joinUsTitle: "JOIN US AT GATS",
+    joinUsDesc1:
+      "Are you worrying about your career? Come and join ATS for an absolutely distinct career prospective. We have numerous opportunities for talented professionals as well as for freshers. ",
+    joinUsDesc2:
+      "At ATS, we've maintained various teams like Sales, Finance, Technical Support, and Carrier Relationship Management. You just need to click on the 'Current Job Openings' button provided below to see the validation of your candidature. If you find yourself suitable for any job, just click on 'Apply Now' and send your latest resume to us. If you fit in our expectations, we shall contact you for further rounds of selection procedure.",
     openingTitle: "CURRENT OPENINGS IN ATS",
 
     profile: "Profile : Laravel Developer",
@@ -750,15 +755,35 @@ The packages of our exclusive services and products would definitely assist you 
     sisterCompanyTitle: "Sister concern companies:",
 
     sisterCompanies: [
-      "https://www.detailingdevils.com/",
-      "https://www.facebook.com/DetailingDevils/",
-      "https://instagram.com/detailingdevils?igshid=YmMyMTA2M2Y=",
-      "https://www.nutsandboltz.in/",
-      "http://www.lumilor.co.in/",
-      "https://www.facebook.com/LumiLorIndia/",
-      "https://instagram.com/lumilorindia?igshid=YmMyMTA2M2Y=",
-      "https://instagram.com/devilscustom?igshid=YmMyMTA2M2Y=",
+      {
+        icon: Car,
+        title: "Detailing Devils",
+        social: {
+          website: "https://www.detailingdevils.com/",
+          instagram: [
+            "https://instagram.com/detailingdevils?igshid=YmMyMTA2M2Y=",
+            // "https://instagram.com/devilscustom?igshid=YmMyMTA2M2Y=",
+          ],
+
+          facebook: "https://www.facebook.com/DetailingDevils/",
+        },
+      },
+      {
+        icon: Cog,
+        title: "LumiLor India",
+        social: {
+          website: "http://www.lumilor.co.in/",
+          instagram: ["https://instagram.com/lumilorindia?igshid=YmMyMTA2M2Y="],
+          facebook: "https://www.facebook.com/LumiLorIndia/",
+        },
+      },
+      {
+        icon: Microchip,
+        title: "Nuts & Boltz",
+        social: { website: "https://www.nutsandboltz.in/" },
+      },
     ],
+    sisterConcern: "Our Sister Concerns",
   },
 };
 export const category = [
