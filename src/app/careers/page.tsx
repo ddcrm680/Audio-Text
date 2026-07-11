@@ -88,11 +88,13 @@ export default function CareersPage() {
                 </p>
               </div>
 
-              <div className="border-primary-blue/20 dark:border-card-border-dark dark:bg-card-dark rounded-full border bg-white px-[16px] py-2 shadow-sm">
-                <span className="flex items-center gap-1 text-[14px] font-semibold">
-                  <div className="h-2 w-2 rounded-full border bg-green-600"></div>{" "}
-                  1 Position Available
-                </span>
+              <div className="self-end md:self-auto">
+                <div className="border-primary-blue/20 dark:border-card-border-dark dark:bg-card-dark w-fit rounded-full border bg-white px-4 py-2 shadow-sm">
+                  <span className="flex items-center gap-2 text-[14px] font-semibold">
+                    <span className="h-2 w-2 rounded-full bg-green-600" />1
+                    Position Available
+                  </span>
+                </div>
               </div>
             </div>
 
