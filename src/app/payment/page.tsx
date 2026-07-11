@@ -32,8 +32,8 @@ const PaymentPage = () => {
   return (
     <div>
       <SectionBanner
-        title={Constant.Services.title}
-        subtitle={Constant.Services.subTitle}
+        title={Constant.Payment.title}
+        subtitle={Constant.Payment.desc}
       />
       <div className="" style={{ fontFamily: "Aileron Light" }}>
         <div className="">
