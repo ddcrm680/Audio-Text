@@ -4,6 +4,6 @@ import { StaticImageData } from "next/image";
 export type PaymentMethod = {
   title: string;
   desc: string;
-  icon?: LucideIcon;
-  image?: StaticImageData;
+  icon?: string;
+  image?: string;
 };

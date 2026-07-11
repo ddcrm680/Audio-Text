@@ -6,6 +6,7 @@ import { ServiceCardProp } from "@/types/services";
 import { iconMap } from "@/utils/constants";
 import React from "react";
 import { motion } from "framer-motion";
+import { logger } from "@/utils/helpers";
 export default function ServiceCard({
   description,
   icon,
@@ -27,6 +28,7 @@ export default function ServiceCard({
   const router = useRouter();
 
   const Icon = icon ? iconMap[icon] : null;
+  logger.log("ServiceCard icon:", icon, "Icon component:", Icon);
   const iconVariants = {
     hidden: {
       opacity: 0,
@@ -66,10 +68,10 @@ export default function ServiceCard({
   };
   return (
     <div
-      className={`group mx-auto h-full ${
+      className={`group h-full w-full ${
         cardVariant === "feature"
           ? `rounded-xl border border-slate-200 bg-white p-4 text-left shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl dark:border-slate-800 dark:bg-[#171a1f] dark:hover:border-[#1cc7ec]/40`
-          : "flex cursor-pointer flex-col items-center text-center md:max-w-[275px]"
+          : "flex cursor-pointer flex-col items-center"
       } ${cardClassName ?? ""} ${parentClassName}`}
       onClick={() => cardVariant === "default" && router.push("/services")}
     >

@@ -10,20 +10,29 @@ export default function FeatureSection({
   description,
   icon,
   image,
+  contentClassName,
   imageAlt,
   imagePosition = "right",
   layout = "horizontal",
+  card,
+  center,
+  iconWrapperClassName,
+  cardClassName,
   descClassName,
   buttonText,
   buttonLink,
   imageContainerClassName,
   padding = "py-5",
+  imageVerticalContainer,
   titleClassName,
   className = "",
   childPadding = "",
 }: FeatureSectionProps) {
   return (
-    <section className={`${padding} ${className}`}>
+    <section
+      className={` ${padding} ${className} ${card ? "rounded-2xl transition-all duration-300 hover:-translate-y-1" : ""} ${cardClassName ?? ""} `}
+    >
+      {" "}
       <div
         className={`mx-auto flex max-w-6xl gap-12 ${
           imagePosition === "left" ? "lg:flex-row-reverse" : "lg:flex-row"
@@ -39,24 +48,24 @@ export default function FeatureSection({
           }`}
         >
           <div
-            className={`${layout === "vertical" ? "mx-auto mb-[35px]" : "mx-auto h-full"} flex w-[40%] items-center justify-center`}
+            className={`${layout === "vertical" ? "mx-auto mb-[24px]" : "mx-auto h-full"} flex w-[40%] items-center justify-center ${imageVerticalContainer}`}
           >
             <div
-              className={`flex h-[103px] w-[103px] items-center justify-center rounded-full border border-gray-200 ${imageContainerClassName}`}
+              className={`flex h-[103px] w-[103px] items-center justify-center rounded-full border border-gray-200 ${imageContainerClassName} ${iconWrapperClassName}`}
             >
               <div className="text-primary-blue">{icon}</div>
             </div>
           </div>
 
-          <div>
+          <div className={contentClassName}>
             <h2
-              className={`mb-5 ${layout === "vertical" ? "text-center" : ""} text-primary-blue text-4xl leading-[46px] font-light uppercase md:text-4xl dark:text-sky-400 ${titleClassName}`}
+              className={`mb-5 ${layout === "vertical" ? "text-center" : ""} text-primary-blue text-3xl leading-[46px] font-light uppercase dark:text-sky-400 ${titleClassName}`}
             >
               {title}
             </h2>
 
             <div
-              className={`text-[15px] leading-[1.8] font-light text-black dark:text-gray-300 ${descClassName}`}
+              className={`text-[14px] leading-[20px] font-light text-black dark:text-gray-300 ${descClassName}`}
             >
               {description}
             </div>

@@ -23,7 +23,7 @@ export function Services() {
               key={service.title}
               title={
                 <h3
-                  className={`mb-[15px] max-w-[220px] text-[18px] font-light text-[#2d3550] uppercase md:text-[23px] dark:text-white`}
+                  className={`mb-[15px] max-w-[220px] text-center text-[18px] font-light text-[#2d3550] uppercase md:text-[23px] dark:text-white`}
                 >
                   {service.title}
                 </h3>

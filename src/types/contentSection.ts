@@ -9,6 +9,10 @@ export interface ContentSectionProps {
 
   subParentClassName?: string;
   imageAlt?: string;
+  imageClassName?: string;
+  contentClassName?: string;
+  descriptionClassName?: string;
+  imageWrapperClassName?: string;
   titleClassName?: string;
   bg?: string;
 

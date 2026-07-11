@@ -13,6 +13,7 @@ import { CreditCard, Eye, Flag, Rocket, Users } from "lucide-react";
 import { Metadata } from "next";
 import Image from "next/image";
 import payment from "../../../public/images/payment/payment.webp";
+import ServiceCard from "@/components/Hero/ServiceCard";
 export const metadata: Metadata = {
   title: "Payment | Audio Text",
   // other metadata
@@ -81,30 +82,48 @@ const PaymentPage = () => {
               {Constant.Payment.paymentMethodDesc}
             </p>
           </div>
-          <div className="grid gap-5 lg:grid-cols-3 lg:gap-x-[30px]">
-            {PAYMENT_METHOD.map((item) => (
-              <FeatureSection
-                key={item.title}
-                descClassName="!text-[17px] !leading-[25px]"
-                childPadding="px-0"
-                titleClassName="!text-[30px] !mb-[23px]"
-                padding="pb-[60px]"
-                layout="vertical"
-                imageContainerClassName="!border-[2px] !border-[#00C1CF]"
-                icon={
-                  item.icon ? (
-                    <item.icon size={75} strokeWidth={1} color="#00C1CF" />
-                  ) : (
-                    <Image
-                      src={item.image!}
-                      alt={item.title}
-                      width={65}
-                      height={65}
-                    />
-                  )
+          <div className="grid grid-cols-1 gap-5 lg:grid-cols-3 lg:gap-x-[30px]">
+            {PAYMENT_METHOD.map((item, index) => (
+              <ServiceCard
+                {...item}
+                // enableScrollAnimation
+                animationDirection={index < 2 ? "left" : "right"}
+                parentClassName="!cursor-default"
+                cardVariant="feature"
+                title={
+                  <h2
+                    className={`text-primary-blue mb-[15px] text-xl leading-[30px] font-semibold uppercase dark:text-sky-400`}
+                  >
+                    {item.title}
+                  </h2>
                 }
-                title={item.title}
-                description={<p>{item.desc}</p>}
+                description={item.desc}
+                iconWrapperClassName="
+                    h-14
+                    w-14
+                    rounded-xl
+                    bg-primary-blue dark:bg-[#00dbe91a]
+                "
+                iconClassName="h-7 w-7 !text-[#11d9ff]"
+                descriptionClassName="
+                    text-[15px]
+                    leading-7
+                    text-slate-500
+                    dark:text-slate-400
+                "
+                cardClassName="
+                    p-4
+                    rounded-xl
+                    border
+                    border-slate-200
+                    bg-white
+                    dark:bg-[#171a1f]
+                    dark:border-slate-800
+                    hover:border-[#11d9ff]/40
+                    hover:shadow-xl
+                    transition-all
+                    duration-300
+                "
               />
             ))}
           </div>

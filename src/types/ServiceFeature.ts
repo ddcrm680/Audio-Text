@@ -7,8 +7,15 @@ export interface FeatureSectionProps {
   icon: ReactNode;
   descClassName?: string;
   titleClassName?: string;
+  imageVerticalContainer?: string;
   imageContainerClassName?: string;
   image?: string;
+  card?: boolean;
+  center?: boolean;
+  cardClassName?: string;
+  contentClassName?: string;
+  titleWrapperClassName?: string;
+  iconWrapperClassName?: string;
   padding?: string;
   imageAlt?: string;
 

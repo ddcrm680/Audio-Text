@@ -13,6 +13,10 @@ export default function ContentSection({
   imagePosition = "right",
   titleIcon,
   buttonText,
+  imageClassName,
+  contentClassName,
+  descriptionClassName,
+  imageWrapperClassName,
   buttonLink,
   padding = "p-[50px]",
   titleClassName,
@@ -21,15 +25,18 @@ export default function ContentSection({
   className = "",
 }: ContentSectionProps) {
   return (
-    <section className={`${bg} ${padding} dark:bg-slate-900 ${className}`}>
+    <section
+      className={` ${bg ?? "dark:bg-slate-900"} ${padding} ${className}`}
+    >
       <div
-        className={`mx-auto flex flex-col items-center gap-[30px] px-5 md:max-w-4xl md:gap-[30px] lg:max-w-5xl xl:max-w-7xl ${
-          imagePosition === "left" ? "md:flex-row-reverse" : "md:flex-row"
+        className={`mx-auto flex flex-col items-center gap-[30px] px-5 md:gap-[30px] ${
+          imagePosition === "left" ? "lg:flex-row-reverse" : "lg:flex-row"
         } ${subParentClassName}`}
       >
         {/* Content */}
 
-        <div className="w-full flex-2 md:w-auto">
+        <div className={`w-full flex-2 md:w-auto ${contentClassName ?? ""}`}>
+          {" "}
           <div
             className={`mt-1 mb-5 flex items-start gap-4 md:items-center ${titleClassName}`}
           >
@@ -40,16 +47,18 @@ export default function ContentSection({
             )}
 
             <h2
-              className={`text-primary-blue text-4xl leading-[46px] font-light uppercase md:text-4xl xl:whitespace-nowrap dark:text-sky-400`}
+              className={`text-primary-blue text-4xl leading-[46px] uppercase md:text-4xl xl:whitespace-nowrap dark:text-sky-400 ${titleClassName}`}
             >
               {title}
             </h2>
           </div>
-
-          <div className="text-[15px] leading-[1.8] font-light text-black dark:text-gray-300">
+          <div
+            className={`text-[15px] leading-[1.8] font-light text-black dark:text-gray-300 ${
+              descriptionClassName ?? ""
+            }`}
+          >
             {description}
           </div>
-
           {buttonText && buttonLink && (
             <Link
               href={buttonLink}
@@ -67,13 +76,16 @@ export default function ContentSection({
         {/* Image */}
 
         {image && (
-          <div className="w-full flex-1">
+          <div className={`w-full flex-1 ${imageWrapperClassName ?? ""}`}>
             <Image
               src={image}
               alt={imageAlt ?? title}
               width={700}
               height={500}
-              className="w-full border border-gray-200 object-cover p-[20px] dark:border-slate-700"
+              className={`w-full object-cover ${
+                imageClassName ??
+                "border border-gray-200 p-5 dark:border-slate-700"
+              }`}
             />
           </div>
         )}
