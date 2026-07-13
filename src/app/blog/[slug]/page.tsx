@@ -65,7 +65,7 @@ export default async function BlogDetails({ params }: Props) {
           <div className="mx-auto max-w-6xl py-[70px]">
             <BlogWrapper>
               <div>
-                <div className="flex flex-wrap items-center justify-between pb-4 dark:border-white/10">
+                <div className="flex flex-wrap items-center justify-between dark:border-white/10">
                   <div className="flex flex-wrap items-center">
                     <div className="overflow-hidden rounded-[6px] border border-[#d8e0e8] bg-white shadow-sm dark:border-gray-700 dark:bg-[#111827]">
                       {/* Featured Image */}
@@ -210,25 +210,46 @@ export default async function BlogDetails({ params }: Props) {
                         )}
                       </div>
                     </div>
-                    <div className="mt-12 w-full">
-                      <h2 className="border-primary-blue mb-6 border-l-4 pl-3 text-[20px] leading-[28px] font-semibold text-[#0b3156] dark:text-sky-400">
-                        Related Posts
-                      </h2>
 
-                      <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-                        {relatedPosts.slice(0, 3).map((blog, index, arr) => (
-                          <div
-                            key={blog.id}
-                            className={` ${index !== 0 ? "pt-[34px]" : ""} hover:border-primary-blue rounded-lg border border-[#bec8cf] bg-[#eff4ff] p-[8px]`}
-                          >
-                            <RelatedPost
-                              title={blog.title}
-                              image={blog.image}
-                              slug={blog.slug}
-                              date={formatBlogDate(blog.publish_at)}
-                            />
-                          </div>
-                        ))}
+                    <div className="mt-12 w-full">
+                      <div className="dark:border-card-border-dark dark:bg-card-dark block rounded-xl border border-[#d7e2f0] bg-[#eef5ff] p-6 lg:hidden">
+                        <h3 className="border-primary-blue mb-6 border-l-4 pl-3 text-[20px] leading-[28px] font-semibold text-[#0b3156] dark:text-sky-400">
+                          Related Posts
+                        </h3>
+
+                        <ul className="space-y-6">
+                          {relatedPosts.slice(0, 3).map((blog) => (
+                            <li key={blog.id}>
+                              <RelatedPost
+                                title={blog.title}
+                                image={blog.image}
+                                slug={blog.slug}
+                                date={formatBlogDate(blog.publish_at)}
+                              />
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                      <div className="hidden lg:block">
+                        <h2 className="border-primary-blue mb-6 border-l-4 pl-3 text-[20px] leading-[28px] font-semibold text-[#0b3156] dark:text-sky-400">
+                          Related Posts
+                        </h2>
+
+                        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+                          {relatedPosts.slice(0, 3).map((blog, index, arr) => (
+                            <div
+                              key={blog.id}
+                              className={`hover:border-primary-blue rounded-lg border border-[#bec8cf] bg-[#eff4ff] p-[8px]`}
+                            >
+                              <RelatedPost
+                                title={blog.title}
+                                image={blog.image}
+                                slug={blog.slug}
+                                date={formatBlogDate(blog.publish_at)}
+                              />
+                            </div>
+                          ))}
+                        </div>
                       </div>
                     </div>
                   </div>

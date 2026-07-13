@@ -19,7 +19,7 @@ const BlogWrapper = ({ children }: { children: any }) => {
     <>
       <section className="overflow-hidden">
         <div className="container">
-          <div className="flex w-full flex-wrap gap-6">
+          <div className="flex w-full flex-wrap gap-12 lg:gap-6">
             <div className="w-full lg:flex-1">{children}</div>
             <div className="w-full lg:w-4/12">
               {/* Popular Posts */}
