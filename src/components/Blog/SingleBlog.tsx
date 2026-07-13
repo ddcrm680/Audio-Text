@@ -77,7 +77,7 @@ export default function SingleBlog({ blog }: Props) {
 
             <Link
               href={`/blog/${blog.slug}`}
-              className="text-primary-blue flex items-center gap-1 text-[14px] font-semibold underline"
+              className="text-primary-blue flex items-center gap-1 text-[14px] font-semibold hover:underline"
             >
               Read More
               <ChevronRight
