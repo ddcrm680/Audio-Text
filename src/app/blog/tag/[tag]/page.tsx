@@ -38,7 +38,7 @@ export default async function BlogTag({ params, searchParams }: Props) {
         <div style={{ fontFamily: "Aileron Light" }}>
           <div className="mx-auto max-w-6xl py-[70px]">
             <BlogWrapper>
-              <div className="flex flex-col">
+              <div className="flex flex-col gap-12">
                 {blogs.map((blog, index) => (
                   <SingleBlog
                     index={index}
