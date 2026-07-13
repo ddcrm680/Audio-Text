@@ -1,42 +1,39 @@
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 
-const RelatedPost = ({
-  image,
-  slug,
-  title,
-  date,
-}: {
+interface RelatedPostProps {
   image: StaticImageData;
   slug: string;
   title: string;
   date: string;
-}) => {
-  return (
-    <div className="flex items-center lg:block xl:flex">
-      <div className="mr-[9px] lg:mb-3 xl:mb-0">
-        <Link rel="stylesheet" href={`/blog/${slug}`} className="href">
-          <div className="relative h-[94px] w-[94px] cursor-pointer overflow-hidden rounded-full bg-[#f0f4f7] sm:h-[94px] sm:w-[94px]">
-            <Image
-              src={image}
-              alt={title}
-              fill
-              className="h-[72px] w-[72px] rounded-full p-[11px]"
-            />
-          </div>
-        </Link>
-      </div>
-      <div className="w-full">
-        <Link
-          href={`/blog/${slug}`}
-          className="text-[15px] leading-[15px] text-[#48AFDB] hover:underline"
-        >
-          {title}
-        </Link>
-        <p className="text-[15px] font-medium text-[#75889C]">{date}</p>
-      </div>
-    </div>
-  );
-};
+}
 
-export default RelatedPost;
+export default function RelatedPost({
+  image,
+  slug,
+  title,
+  date,
+}: RelatedPostProps) {
+  return (
+    <Link href={`/blog/${slug}`} className="group flex gap-3">
+      {/* Thumbnail */}
+      <div className="dark:border-card-border-dark relative h-[64px] w-[64px] shrink-0 overflow-hidden rounded-md border border-slate-200 bg-white">
+        <Image
+          src={image}
+          alt={title}
+          fill
+          className="transition-transform duration-300 group-hover:scale-105"
+        />
+      </div>
+
+      {/* Content */}
+      <div className="flex min-w-0 flex-1 flex-col justify-center">
+        <h3 className="hover:text-primary-blue line-clamp-2 text-[14px] leading-[16px] font-semibold text-[#495466]">
+          {title}
+        </h3>
+
+        <p className="mt-2 text-[13px] leading-[20px] text-[#6b7280]">{date}</p>
+      </div>
+    </Link>
+  );
+}

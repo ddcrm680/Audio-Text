@@ -1,7 +1,7 @@
 import { Blog } from "@/types/blog";
 import Image from "next/image";
 import Link from "next/link";
-import { ChevronRight } from "lucide-react";
+import { ChevronRight, MessageSquare } from "lucide-react";
 import { formatDate } from "@/utils/helpers";
 
 interface Props {
@@ -11,110 +11,79 @@ interface Props {
   isLast?: boolean;
 }
 
-export default function SingleBlog({
-  index,
-  blog,
-  isShare = false,
-  isLast = false,
-}: Props) {
+export default function SingleBlog({ blog }: Props) {
   const { day, month } = formatDate(blog.publish_at);
-  const socials = [
-    {
-      icon: "/images/destination/facebook.png",
-      link: blog.socialLinks.facebook,
-    },
-    {
-      icon: "/images/destination/twitter.png",
-      link: blog.socialLinks.twitter,
-    },
-    {
-      icon: "/images/destination/google-plus-logo.png",
-      link: blog.socialLinks.google,
-    },
 
-    {
-      icon: "/images/destination/linkedin.png",
-      link: blog.socialLinks.linkedin,
-    },
-    {
-      icon: "/images/destination/stumble.png",
-      link: blog.socialLinks.stumble,
-    },
-  ];
   return (
-    <article className={`flex gap-6 ${index == 0 ? " " : "pt-15"}`}>
-      {/* Date */}
+    <article className="group z-1 overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm hover:shadow-md">
+      {" "}
+      {/* Image */}
+      <Link href={`/blog/${blog.slug}`} className="block">
+        <div className="relative">
+          <Image
+            src={blog.image}
+            alt={blog.title}
+            width={700}
+            height={420}
+            className="z-0 h-[320px] w-full transition-transform duration-500 group-hover:scale-105"
+          />
+          {/* Date */}
+          <div className="bg-primary-blue absolute top-4 left-4 flex flex-col items-center justify-center rounded-lg p-3 text-white shadow-lg">
+            <span className="text-[24px] leading-[16px] font-semibold">
+              {day}
+            </span>
 
-      <div className="w-[70px] shrink-0 text-center">
-        <div className="mx-auto flex h-[62px] w-[62px] items-center justify-center rounded-full bg-[#48AFDB] text-[36px] font-light text-white">
-          {day}
+            <span className="mt-1 text-[14px] leading-[16px] font-semibold uppercase">
+              {month}
+            </span>
+          </div>
         </div>
-
-        <div className="mt-[5px] text-[17px] text-[#333] uppercase dark:text-gray-300">
-          {month}
-        </div>
-      </div>
-
-      {/* Right */}
-
-      <div className={`flex-1 border-b border-[#d6dde3] pb-[18px]`}>
+      </Link>
+      {/* Content */}
+      <div className="p-6">
         <Link href={`/blog/${blog.slug}`}>
-          <h2 className="mb-[18px] text-[30px] leading-[38px] font-light text-[#48AFDB] uppercase transition hover:text-[#2d9fd5]">
+          <h2 className="text-primary-blue line-clamp-2 text-[32px] leading-tight font-semibold uppercase transition-colors group-hover:text-sky-500">
             {blog.title}
           </h2>
         </Link>
 
-        <div className="mx-auto mt-[9px] mb-[70px] w-full max-w-[1100px] md:w-[500px]">
-          <Link href={`/blog/${blog.slug}`}>
-            <Image
-              src={blog.image}
-              alt={blog.title}
-              className="h-auto w-full md:w-[500px]"
-            />
-          </Link>
-        </div>
-        {isShare && (
-          <div className="flex h-[35px] items-center gap-4">
-            {socials.map((item, index) => (
-              <a
-                key={index}
-                href={item.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`hover:bg-primary-blue dark:hover:bg-primary-blue flex h-[35px] w-[35px] items-center justify-center rounded-full bg-gray-300 transition-colors duration-200`}
-              >
-                <Image src={item.icon} alt="" width={20} height={20} />
-              </a>
-            ))}
-          </div>
-        )}
-        <div className="mt-[29px] flex items-center justify-between">
+        <div className="dark:border-card-border-dark my-4 border-t border-[#bec8cf]" />
+
+        {/* Footer */}
+        <div className="flex flex-wrap items-center justify-between gap-5">
+          {/* Categories */}
           <div className="flex flex-wrap items-center">
             {blog.category.map((cat, index) => (
               <div key={cat.slug} className="flex items-center">
                 <Link
                   href={`/blog/category/${cat.slug}`}
-                  className="text-[15px] text-[#48AFDB] hover:underline"
+                  className="text-[16px] leading-[0.05em] font-semibold text-[#4e6073] hover:underline"
                 >
                   {cat.name}
                 </Link>
 
                 {index !== blog.category.length - 1 && (
-                  <span className="mx-3 text-[#c7c7c7]">|</span>
+                  <span className="mx-3 text-slate-300">|</span>
                 )}
               </div>
             ))}
           </div>
 
-          <div className="flex items-center gap-[18px] text-[15px]">
-            <span className="text-[#75889C]">0 comments</span>
+          {/* Right */}
+          <div className="flex items-center gap-6">
+            <span className="flex items-center gap-1 text-[14px] font-semibold text-slate-500 dark:text-slate-400">
+              <MessageSquare size={16} />0 Comments
+            </span>
 
             <Link
               href={`/blog/${blog.slug}`}
-              className="flex items-center gap-1 text-[15px] text-[#48AFDB] hover:underline"
+              className="text-primary-blue flex items-center gap-1 text-[14px] font-semibold underline"
             >
-              <ChevronRight size={17} />
-              Read more
+              Read More
+              <ChevronRight
+                size={16}
+                className="transition-transform duration-300 group-hover:translate-x-1"
+              />
             </Link>
           </div>
         </div>

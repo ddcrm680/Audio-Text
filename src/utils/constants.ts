@@ -2,7 +2,7 @@ import SlideFive from "@/components/LandingScreeen/SlideFive";
 import SlideFour from "@/components/LandingScreeen/SlideFour";
 import SlideOne from "@/components/LandingScreeen/SlideOne";
 import SlideThree from "@/components/LandingScreeen/SlideThree";
-import Blog2 from "../../public/images/blog/blog-2.jpg";
+import Blog2 from "../../public/images/blog/blog-2.png";
 
 import ANGUILLA from "../../public/images/destination/ANGUILLA.jpg";
 import COMROS from "../../public/images/destination/COMROS.jpg";
@@ -24,7 +24,7 @@ import Finance_asian from "../../public/images/team/Finance_asian.png";
 import tech_support from "../../public/images/team/tech_support.png";
 
 import secondaryBannerBg from "../../public/images/common/Secondary_banner_bg.jpg";
-import Blog1 from "../../public/images/blog/blog-1.jpg";
+import Blog1 from "../../public/images/blog/blog-1.png";
 import SlideTwo from "@/components/LandingScreeen/SlideTwo";
 import {
   Banknote,

@@ -19,24 +19,18 @@ const BlogWrapper = ({ children }: { children: any }) => {
     <>
       <section className="overflow-hidden">
         <div className="container">
-          <div className="flex w-full flex-wrap">
-            <div className="w-full lg:w-8/12 lg:pr-16">{children}</div>
+          <div className="flex w-full flex-wrap gap-6">
+            <div className="w-full lg:flex-1">{children}</div>
             <div className="w-full lg:w-4/12">
-              <div className="mb-[14px]">
-                <h2 className="mb-[22px] text-[28px] leading-[38px] font-extralight text-[#48AFDB] uppercase">
+              {/* Popular Posts */}
+              <div className="dark:border-card-border-dark dark:bg-card-dark mb-12 rounded-xl border border-[#d7e2f0] bg-[#eef5ff] p-6">
+                <h3 className="border-primary-blue mb-6 border-l-4 pl-3 text-[20px] leading-[28px] font-semibold text-[#0b3156] dark:text-sky-400">
                   Popular Posts
-                </h2>
-                <ul>
-                  {BlogList.slice(0, 3).map((blog, index) => (
-                    <li
-                      key={blog.id}
-                      className={`${index !== 0 ? "pt-[34px]" : ""} ${
-                        index !== 2
-                          ? ""
-                          : "mb-[35px] border-b border-[#d9d9d9] pb-[35px] dark:border-gray-700"
-                      }`}
-                    >
-                      {" "}
+                </h3>
+
+                <ul className="space-y-6">
+                  {BlogList.slice(0, 3).map((blog) => (
+                    <li key={blog.id}>
                       <RelatedPost
                         title={blog.title}
                         image={blog.image}
@@ -47,17 +41,16 @@ const BlogWrapper = ({ children }: { children: any }) => {
                   ))}
                 </ul>
               </div>
-              <div className="mb-[14px]">
-                <h2 className="mb-[22px] text-[28px] leading-[38px] font-extralight text-[#48AFDB] uppercase">
+
+              {/* Recent Posts */}
+              <div className="dark:border-card-border-dark dark:bg-card-dark rounded-xl border border-[#d7e2f0] bg-[#eef5ff] p-6">
+                <h3 className="border-primary-blue mb-6 border-l-4 pl-3 text-[20px] leading-[28px] font-semibold text-[#0b3156] dark:text-sky-400">
                   Recent Posts
-                </h2>
-                <ul>
-                  {BlogList.slice(0, 3).map((blog, index) => (
-                    <li
-                      key={blog.id}
-                      className={`${index !== 0 ? "pt-[34px]" : ""}`}
-                    >
-                      {" "}
+                </h3>
+
+                <ul className="space-y-6">
+                  {BlogList.slice(0, 3).map((blog) => (
+                    <li key={blog.id}>
                       <RelatedPost
                         title={blog.title}
                         image={blog.image}
