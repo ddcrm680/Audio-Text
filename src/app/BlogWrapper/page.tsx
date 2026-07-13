@@ -23,7 +23,7 @@ const BlogWrapper = ({ children }: { children: any }) => {
             <div className="w-full lg:flex-1">{children}</div>
             <div className="w-full lg:w-4/12">
               {/* Popular Posts */}
-              <div className="dark:border-card-border-dark dark:bg-card-dark mb-12 rounded-xl border border-[#d7e2f0] bg-[#eef5ff] p-6">
+              <div className="mb-12 rounded-xl border border-[#d7e2f0] bg-[#eef5ff] p-6 dark:border-[#2d3748] dark:bg-[#111827]">
                 <h3 className="border-primary-blue mb-6 border-l-4 pl-3 text-[20px] leading-[28px] font-semibold text-[#0b3156] dark:text-sky-400">
                   Popular Posts
                 </h3>

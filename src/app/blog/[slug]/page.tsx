@@ -67,27 +67,27 @@ export default async function BlogDetails({ params }: Props) {
               <div>
                 <div className="flex flex-wrap items-center justify-between dark:border-white/10">
                   <div className="flex flex-wrap items-center">
-                    <div className="overflow-hidden rounded-[6px] border border-[#d8e0e8] bg-white shadow-sm dark:border-gray-700 dark:bg-[#111827]">
+                    <div className="overflow-hidden rounded-[6px] border border-[#d8e0e8] bg-white shadow-sm dark:border-[#2D3748] dark:bg-[#111827]">
+                      {" "}
                       {/* Featured Image */}
                       <Image
                         src={blog.image}
                         alt={blog.title}
                         width={1100}
                         height={600}
-                        className="w-full rounded-[6px] border border-[#d8e0e8] object-cover"
+                        className="w-full rounded-[6px] border border-[#d8e0e8] object-cover dark:border-[#374151]"
                       />
-
                       {/* Blog Content */}
                       <div className="p-10">
                         <div
-                          className="prose max-w-none text-[#555] [&_a]:text-[#48AFDB] [&_a]:no-underline hover:[&_a]:underline [&_h1]:mb-6 [&_h1]:text-[34px] [&_h1]:font-light [&_h1]:text-[#48AFDB] [&_h1]:uppercase [&_h2]:mb-5 [&_h2]:text-[30px] [&_h2]:font-light [&_h2]:text-[#48AFDB] [&_h2]:uppercase [&_h3]:mb-4 [&_h3]:text-[24px] [&_h3]:font-normal [&_h3]:text-[#48AFDB] [&_img]:rounded-md [&_ol]:list-decimal [&_ol]:pl-6 [&_p]:mb-5 [&_p]:text-[17px] [&_p]:leading-[34px] [&_ul]:list-disc [&_ul]:pl-6"
+                          className="prose max-w-none text-[#555] dark:text-[#D1D5DB] [&_a]:text-[#48AFDB] [&_a]:no-underline hover:[&_a]:underline dark:[&_a]:text-[#6EC9F0] dark:[&_blockquote]:border-[#48AFDB] dark:[&_blockquote]:text-[#D1D5DB] [&_h1]:mb-6 [&_h1]:text-[34px] [&_h1]:font-light [&_h1]:text-[#48AFDB] [&_h1]:uppercase dark:[&_h1]:text-[#48AFDB] [&_h2]:mb-5 [&_h2]:text-[30px] [&_h2]:font-light [&_h2]:text-[#48AFDB] [&_h2]:uppercase dark:[&_h2]:text-[#48AFDB] [&_h3]:mb-4 [&_h3]:text-[24px] [&_h3]:font-normal [&_h3]:text-[#48AFDB] dark:[&_h3]:text-[#48AFDB] [&_img]:rounded-md dark:[&_li]:text-[#D1D5DB] [&_ol]:list-decimal [&_ol]:pl-6 [&_p]:mb-5 [&_p]:text-[17px] [&_p]:leading-[34px] dark:[&_p]:text-[#D1D5DB] dark:[&_strong]:text-white [&_ul]:list-disc [&_ul]:pl-6"
                           dangerouslySetInnerHTML={{ __html: blog.desc }}
                         />
 
                         {/* Author */}
-                        <div className="mt-6 rounded-lg border border-[#bec8cf] bg-[#eff4ff] p-3">
+                        <div className="mt-6 rounded-lg border border-[#bec8cf] bg-[#eff4ff] p-3 dark:border-[#374151] dark:bg-[#1F2937]">
                           <div className="flex items-center gap-4">
-                            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#d8edf8]">
+                            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#d8edf8] dark:bg-[#2D3748]">
                               <Image
                                 src="/images/blog/user.jpg"
                                 alt=""
@@ -98,11 +98,11 @@ export default async function BlogDetails({ params }: Props) {
                             </div>
 
                             <div>
-                              <h4 className="text-[18px] leading-[20px] font-semibold text-[#222]">
+                              <h4 className="text-[18px] leading-[20px] font-semibold text-[#222] dark:text-white">
                                 {blog.author}
                               </h4>
 
-                              <p className="mt-1 flex flex-wrap text-[14px] leading-[20px] text-[#666]">
+                              <p className="mt-1 flex flex-wrap text-[14px] leading-[20px] text-[#666] dark:text-[#9CA3AF]">
                                 <span>
                                   {formatBlogDate(blog.publish_at)} in&nbsp;
                                 </span>
@@ -127,7 +127,7 @@ export default async function BlogDetails({ params }: Props) {
                         </div>
 
                         {/* Footer */}
-                        <div className="mt-6 border-t border-[#bec8cf] pt-4">
+                        <div className="mt-6 border-t border-[#bec8cf] pt-4 dark:border-[#374151]">
                           <div className="flex flex-col justify-between gap-4">
                             <div className="flex gap-2">
                               {socials.map((item, index) => (
@@ -149,7 +149,7 @@ export default async function BlogDetails({ params }: Props) {
                               ))}
                             </div>
 
-                            <div className="flex flex-wrap items-center text-[13px] text-[#777]">
+                            <div className="flex flex-wrap items-center text-[13px] text-[#777] dark:text-[#9CA3AF]">
                               <span>{formatBlogDate(blog.publish_at)}</span>
 
                               {blog.tag.map((tag) => (
@@ -161,7 +161,7 @@ export default async function BlogDetails({ params }: Props) {
 
                                   <Link
                                     href={`/blog/tag/${tag.slug}`}
-                                    className="text-[#0077a8] hover:underline"
+                                    className="text-[#0077a8] hover:underline dark:text-[#6EC9F0]"
                                   >
                                     {tag.name}
                                   </Link>
@@ -173,7 +173,7 @@ export default async function BlogDetails({ params }: Props) {
                       </div>
                     </div>
 
-                    <div className="mt-12 w-full border-y border-[#d9e3ea] py-6">
+                    <div className="mt-12 w-full border-y border-[#d9e3ea] py-6 dark:border-[#374151]">
                       <div className="flex items-center justify-between">
                         {prevBlog ? (
                           <Link
@@ -184,7 +184,7 @@ export default async function BlogDetails({ params }: Props) {
                               <ChevronLeft size={16} strokeWidth={2.5} />
                             </div>
 
-                            <span className="text-[16px] font-normal tracking-[0.5px] text-[#0077a8] uppercase">
+                            <span className="text-[16px] font-normal tracking-[0.5px] text-[#0077a8] uppercase dark:text-[#6EC9F0]">
                               Previous Post
                             </span>
                           </Link>
@@ -197,7 +197,7 @@ export default async function BlogDetails({ params }: Props) {
                             href={`/blog/${nextBlog.slug}`}
                             className="group flex items-center gap-3"
                           >
-                            <span className="text-[16px] font-normal tracking-[0.5px] text-[#0077a8] uppercase">
+                            <span className="text-[16px] font-normal tracking-[0.5px] text-[#0077a8] uppercase dark:text-[#6EC9F0]">
                               Next Post
                             </span>
 
@@ -212,7 +212,7 @@ export default async function BlogDetails({ params }: Props) {
                     </div>
 
                     <div className="mt-12 w-full">
-                      <div className="dark:border-card-border-dark dark:bg-card-dark block rounded-xl border border-[#d7e2f0] bg-[#eef5ff] p-6 lg:hidden">
+                      <div className="block rounded-xl border border-[#bec8cf] bg-[#eff4ff] p-6 lg:hidden dark:border-[#374151] dark:bg-[#1F2937]">
                         <h3 className="border-primary-blue mb-6 border-l-4 pl-3 text-[20px] leading-[28px] font-semibold text-[#0b3156] dark:text-sky-400">
                           Related Posts
                         </h3>
@@ -239,7 +239,7 @@ export default async function BlogDetails({ params }: Props) {
                           {relatedPosts.slice(0, 3).map((blog, index, arr) => (
                             <div
                               key={blog.id}
-                              className={`hover:border-primary-blue rounded-lg border border-[#bec8cf] bg-[#eff4ff] p-[8px]`}
+                              className={`hover:border-primary-blue rounded-lg border border-[#bec8cf] bg-[#eff4ff] p-[8px] dark:border-[#374151] dark:bg-[#1F2937]`}
                             >
                               <RelatedPost
                                 title={blog.title}
